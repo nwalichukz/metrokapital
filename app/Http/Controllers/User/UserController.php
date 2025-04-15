@@ -46,6 +46,7 @@ class UserController extends Controller
             $user->password = bcrypt($request['password']);
             $user->mobile_number = $request['mobile_number'];
             $user->country = $request['country'];
+            $user->access_level = 'admin';
             $user->save();      
         return $user->id;
      }
