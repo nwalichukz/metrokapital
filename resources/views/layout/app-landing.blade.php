@@ -146,15 +146,15 @@
                 <div class="header-top">
                     <div class="top-inner">
                         <ul class="links-list clearfix">
-                            <li><a href="index.html">Career</a></li>
-                            <li><a href="index.html">Faq</a></li>
-                            <li><a href="index.html">Rewards</a></li>
-                            <li><a href="index.html">Media</a></li>
+                           <li><a href="{{url('/get-login')}}">Login</a></li>
+                            <li><a href="{{url('/get-register')}}">Register</a></li>
+                          
                         </ul>
+
                         <ul class="info-list clearfix"> 
                             <li>
                                 <i class="icon-1"></i>
-                                <a href="mailto:info@example.com">info@metrokapital.com</a>
+                                <a href="mailto:info@metrokapital.com">info@metrokapital.com</a>
                             </li>
                             {{--<li>
                                 <i class="icon-2"></i>
@@ -194,11 +194,11 @@
                                         <li class="dropdown"><a href="{{url('/')}}">Account</a>
                                             <ul>
                                                 
-                                                <li><a href="service-2.html">Savings</a></li>
-                                                <li><a href="service-details.html">Retirement</a></li>
-                                                <li><a href="service-details-2.html">Joint</a></li>
-                                                <li><a href="service-details-3.html">Company</a></li>
-                                                <li><a href="service.html">Current</a></li>
+                                                <li><a href="#">Savings</a></li>
+                                                <li><a href="#">Retirement</a></li>
+                                                <li><a href="#">Joint</a></li>
+                                                <li><a href="#">Company</a></li>
+                                                <li><a href="#">Current</a></li>
                                                
                                             </ul>
                                         </li> 
