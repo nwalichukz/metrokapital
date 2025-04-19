@@ -152,10 +152,7 @@
                         </ul>
 
                         <ul class="info-list clearfix"> 
-                            <li>
-                                <i class="icon-1"></i>
-                                <a href="mailto:info@metrokapital.com">info@metrokapital.com</a>
-                            </li>
+                        
                             {{--<li>
                                 <i class="icon-2"></i>
                                 Find Nearest Branch
@@ -190,7 +187,7 @@
                                                
                                             </ul>
                                         </li> 
-                                        <li><a href="about.html">News</a></li>
+                                        <li><a href="#">News</a></li>
                                         <li class="dropdown"><a href="{{url('/')}}">Account</a>
                                             <ul>
                                                 
