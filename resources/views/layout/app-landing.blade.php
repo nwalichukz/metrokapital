@@ -71,25 +71,25 @@
                             <span data-text-preloader="o" class="letters-loading">
                                 o
                             </span>
-                            <span data-text-preloader="b" class="letters-loading">
+                            <span data-text-preloader="k" class="letters-loading">
                                 K
                             </span>
                             <span data-text-preloader="a" class="letters-loading">
                                 a
                             </span>
-                            <span data-text-preloader="n" class="letters-loading">
+                            <span data-text-preloader="p" class="letters-loading">
                                 p
                             </span>
-                            <span data-text-preloader="k" class="letters-loading">
+                            <span data-text-preloader="i" class="letters-loading">
                                 i
                             </span>
-                            <span data-text-preloader="k" class="letters-loading">
+                            <span data-text-preloader="t" class="letters-loading">
                                 t
                             </span>
-                            <span data-text-preloader="k" class="letters-loading">
+                            <span data-text-preloader="a" class="letters-loading">
                                 a
                             </span>
-                            <span data-text-preloader="k" class="letters-loading">
+                            <span data-text-preloader="l" class="letters-loading">
                                 l
                             </span>
                         </div>
@@ -202,7 +202,7 @@
                                                
                                             </ul>
                                         </li> 
-                                        <li class="dropdown"><a href="index.html">Citinship By Investment</a>
+                                        <li class="dropdown"><a href="#">Citinship By Investment</a>
                                             <ul>
                                                <li class="dropdown"><a href="#">By Investment</a>
                                                     <ul>
@@ -299,7 +299,7 @@
                                                 <li><a href="error.html">St. Kitts & Nevis</a></li>--}}
                                             </ul>
                                         </li> 
-                                        <li><a href="contact.html">Contact</a></li> 
+                                        <li><a href="{{url('/contact-us')}}">Contact</a></li> 
                                     </ul>
                                 </div>
                             </nav>
@@ -360,11 +360,10 @@
                 </div>
                 <div class="social-links">
                     <ul class="clearfix">
-                        <li><a href="index.html"><span class="fab fa-twitter"></span></a></li>
-                        <li><a href="index.html"><span class="fab fa-facebook-square"></span></a></li>
-                        <li><a href="index.html"><span class="fab fa-pinterest-p"></span></a></li>
-                        <li><a href="index.html"><span class="fab fa-instagram"></span></a></li>
-                        <li><a href="index.html"><span class="fab fa-youtube"></span></a></li>
+                        <li><a href="#"><span class="fab fa-twitter"></span></a></li>
+                        <li><a href="#"><span class="fab fa-pinterest-p"></span></a></li>
+                        <li><a href="#"><span class="fab fa-instagram"></span></a></li>
+                        <li><a href="#"><span class="fab fa-youtube"></span></a></li>
                     </ul>
                 </div>
             </nav>

@@ -254,7 +254,6 @@
         <!-- main-header end -->
 
 
-
         <!-- Mobile Menu  -->
         <div class="mobile-menu">
             <div class="menu-backdrop"></div>
@@ -349,7 +348,6 @@
         <!-- contact-info-section end -->
 
 
-
         <!-- google-map-section -->
         <section class="google-map-section pb_120">
             <div class="auto-container">
@@ -357,7 +355,6 @@
             </div>
         </section>
         <!-- google-map-section end -->
-         
 
 
         <!-- contact-section -->

@@ -40,6 +40,10 @@ Route::get('/citizenship-inv-grenada', function () {
     return view('landing/citizenship-by-investment-grenada');
 });
 
+Route::get('/contact-us', function () {
+    return view('landing/contact');
+});
+
 Route::get('/real-estate-inv-antigua-and-barbuda', function () {
     return view('landing/real-estate-investment-antigua-and-barbuda');
 });

@@ -15,7 +15,7 @@
                             <h2>Open our Current Account Online</h2>
                             <p>This statistic is based on our average personal current account online opening time from the last 12 months.</p>
                             <div class="btn-box">
-                                <a href="index.html" class="theme-btn btn-three">Create Account</a>
+                                <a href="{{url('/get-register')}}" class="theme-btn btn-three">Create Account</a>
                             </div>
                         </div> 
                     </div>
@@ -31,7 +31,7 @@
                             <h2>Open our Current Account Online</h2>
                             <p>This statistic is based on our average personal current account online opening time from the last 12 months.</p>
                             <div class="btn-box">
-                                <a href="index.html" class="theme-btn btn-three">Create Account</a>
+                                <a href="{{url('/get-register')}}" class="theme-btn btn-three">Create Account</a>
                             </div>
                         </div> 
                     </div>
@@ -47,7 +47,7 @@
                             <h2>Open our Current Account Online</h2>
                             <p>This statistic is based on our average personal current account online opening time from the last 12 months.</p>
                             <div class="btn-box">
-                                <a href="{{url('/')}}" class="theme-btn btn-three">Create Account</a>
+                                <a href="{{url('/get-login')}}" class="theme-btn btn-three">Create Account</a>
                             </div>
                         </div>  
                     </div>
@@ -106,7 +106,7 @@
                                     <div class="shape-1" style="background-image: url(assets/images/shape/shape-3.png);"></div>
                                     <div class="shape-2" style="background-image: url(assets/images/shape/shape-11.png);"></div>
                                 </div>
-                                <figure class="image"><img src="assets/images/resource/about-1.jpg" alt=""></figure>
+                                <figure class="image"><img src="{{ asset('assets/images/resource/about-1.jpg')}}" alt=""></figure>
                                 <div class="rating-box">
                                     <ul class="rating mb_5 clearfix">
                                         <li><i class="icon-9"></i></li>
@@ -117,10 +117,10 @@
                                     </ul>
                                     <h6>5 Star Rating Bank</h6>
                                     <ul class="thumb-list">
-                                        <li><img src="assets/images/resource/thumb-1.png" alt=""></li>
-                                        <li><img src="assets/images/resource/thumb-2.png" alt=""></li>
-                                        <li><img src="assets/images/resource/thumb-3.png" alt=""></li>
-                                        <li><img src="assets/images/resource/thumb-4.png" alt=""></li>
+                                        <li><img src="{{ asset('assets/images/resource/thumb-1.png')}}" alt=""></li>
+                                        <li><img src="{{ asset('assets/images/resource/thumb-2.png')}}" alt=""></li>
+                                        <li><img src="{{ asset('assets/images/resource/thumb-3.png')}}" alt=""></li>
+                                        <li><img src="{{ asset('assets/images/resource/thumb-4.png')}}" alt=""></li>
                                     </ul>
                                 </div>
                                 <div class="experience-box">
@@ -140,22 +140,22 @@
                                     <h2>Financial Guidance for Every Stage of Life.</h2>
                                 </div>
                                 <div class="text-box mb_40">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec felis, suscipit you take action against fraud. See it the Security Center for and Mobile and Online Banking.</p>
+                                    <p>The Security Center for and Mobile and Online Banking.</p>
                                 </div>
                                 <div class="inner-box mb_45">
                                     <div class="single-item">
                                         <div class="icon-box"><i class="icon-10"></i></div>
                                         <h3>Solution Focused</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec felis tincidunt feugiat</p>
+                                        <p>We are focused on finding solutions to your problems</p>
                                     </div>
                                     <div class="single-item">
                                         <div class="icon-box"><i class="icon-11"></i></div>
                                         <h3>99.99% Success</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec felis tincidunt feugiat</p>
+                                        <p>Our solutions deliver close to 100% we have got you</p>
                                     </div>
                                 </div>
                                 <div class="btn-box">
-                                    <a href="index.html" class="theme-btn btn-one">Discover More</a>
+                                    <a href="#" class="theme-btn btn-one">Discover More</a>
                                 </div>
                             </div>
                         </div>
@@ -260,7 +260,7 @@
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-12 service-block">
                         <div class="service-block-one wow fadeInUp animated" data-wow-delay="900ms" data-wow-duration="1500ms">
-                            <figure class="image-box"><a href="service-details-4.html"><img src="assets/images/service/service-8.jpg" alt=""></a></figure>
+                            <figure class="image-box"><a href="service-details-4.html"><img src="{{ asset('assets/images/service/service-8.jpg')}}" alt=""></a></figure>
                             <div class="inner-box">
                                 <div class="icon-box"><i class="icon-15"></i></div>
                                 <h4><a href="service-details-4.html">Home & Property Loan</a></h4>
@@ -274,7 +274,9 @@
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-12 service-block">
                         <div class="service-block-one wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1500ms">
-                            <figure class="image-box"><a href="service-details-5.html"><img src="assets/images/service/service-9.jpg" alt=""></a></figure>
+                            <figure class="image-box">
+                                <a href="service-details-5.html">
+                                    <img src="{{ asset('assets/images/service/service-9.jpg')}}" alt=""></a></figure>
                             <div class="inner-box">
                                 <div class="icon-box"><i class="icon-16"></i></div>
                                 <h4><a href="service-details-5.html">All Bank Account</a></h4>
@@ -289,7 +291,9 @@
 
                     <div class="col-lg-3 col-md-6 col-sm-12 service-block">
                         <div class="service-block-one wow fadeInUp animated" data-wow-delay="300ms" data-wow-duration="1500ms">
-                            <figure class="image-box"><a href="service-details-6.html"><img src="assets/images/service/service-10.jpg" alt=""></a></figure>
+                            <figure class="image-box">
+                                <a href="service-details-6.html">
+                                    <img src="{{ asset('assets/images/service/service-10.jpg')}}" alt=""></a></figure>
                             <div class="inner-box">
                                 <div class="icon-box"><i class="icon-17"></i></div>
                                 <h4><a href="service-details-6.html">borrowing accounts</a></h4>
@@ -303,7 +307,8 @@
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-12 service-block">
                         <div class="service-block-one wow fadeInUp animated" data-wow-delay="600ms" data-wow-duration="1500ms">
-                            <figure class="image-box"><a href="service-details-7.html"><img src="assets/images/service/service-11.jpg" alt=""></a></figure>
+                            <figure class="image-box"><a href="service-details-7.html">
+                                <img src="{{ asset('assets/images/service/service-11.jpg')}}" alt=""></a></figure>
                             <div class="inner-box">
                                 <div class="icon-box"><i class="icon-18"></i></div>
                                 <h4><a href="service-details-7.html">Private Banking</a></h4>
@@ -317,7 +322,9 @@
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-12 service-block">
                         <div class="service-block-one wow fadeInUp animated" data-wow-delay="900ms" data-wow-duration="1500ms">
-                            <figure class="image-box"><a href="service-details-8.html"><img src="assets/images/service/service-12.jpg" alt=""></a></figure>
+                            <figure class="image-box">
+                                <a href="service-details-8.html">
+                                <img src="{{ asset('assets/images/service/service-12.jpg')}}" alt=""></a></figure>
                             <div class="inner-box">
                                 <div class="icon-box"><i class="icon-19"></i></div>
                                 <h4><a href="service-details-8.html">Fixed term accounts</a></h4>
@@ -418,7 +425,8 @@
                                     <div class="exchange-block-one">
                                         <div class="inner-box">
                                             <h5>USD<i class="icon-38"></i></h5>
-                                            <figure class="flag"><img src="assets/images/icons/flag-1.png" alt=""></figure>
+                                            <figure class="flag">
+                                                <img src="{{ asset('assets/images/icons/flag-1.png')}}" alt=""></figure>
                                             <ul class="lower-box clearfix">
                                                 <li><span>Send</span><span>50.30</span></li>
                                                 <li><span>Receive</span><span>45.30</span></li>
@@ -430,7 +438,8 @@
                                     <div class="exchange-block-one red">
                                         <div class="inner-box">
                                             <h5>GBP<i class="icon-39"></i></h5>
-                                            <figure class="flag"><img src="assets/images/icons/flag-2.png" alt=""></figure>
+                                            <figure class="flag">
+                                                <img src="{{ asset('assets/images/icons/flag-2.png')}}" alt=""></figure>
                                             <ul class="lower-box clearfix">
                                                 <li><span>Send</span><span>60.30</span></li>
                                                 <li><span>Receive</span><span>55.30</span></li>
@@ -442,7 +451,8 @@
                                     <div class="exchange-block-one red">
                                         <div class="inner-box">
                                             <h5>INR<i class="icon-39"></i></h5>
-                                            <figure class="flag"><img src="assets/images/icons/flag-3.png" alt=""></figure>
+                                            <figure class="flag">
+                                                <img src="{{ asset('assets/images/icons/flag-3.png')}}" alt=""></figure>
                                             <ul class="lower-box clearfix">
                                                 <li><span>Send</span><span>20.30</span></li>
                                                 <li><span>Receive</span><span>40.30</span></li>
@@ -454,7 +464,8 @@
                                     <div class="exchange-block-one">
                                         <div class="inner-box">
                                             <h5>CAD<i class="icon-38"></i></h5>
-                                            <figure class="flag"><img src="assets/images/icons/flag-4.png" alt=""></figure>
+                                            <figure class="flag">
+                                                <img src="{{ asset('assets/images/icons/flag-4.png')}}" alt=""></figure>
                                             <ul class="lower-box clearfix">
                                                 <li><span>Send</span><span>30.30</span></li>
                                                 <li><span>Receive</span><span>32.30</span></li>
@@ -466,7 +477,8 @@
                                     <div class="exchange-block-one">
                                         <div class="inner-box">
                                             <h5>YAN<i class="icon-38"></i></h5>
-                                            <figure class="flag"><img src="assets/images/icons/flag-5.png" alt=""></figure>
+                                            <figure class="flag">
+                                                <img src="{{ asset('assets/images/icons/flag-5.png')}}" alt=""></figure>
                                             <ul class="lower-box clearfix">
                                                 <li><span>Send</span><span>90.30</span></li>
                                                 <li><span>Receive</span><span>95.30</span></li>
@@ -478,7 +490,8 @@
                                     <div class="exchange-block-one red">
                                         <div class="inner-box">
                                             <h5>AUD<i class="icon-39"></i></h5>
-                                            <figure class="flag"><img src="assets/images/icons/flag-6.png" alt=""></figure>
+                                            <figure class="flag">
+                                                <img src="{{ asset('assets/images/icons/flag-6.png')}}" alt=""></figure>
                                             <ul class="lower-box clearfix">
                                                 <li><span>Send</span><span>50.30</span></li>
                                                 <li><span>Receive</span><span>45.30</span></li>
@@ -494,7 +507,8 @@
                                     <div class="exchange-block-one">
                                         <div class="inner-box">
                                             <h5>USD<i class="icon-38"></i></h5>
-                                            <figure class="flag"><img src="assets/images/icons/flag-1.png" alt=""></figure>
+                                            <figure class="flag">
+                                                <img src="{{ asset('assets/images/icons/flag-1.png')}}" alt=""></figure>
                                             <ul class="lower-box clearfix">
                                                 <li><span>Send</span><span>50.30</span></li>
                                                 <li><span>Receive</span><span>45.30</span></li>
@@ -506,7 +520,8 @@
                                     <div class="exchange-block-one red">
                                         <div class="inner-box">
                                             <h5>GBP<i class="icon-39"></i></h5>
-                                            <figure class="flag"><img src="assets/images/icons/flag-2.png" alt=""></figure>
+                                            <figure class="flag">
+                                                <img src="{{ asset('assets/images/icons/flag-2.png')}}" alt=""></figure>
                                             <ul class="lower-box clearfix">
                                                 <li><span>Send</span><span>60.30</span></li>
                                                 <li><span>Receive</span><span>55.30</span></li>
@@ -518,7 +533,8 @@
                                     <div class="exchange-block-one red">
                                         <div class="inner-box">
                                             <h5>INR<i class="icon-39"></i></h5>
-                                            <figure class="flag"><img src="assets/images/icons/flag-3.png" alt=""></figure>
+                                            <figure class="flag">
+                                                <img src="{{ asset('assets/images/icons/flag-3.png')}}" alt=""></figure>
                                             <ul class="lower-box clearfix">
                                                 <li><span>Send</span><span>20.30</span></li>
                                                 <li><span>Receive</span><span>40.30</span></li>
@@ -530,7 +546,7 @@
                                     <div class="exchange-block-one">
                                         <div class="inner-box">
                                             <h5>CAD<i class="icon-38"></i></h5>
-                                            <figure class="flag"><img src="assets/images/icons/flag-4.png" alt=""></figure>
+                                            <figure class="flag"><img src="{{ asset('assets/images/icons/flag-4.png')}}" alt=""></figure>
                                             <ul class="lower-box clearfix">
                                                 <li><span>Send</span><span>30.30</span></li>
                                                 <li><span>Receive</span><span>32.30</span></li>
@@ -542,7 +558,8 @@
                                     <div class="exchange-block-one">
                                         <div class="inner-box">
                                             <h5>YAN<i class="icon-38"></i></h5>
-                                            <figure class="flag"><img src="assets/images/icons/flag-5.png" alt=""></figure>
+                                            <figure class="flag">
+                                                <img src="{{ asset('assets/images/icons/flag-5.png')}}" alt=""></figure>
                                             <ul class="lower-box clearfix">
                                                 <li><span>Send</span><span>90.30</span></li>
                                                 <li><span>Receive</span><span>95.30</span></li>
@@ -554,7 +571,8 @@
                                     <div class="exchange-block-one red">
                                         <div class="inner-box">
                                             <h5>AUD<i class="icon-39"></i></h5>
-                                            <figure class="flag"><img src="assets/images/icons/flag-6.png" alt=""></figure>
+                                            <figure class="flag">
+                                                <img src="{{ asset('assets/images/icons/flag-6.png')}}" alt=""></figure>
                                             <ul class="lower-box clearfix">
                                                 <li><span>Send</span><span>50.30</span></li>
                                                 <li><span>Receive</span><span>45.30</span></li>
@@ -590,16 +608,16 @@
                                 <h2>Get the Fastest and Most Secure Banking</h2>
                             </div>
                             <div class="text-box mb_50">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec felis, suscipit you take action against fraud. See it the Security Center for and Mobile and Online Banking.</p>
+                                <p>Center for and Mobile and Online Banking.</p>
                             </div>
                             <div class="btn-box">
-                                <a href="index.html" class="play-store mr_20">
-                                    <img src="assets/images/icons/icon-2.png" alt="">
+                                <a href="#" class="play-store mr_20">
+                             <img src="{{ asset('assets/images/icons/icon-2.png')}}" alt="">
                                     <span>get it on</span>
                                     Google Play
                                 </a>
-                                <a href="index.html" class="play-store">
-                                    <img src="assets/images/icons/icon-3.png" alt="">
+                                <a href="#" class="play-store">
+                             <img src="{{ asset('assets/images/icons/icon-3.png')}}" alt="">
                                     <span>Download on the</span>
                                     App Store
                                 </a>
@@ -621,7 +639,7 @@
                         <div class="sec-title mr_70">
                             <h6>Testimonials</h6>
                             <h2>Love from Happy Clients</h2>
-                            <p>Amet dui scelerisque habitant eget tincidunt facilisis pretium lorem ipsum dilore. </p>
+                            <p>We can testify the real nature of this platform. </p>
                         </div>
                     </div>
                     <div class="col-lg-8 col-md-12 col-sm-12 content-column">
@@ -629,7 +647,7 @@
                             <div class="testimonial-block-two">
                                 <div class="inner-box">
                                     <div class="author-box">
-                                        <figure class="thumb-box"><img src="assets/images/resource/testimonial-4.png" alt=""></figure>
+                                        <figure class="thumb-box"><img src="{{ asset('assets/images/resource/testimonial-4.png')}}" alt=""></figure>
                                         <h4>Julien Anthor</h4>
                                         <span class="designation">Manager</span>
                                     </div>
@@ -640,7 +658,7 @@
                                         <li><i class="icon-9"></i></li>
                                         <li><i class="icon-9"></i></li>
                                     </ul>
-                                    <p>“Lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque etiam nis quis at arcu nunc neque ac integer sit lobortis diam semper nulla duis in blandit.”</p>
+                                    <p>“Absolutely satisfied with the services received.”</p>
                                 </div>
                             </div>
                             <div class="testimonial-block-two">
@@ -657,7 +675,7 @@
                                         <li><i class="icon-9"></i></li>
                                         <li><i class="icon-9"></i></li>
                                     </ul>
-                                    <p>“Lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque etiam nis quis at arcu nunc neque ac integer sit lobortis diam semper nulla duis in blandit.”</p>
+                                    <p>“Never regreted my time on this platform. Thank you to Metrokapital.”</p>
                                 </div>
                             </div>
                         </div>
