@@ -121,7 +121,7 @@ class InvestmentTypeController extends Controller
      * 
      */
     public function delete($id){
-      $delete = InvestmentType::delete($id);
+      $delete = InvestmentType::where('id', $id)->delete();
       if($delete){
          return redirect()->back()->with('status', 'Investment type deleted successfully');
       }else{

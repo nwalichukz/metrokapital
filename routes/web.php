@@ -158,6 +158,8 @@ Route::any('/user/confirm-investment-type/{id}', [InvestmentTypeController::clas
 
 Route::get('/admin/get-all-investment-type', [InvestmentTypeController::class, 'getAll']);
 
+Route::post('/admin/inv-type/delete/{id}', [InvestmentTypeController::class, 'delete']);
+
 Route::get('/admin/get-all-wallet-address', [WalletAddressController::class, 'getAll']);
 
 Route::get('/admin/add-account-type', [InvestmentTypeController::class, 'addAccountTyePage']);
