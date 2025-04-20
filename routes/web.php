@@ -41,7 +41,11 @@ Route::get('/citizenship-inv-grenada', function () {
 });
 
 Route::get('/contact-us', function () {
-    return view('landing/contact');
+    return view('landing/contact')->with(['title'=>'Contact Us']);
+});
+
+Route::get('/about-us', function () {
+    return view('landing/about-us')->with(['title'=>'Contact Us']);
 });
 
 Route::get('/real-estate-inv-antigua-and-barbuda', function () {
