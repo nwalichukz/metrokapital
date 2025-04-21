@@ -49,31 +49,31 @@
                         <div class="nk-sidebar-menu" data-simplebar>
                             <ul class="nk-menu">
 
-                               {{-- <li class="nk-menu-item">
-                                    <a href="html/crm/index.html" class="nk-menu-link">
+                                <li class="nk-menu-item">
+                                    <a href="{{url('/user-signin/'.Auth::user()->id)}}" class="nk-men-link">
                                         <span class="nk-menu-icon"><em class="icon ni ni-dashboard-fill"></em></span>
-                                        <span class="nk-menu-text">Dashboard</span>
+                                        <span class="nk-menu-tex">Dashboard</span>
                                     </a>
-                                </li>--}}<!-- .nk-menu-item -->
+                                </li><!-- .nk-menu-item -->
 
                                 <li class="nk-menu-item has-sub">
                                     <a href="{{url('/dashboard/user-signin/'.Auth::user()->id)}}" class="nk-menu-link nk-menu-toggle">
                                         <span class="nk-menu-icon"><em class="icon ni ni-task-fill-c"></em></span>
-                                        <span class="nk-menu-text">Dashboard</span>
+                                        <span class="nk-menu-text">Accounts</span>
                                     </a>
                                     <ul class="nk-menu-sub">
                                        
                                         <li class="nk-menu-item">
-                                            <a href="html/crm/archive-task.html" class="nk-menu-link"><span class="nk-menu-text">Savings</span></a>
+                                            <a href="" class="nk-menu-link"><span class="nk-menu-text">Savings</span></a>
                                         </li>
                                         <li class="nk-menu-item">
-                                            <a href="html/crm/archive-task.html" class="nk-menu-link"><span class="nk-menu-text">Retirement</span></a>
+                                            <a href="" class="nk-menu-link"><span class="nk-menu-text">Retirement</span></a>
                                         </li>
                                         <li class="nk-menu-item">
-                                            <a href="html/crm/archive-task.html" class="nk-menu-link"><span class="nk-menu-text">Joint</span></a>
+                                            <a href="" class="nk-menu-link"><span class="nk-menu-text">Joint</span></a>
                                         </li>
                                         <li class="nk-menu-item">
-                                            <a href="html/crm/archive-task.html" class="nk-menu-link"><span class="nk-menu-text">Current</span></a>
+                                            <a href="" class="nk-menu-link"><span class="nk-menu-text">Current</span></a>
                                         </li>
                                     </ul><!-- .nk-menu-sub -->
                                 </li><!-- .nk-menu-item -->

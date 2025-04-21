@@ -17,13 +17,13 @@
 	
   <br>
   <div id="overlay" style="margin-left:auto; margin-right:auto; float:none;" class="col-md-8 alert alert-success">
-  <button type="button" class="close" data-dismiss="alert">×</button> 
+  <button type="button" data-dismiss="alert" aria-label="close">×</button> 
   <strong> {{ session::get('success') }} </strong>
   </div>
   @elseif(Session::has('error'))
    <br>
   <div id="overlay" style="margin-left:auto; margin-right:auto; float:none;" class="col-md-8 alert alert-danger">
-  <button type="button" class="close" data-dismiss="alert">×</button> 
+  <button type="button" class="close" data-dismiss="alert" aria-label="close">×</button> 
   <strong> {{ Session::get('error') }} </strong>
   </div>
   @endif
