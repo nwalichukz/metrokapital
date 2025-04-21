@@ -250,13 +250,15 @@ class UserWalletController extends Controller
             return redirect()->back()->withErrors($validator);
         } 
         
-        $receiver_wallet_details = UserWallet::where('wallet_no', $request['wallet_no'])->with('user')->first();
-        if(!empty($receiver_wallet_details->user_id) && Auth::user()->userWallet->balance >= $request['amount']){
+        $receiver_wallet_details = UserWallet::where('wallet_no', (int)$request['wallet_no'])->with('user')->first();
+        if(!empty($receiver_wallet_details->id)){
             return view('dashboard/src/html/components/forms/confirm-internal-transfer-details')->with(['data'=>  $receiver_wallet_details, 'user', 'amount'=>$request['amount']]);
         }else{
             return redirect()->back()->with('error', 'Invalid User Details or Insufficient balance');
         }
+
     }
+
 
     /**
      *
@@ -266,16 +268,18 @@ class UserWalletController extends Controller
      * @return $response
      */
     public static function transferToAnotherUserWalletId(Request $request){
-        $validation = Validator::make($request->all(),
+        /*$validation = Validator::make($request->all(),
             [
-                "sender_user_id" => "required",
+                //"sender_wallet_no" => "required",
                 "receiver_wallet_no" =>"required",
                 "amount"=>"required"
             ]);
-
+         // return 345;
         if($validation->fails()){
             return redirect()->back()->withErrors($validation);
-        }
+        }*/
+      return $request->all();
+        if(true/*$request['receiver_wallet_no'] == $request['sender_wallet_no']*/){
         if(self::checkAmt($request['sender_user_id'], $request['amount'])){
             try{
                 $credit = UserWallet::where('wallet_no', $request['receiver_wallet_no'])->with(['user'])->lockForUpdate()->first();
@@ -285,7 +289,7 @@ class UserWalletController extends Controller
                     if($debit->balance >= $request['amount'] && is_int($request['amount'])){
                         $debit->balance = $debit->balance - $request['amount'];
                         $debit->save();
-                        $debit_transaction_record = [
+                     $debit_transaction_record = [
                             'user_id' => $request['sender_user_id'],
                             'amount' => $request['amount'],
                             'transaction_type' => 'debit',
@@ -306,7 +310,7 @@ class UserWalletController extends Controller
                     UserTransactionHistoryController::save($credit_transaction_record);
                 });
 
-                return redirect()->back()->with('success', $request['amount'].' transfered successfully to '.$credit->user->first_name);
+                return redirect()->back()->with('success', $request['amount'].' transfered successfully to '.$credit->user->name);
                
             }catch(Exception $e){
                 return redirect()->back()->with('error', 'Something went wrong transfer could not be completed successfully. Please try again');
@@ -316,6 +320,9 @@ class UserWalletController extends Controller
             return redirect()->back()->with('error', 'You do not have sufficient balance in your wallet to carry out this transaction'); 
 
         }
+    }else{
+        return redirect()->back()->with('error', 'You can not make a transfer to yourself'); 
+    }
 
     }
 

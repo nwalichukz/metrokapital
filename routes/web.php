@@ -61,6 +61,25 @@ Route::get('/get-transactions', function () {
     return view('dashboard/src/html/crm/transaction');
 });
 
+Route::get('/get-joint-account-plans', function () {
+    return view('dashboard/src/html/crm/joint-account');
+});
+
+Route::get('/get-savings-account-plans', function () {
+    return view('dashboard/src/html/crm/savings-account');
+});
+
+
+Route::get('/get-retirement-account-plans', function () {
+    return view('dashboard/src/html/crm/retirement-account-plans');
+});
+
+
+Route::get('/get-current-account-plans', function () {
+    return view('dashboard/src/html/current-account-plans');
+});
+
+
 
 Route::get('/get-insurance', function () {
     return view('dashboard/src/html/pages/insurance');
@@ -105,6 +124,7 @@ Route::get('/user-signin/{id}', [AuthController::class, 'dashboard']);
 
 Route::get('/logout', [AuthController::class, 'logout']);
 
+Route::get('/user/grt-joint-account', [InvestmentController::class, 'getJointAccount']);
 Route::get('/admin/end-investment/{id}', [InvestmentController::class, 'endInv']);
 Route::get('/user/delete-investment/{id}', [InvestmentController::class, 'delete']);
 
@@ -145,11 +165,13 @@ Route::get('/view-residency-by-real-estate/{id}', [ResidencyByRealEstate::class,
 
 
 
-Route::post('/user/internal-transfer/create', [UserWalletController::class, 'transferToAnotherUserWalletId']);
+
 Route::get('/dashboard/get-investment-page/{id}', [InvestmentController::class, 'returnInvestmentPage']);
 
 Route::post('/admin/create-wallet-address', [WalletAddressController::class, 'create']);
 Route::any('/user/confirm-wallet-details', [UserWalletController::class, 'confirmUserWalletNo']);
+
+Route::any('/user/internal-transfer/create', [UserWalletController::class, 'transferToAnotherUserWalletId']);
 
 
 Route::post('/admin/create-investment-type', [InvestmentTypeController::class, 'create']);

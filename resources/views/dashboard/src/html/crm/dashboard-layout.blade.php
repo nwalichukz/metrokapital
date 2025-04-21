@@ -64,16 +64,16 @@
                                     <ul class="nk-menu-sub">
                                        
                                         <li class="nk-menu-item">
-                                            <a href="" class="nk-menu-link"><span class="nk-menu-text">Savings</span></a>
+                                            <a href="{{url('/get-savings-account-plans')}}" class="nk-menu-link"><span class="nk-menu-text">Savings</span></a>
                                         </li>
                                         <li class="nk-menu-item">
-                                            <a href="" class="nk-menu-link"><span class="nk-menu-text">Retirement</span></a>
+                                            <a href="{{url('/get-retirement-account-plans')}}" class="nk-menu-link"><span class="nk-menu-text">Retirement</span></a>
                                         </li>
                                         <li class="nk-menu-item">
-                                            <a href="" class="nk-menu-link"><span class="nk-menu-text">Joint</span></a>
+                                            <a href="{{url('/get-joint-account-plans')}}" class="nk-menu-link"><span class="nk-menu-text">Joint</span></a>
                                         </li>
                                         <li class="nk-menu-item">
-                                            <a href="" class="nk-menu-link"><span class="nk-menu-text">Current</span></a>
+                                            <a href="{{url('/get-current-account-plans')}}" class="nk-menu-link"><span class="nk-menu-text">Current</span></a>
                                         </li>
                                     </ul><!-- .nk-menu-sub -->
                                 </li><!-- .nk-menu-item -->
@@ -600,7 +600,8 @@
                                             </div>
                                             <div class="dropdown-inner">
                                                 <ul class="link-list">
-                                                    <li><a href="{{ url('/logout')}}"><em class="icon ni ni-signout"></em><span>Sign out</span></a></li>
+                                                    <li><a href="{{ url('/logout')}}">
+                                                        <em class="icon ni ni-signout"></em><span>Sign out</span></a></li>
                                                 </ul>
                                             </div>
                                         </div>

@@ -8,7 +8,7 @@
                                 <div class="nk-block-head nk-block-head-sm">
                                     <div class="nk-block-between">
                                         <div class="nk-block-head-content">
-                                            <h3 class="nk-block-title page-title">MetroKapital Dashboard</h3>
+                                            <h3 class="nk-block-title page-title">Retirement Account Plans</h3>
                                             <div class="nk-block-des text-soft">
                                                 {{--<p>Welcome Chukz.</p>--}}
                                             </div>
@@ -546,85 +546,132 @@
                                                 <div class="card-inner border-bottom">
                                                     <div class="card-title-group">
                                                         <div class="card-title">
-                                                            <h6 class="title">Accounts</h6>
+                                                            <h6 class="title">Choose from Retirement Account Plans</h6>
                                                         </div>
                                                         <div class="card-tools">
                                                             <a href="#" class="link">   </a>
                                                         </div>
                                                     </div>
                                                 </div>
+
                                                 <ul class="nk-support">
+
                                                     <li class="nk-support-item">
-                                                        <div class="user-avatar">
-                                                            <img src="./images/avatar/a-sm.jpg" alt="">
-                                                        </div>
+                                                        
                                                         <div class="nk-support-content">
                                                             <div class="title">
-                                                                <span>Primary Account</span>
+                                                                <span>Joint Account 01</span>
+                                                                <br/>
+                                                             
                                                                 <div class="status delivered">
                                                                     <em class="icon ni ni-check-circle-fill"></em>
                                                                 </div>
                                                             </div>
-                                                            <p>Balance: $ {{Auth::user()->userwallet->balance}}</p>
-                                                            <span class="time">sttus: active</span>
+                                                           
+                                                            <p> <span><b>&nbsp;&nbsp;  8%</b> </span> &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    <span><b>&nbsp;&nbsp; &nbsp;&nbsp;   90</b></span></p>
+                                                            <p><span>(int. rate)   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;     (Days Lockin)</span></p>
+                                                            <hr>
+                                                           <div>Minimum  &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;$1000   </div>
+                                                           <div>Maxiimum  &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;$100, 000   </div>
+                                                           <br/>
+                                                           <button> Apply Now</button>
                                                         </div>
+                                                        
                                                     </li>
 
 
 
                                                     <li class="nk-support-item">
-                                                        <div class="user-avatar bg-purple-dim">
-                                                            <span>JA</span>
-                                                        </div>
-                                                        <div class="nk-support-content ">
-                                                            <div class="title">
-                                                                <span> Joint Account</span>
-                                                                <div class="status unread">
-                                                                    <em class="icon ni ni-bullet-fill"></em>
-                                                                </div>
-                                                            </div>
-                                                            <tip>Joint account helps you make more profit  </tip>
-                                                            <a href="{{url('/user/grt-joint-account')}}">
-                                                            <span class="time primary">Create Account</span>
-                                                            </a>
-                                                        </div>
-                                                    </li>
-
-                                                    <li class="nk-support-item">
-                                                        <div class="user-avatar bg-purple-dim">
-                                                            <span>CA</span>
-                                                        </div>
-                                                        <div class="nk-support-content ">
-                                                            <div class="title">
-                                                                <span>Current Account</span>
-                                                                <div class="status unread">
-                                                                    <em class="icon ni ni-bullet-fill"></em>
-                                                                </div>
-                                                            </div>
-                                                            <p> </p>
-                                                            <a href="#">
-                                                            <span class="time">Create Account</span>
-                                        </a>
-                                                        </div>
-                                                    </li>
-
-
-                                                    <li class="nk-support-item">
-                                                        <div class="user-avatar">
-                                                            <img src="./images/avatar/b-sm.jpg" alt="">
-                                                        </div>
+                                                        
                                                         <div class="nk-support-content">
                                                             <div class="title">
-                                                                <span>Retirement Account</span>
-                                                                <div class="status sent">
-                                                                    <em class="icon ni ni-check-circle"></em>
+                                                                <span>Joint Account 02</span>
+                                                                <br/>
+                                                             
+                                                                <div class="status delivered">
+                                                                    <em class="icon ni ni-check-circle-fill"></em>
                                                                 </div>
                                                             </div>
-                                                            <p> </p>
-                                                            <a href="#">
-                                                            <span class="time">Create Account</span>
-                                        </a>
+                                                           
+                                                            <p> <span><b>&nbsp;&nbsp;  8%</b> </span> &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    <span><b>&nbsp;&nbsp; &nbsp;&nbsp;   90</b></span></p>
+                                                            <p><span>(int. rate)   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;     (Days Lockin)</span></p>
+                                                            <hr>
+                                                           <div>Minimum  &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;$1000   </div>
+                                                           <div>Maxiimum  &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;$100, 000   </div>
+                                                           <br/>
+                                                           <button> Apply Now</button>
                                                         </div>
+                                                        
+                                                    </li>
+
+
+                                                    <li class="nk-support-item">
+                                                        
+                                                        <div class="nk-support-content">
+                                                            <div class="title">
+                                                                <span>Joint Account 03</span>
+                                                                <br/>
+                                                             
+                                                                <div class="status delivered">
+                                                                    <em class="icon ni ni-check-circle-fill"></em>
+                                                                </div>
+                                                            </div>
+                                                           
+                                                            <p> <span><b>&nbsp;&nbsp;  8%</b> </span> &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    <span><b>&nbsp;&nbsp; &nbsp;&nbsp;   90</b></span></p>
+                                                            <p><span>(int. rate)   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;     (Days Lockin)</span></p>
+                                                            <hr>
+                                                           <div>Minimum  &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;$1000   </div>
+                                                           <div>Maxiimum  &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;$100, 000   </div>
+                                                           <br/>
+                                                           <button> Apply Now</button>
+                                                        </div>
+                                                        
+                                                    </li>
+
+                                                    <li class="nk-support-item">
+                                                        
+                                                        <div class="nk-support-content">
+                                                            <div class="title">
+                                                                <span>Joint Account 04</span>
+                                                                <br/>
+                                                             
+                                                                <div class="status delivered">
+                                                                    <em class="icon ni ni-check-circle-fill"></em>
+                                                                </div>
+                                                            </div>
+                                                           
+                                                            <p> <span><b>&nbsp;&nbsp;  8%</b> </span> &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    <span><b>&nbsp;&nbsp; &nbsp;&nbsp;   90</b></span></p>
+                                                            <p><span>(int. rate)   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;     (Days Lockin)</span></p>
+                                                            <hr>
+                                                           <div>Minimum  &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;$1000   </div>
+                                                           <div>Maxiimum  &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;$100, 000   </div>
+                                                           <br/>
+                                                           <button> Apply Now</button>
+                                                        </div>
+                                                        
+                                                    </li>
+
+                                                    <li class="nk-support-item">
+                                                        
+                                                        <div class="nk-support-content">
+                                                            <div class="title">
+                                                                <span>Joint Account 05</span>
+                                                                <br/>
+                                                             
+                                                                <div class="status delivered">
+                                                                    <em class="icon ni ni-check-circle-fill"></em>
+                                                                </div>
+                                                            </div>
+                                                           
+                                                            <p> <span><b>&nbsp;&nbsp;  8%</b> </span> &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    <span><b>&nbsp;&nbsp; &nbsp;&nbsp;   90</b></span></p>
+                                                            <p><span>(int. rate)   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;     (Days Lockin)</span></p>
+                                                            <hr>
+                                                           <div>Minimum  &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;$1000   </div>
+                                                           <div>Maxiimum  &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;$100, 000   </div>
+                                                           <br/>
+                                                           <button> Apply Now</button>
+                                                        </div>
+                                                        
                                                     </li>
                                                 </ul>
                                             </div>
