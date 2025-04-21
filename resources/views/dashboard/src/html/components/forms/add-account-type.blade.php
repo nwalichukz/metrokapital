@@ -24,6 +24,7 @@
                                                                         <option value="loans">Loans</option>
                                                                         <option value="dps">DPS</option>
                                                                         <option value="islamic banking">Islamic Banking</option>
+                                                                        <option value="Trading">Trading</option>
                                                                     </select>
                                                                 </div>
                                                             </div>

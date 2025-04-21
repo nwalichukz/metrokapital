@@ -201,6 +201,24 @@
                                         </ul>   
                                         </li>
 
+                                        <li class="nk-menu-item has-sub">
+                                    <a href="#" class="nk-menu-link nk-menu-toggle">
+                                        <span class="nk-menu-icon"><em class="icon ni ni-growth-fill"></em></span>
+                                        <span class="nk-menu-text">Trading</span>
+                                    </a>
+                                    <ul class="nk-menu-sub">
+                                    @foreach($appData->getLabelName($fdr = "Trading") as $country)
+                                        <li class="nk-menu-item">
+                                            <a href="{{url('user/confirm-investment-type/'.$country->id)}}" class="nk-menu-link"><span class="nk-menu-text">{{$country->name}}</span></a>
+                                        </li>
+                                       @endforeach
+                                  
+                                      
+                                    </ul><!-- .nk-menu-sub -->
+                                </li><!-- .nk-menu-item -->
+
+                                
+
 
                                 <li class="nk-menu-item has-sub">
                                     <a href="#" class="nk-menu-link nk-menu-toggle">
