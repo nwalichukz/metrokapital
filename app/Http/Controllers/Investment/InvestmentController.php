@@ -106,6 +106,26 @@ class InvestmentController extends Controller
         $invType = Investment::find($id);
         return view('dashboard.investment.edit-inv')->with(['inv-type'=>$invType]);
       }
+
+         /**
+     * getssingle investment 
+     * 
+     * 
+     * @param request
+     * 
+     * @return response
+     * 
+     */
+    public function getJointAccount(){
+      if(UserWalletController::checkAmt(Auth::user()->id, 1000)){
+   
+        return view('dashboard/src/html/components/forms/create-joint-account');
+
+      }else{
+        return redirect()->back()->with('error', 'You must have atleast USD 1000 before you can create a joint account');
+      }
+      
+    }
   
       /**
        * get many investment 

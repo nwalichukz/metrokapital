@@ -27,13 +27,12 @@
                                                
                                                     
                                                     <input type="hidden" name="sender_wallet_no" value="{{Auth::user()->userWallet->wallet_no}}" class="form-control" id="cf-full-name" required disabled>
-                                               
+                                                    <input type="hidden" name="sender_user_id" value="{{Auth::user()->id}}" class="form-control" id="cf-full-name" required disabled>
                                                 <div class="form-group">
                                                     <label class="form-label" for="cf-email-address">Amount</label>
                                                     <input type="number" name="amount" value="{{$amount}}" required class="form-control" id="cf-email-address" disabled>
                                                 </div>
                                                
-                                              
                                               
                                                 <div class="form-group">
                                                     <button type="submit" class="btn btn-lg btn-primary">Make Transfer</button>
