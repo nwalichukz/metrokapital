@@ -401,6 +401,17 @@ class UserWalletController extends Controller
 
     /**
      *
+     * returns 
+     *
+     *
+     *
+     */
+    public static function externalTransfer(Request $request){
+        return redirect()->back()->with('success', 'Transaction successful'); 
+    }
+
+    /**
+     *
      * checks if you can
      *
      * cash out

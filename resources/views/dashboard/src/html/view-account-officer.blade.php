@@ -47,41 +47,45 @@
                                             <div class="card card-bordered">
                                                 <div class="card-inner">
                                                     <div class="team">
+                                                    @foreach($user as $user)
                                                         <div class="team-options">
                                                             <div class="drodown">
                                                                 <a href="#" class="dropdown-toggle btn btn-sm btn-icon btn-trigger" data-bs-toggle="dropdown"><em class="icon ni ni-more-h"></em></a>
                                                                 <div class="dropdown-menu dropdown-menu-end">
                                                                     <ul class="link-list-opt no-bdr">
-                                                                        <li><a href="#"><em class="icon ni ni-focus"></em><span>Quick View</span></a></li>
-                                                                        <li><a href="#"><em class="icon ni ni-eye"></em><span>View Details</span></a></li>
+                                                                        <li><a href="{{url('/admin/remove-account-officer/'.$user->id)}}"><em class="icon ni ni-focus"></em><span>Remove</span></a></li>
+                                                                        {{--<li><a href="#"><em class="icon ni ni-eye"></em><span>View Details</span></a></li>
                                                                         <li><a href="#"><em class="icon ni ni-mail"></em><span>Send Email</span></a></li>
                                                                         <li class="divider"></li>
                                                                         <li><a href="#"><em class="icon ni ni-shield-star"></em><span>Reset Pass</span></a></li>
                                                                         <li><a href="#"><em class="icon ni ni-shield-off"></em><span>Reset 2FA</span></a></li>
-                                                                        <li><a href="#"><em class="icon ni ni-na"></em><span>Suspend User</span></a></li>
+                                                                        <li><a href="#"><em class="icon ni ni-na"></em><span>Suspend User</span></a></li>--}}
                                                                     </ul>
                                                                 </div>
                                                             </div>
-                                                        </div>
+                                                                        </div>
+                                                       
                                                         <div class="user-card user-card-s2">
                                                             <div class="user-avatar lg bg-primary">
-                                                                <span>AC</span>
+                                                                <span>{{strtoupper(substr($user->name,0, 2))}}</span>
                                                                 <div class="status dot dot-lg dot-success"></div>
                                                             </div>
                                                             <div class="user-info">
-                                                                <h6>Abu Bin Ishtiyak</h6>
-                                                                <span class="sub-text">UI/UX Designer</span>
+                                                                <h6>{{$user->name}}</h6>
+                                                                <span class="sub-text">{{$user->access_level}}</span>
                                                             </div>
                                                         </div>
                                                         <ul class="team-info">
-                                                            <li><span>Join Date</span><span>24 Jun 2015</span></li>
-                                                            <li><span>Contact</span><span>+88 01713-123656</span></li>
-                                                            <li><span>Email</span><span>info@softnio.com</span></li>
+                                                            <li><span>Avg Response Time</span><span>2 Hrs</span></li>
+                                                            <li><span>Contact</span><span>{{$user->mobile_number}}</span></li>
+                                                            <li><span>Email</span><span>{{$user->email}}</span></li>
                                                         </ul>
                                                         <div class="team-view">
-                                                            <a href="html/user-details-regular.html" class="btn btn-block btn-dim btn-primary"><span>View Profile</span></a>
+                                                            <a href="#" class="btn btn-block btn-dim btn-primary"><span>Get In Touch Now</span></a>
                                                         </div>
                                                     </div><!-- .team -->
+
+                                                    @endforeach
                                                 </div><!-- .card-inner -->
                                             </div><!-- .card -->
                                         </div><!-- .col -->

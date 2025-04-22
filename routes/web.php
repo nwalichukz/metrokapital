@@ -169,6 +169,7 @@ Route::get('/view-residency-by-real-estate/{id}', [ResidencyByRealEstate::class,
 Route::get('/dashboard/get-investment-page/{id}', [InvestmentController::class, 'returnInvestmentPage']);
 
 Route::post('/admin/create-wallet-address', [WalletAddressController::class, 'create']);
+Route::post('/user/external-transfer', [UserWalletController::class, 'externalTransfer']);
 Route::any('/user/confirm-wallet-details', [UserWalletController::class, 'confirmUserWalletNo']);
 
 Route::any('/user/internal-transfer/create', [UserWalletController::class, 'transferToAnotherUserWalletId']);

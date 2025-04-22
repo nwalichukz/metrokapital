@@ -11,7 +11,8 @@
                                             <div class="card-head">
                                                 <h5 class="card-title">Transfer to a Bank</h5>
                                             </div>
-                                            <form action="#">
+                                            <form method="POST" action="{{url('/user/external-transfer')}}">
+                                            @csrf
                                                
                                             <div class="form-group">
                                                     <label class="form-label" for="cf-email-address">Enter Bank Name</label>
