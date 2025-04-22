@@ -29,7 +29,7 @@
 
                                                 <div class="form-group">
                                                     <label class="form-label" for="cf-full-name">Upload Documents</label>
-                                                    <input name="doc_image" type="file" class="form-control" id="cf-full-name" placeholder="Enter amount to fund in USD" required>
+                                                    <input name="doc_image" type="file" class="form-control" id="cf-name" placeholder="Select Image" required>
                                                 </div>
                                                                                      
 

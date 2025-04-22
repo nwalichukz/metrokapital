@@ -50,7 +50,7 @@ class KycController extends Controller
         if($validator->fails()){
             return redirect()->back()->withErrors($validator);
         } 
-        // return $request->all();
+         return $request->all();
        // return  $request['doc_image'];
          $find = Kyc::where('user_id', Auth::user()->id)->first();
           if(empty($find->id)){

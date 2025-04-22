@@ -11,7 +11,7 @@
     <!-- Fav Icon  -->
     <link rel="shortcut icon" href="{{ asset('dashboard/images/favicon.png')}}">
     <!-- Page Title  -->
-    <title>MetroKapital | Your Finance Pal</title>
+    <title>MetroKapital | Dashboard</title>
     <!-- StyleSheets  -->
     <link rel="stylesheet" href="{{ asset('dashboard/assets/css/dashlite.css?ver=3.2.4')}}">
     <link id="skin-default" rel="stylesheet" href="{{ asset('dashboard/assets/css/theme.css?ver=3.2.4')}}">
@@ -38,9 +38,8 @@
                     <div class="nk-sidebar-brand">
                         <a href="{{url('/')}}" class="logo-link nk-sidebar-logo">
                            <img class="logo-light logo-img" src="{{ asset('dashboard/images/logo.png')}}" srcset="dashboard/images/logo.png 2x" alt="logo">
-                            <img class="logo-dark logo-img" src="{{ asset('dashboard/images/logo-dark.png')}}" srcset="dashboard/images/logo.png 2x" alt="logo-dark">
-                                
-                               
+                            <img class="logo-light logo-img" src="{{ asset('dashboard/images/logo.png')}}" srcset="dashboard/images/logo.png 2x" alt="logo">
+                                   
                         </a>
                     </div>
                 </div><!-- .nk-sidebar-element -->
@@ -530,8 +529,8 @@
                             </div>
                             <div class="nk-header-brand d-xl-none">
                                 <a href="{{url('/')}}" class="logo-link">
-                                    <img class="logo-light logo-img" src="{{ asset('dashboard/images/logo.png')}}" srcset="dashboard/images/logo2x.png 2x" alt="logo">
-                                    <img class="logo-dark logo-img" src="{{ asset('dashboard/images/logo-dark.png')}}" srcset="dashboard/images/logo-dark2x.png 2x" alt="logo-dark">
+                                    <img class="logo-light logo-img" src="{{ asset('dashboard/images/logo.png')}}" srcset="dashboard/images/logo.png 2x" alt="logo">
+                                    <img class="logo-dark logo-img" src="{{ asset('dashboard/images/logo.png')}}" srcset="dashboard/images/logo.png 2x" alt="logo">
                                 </a>
                             </div><!-- .nk-header-brand -->
                             <div class="nk-header-news d-none d-xl-block">

@@ -463,7 +463,7 @@ public static function changePassword(Request $request){
     public static function getAccountOfficer(){
       if(Auth::check()){
        if(Auth::user()->access_level == 'admin'){
-    $data = User::where('id', '!=', 'null')->orderBy('created_at', 'DESC')->paginate(20);
+    $data = User::where('account_officer', 'yes')->orderBy('created_at', 'DESC')->paginate(20);
     return view('dashboard/src/html/view-account-officer')->with(['user'=>$data]);
        }else{
          return redirect('/get-login');
