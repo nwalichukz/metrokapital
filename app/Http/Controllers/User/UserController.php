@@ -47,6 +47,7 @@ class UserController extends Controller
             $user->mobile_number = $request['mobile_number'];
             $user->country = $request['country'];
             $user->access_level = 'user';
+            $user->kyc_status = 'not-verified';
             $user->save();      
         return $user->id;
      }
