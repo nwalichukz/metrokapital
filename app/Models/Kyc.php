@@ -10,7 +10,7 @@ class Kyc extends Model
     use HasFactory;
 
 
-    public function kyc(){
+    public function user(){
         return $this->belongsTo('App\Models\User');
     }
 }

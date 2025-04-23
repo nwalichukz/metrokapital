@@ -1,5 +1,5 @@
      <!-- content @s -->
- @extends('dashboard/src/html/crm/dashboard-layout')
+ @extends('dashboard/src/html/crm/dashboard-layout-no-kyc')
 @section('content')        
             <!-- content @s -->
             <div class="nk-content ">
@@ -12,6 +12,7 @@
                                         <div class="card-inner">
                                             <div class="card-head">
                                                 <h5 class="card-title">UPLOAD KYC DOCUMENTS</h5>
+                                                <h6>You must complete this photo ID verification before you can continue. If you have upload your documents. Wait for verication or contact admin</h6>
                                             </div>
                                             <form method="post" action="{{url('user/kyc-document/create')}}" enctype="multipart/form-data" accept=true>
                                             @csrf
@@ -21,7 +22,7 @@
                                                                     <select class="form-select js-select2" id="fv-topics" name="name" data-placeholder="Select a option" required>
                                                                         <option value="">Select Document Type</option>
                                                                         <option value="passport">Passport</option>
-                                                                        <option value="national-id">National ID</option>
+                                                                        <option value="natonal-id">National ID</option>
                                                                         <option value="drivers-licence">Driver's Licence</option>
                                                                       
                                                                     </select>

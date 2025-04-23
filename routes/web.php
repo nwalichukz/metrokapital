@@ -90,6 +90,10 @@ Route::get('/get-login', function () {
     return view('dashboard/src/html/pages/auths/auth-login');
 });
 
+Route::get('/get-login-no-kyc', function () {
+    return view('dashboard/src/html/pages/auths/auth-login-no-kyc');
+});
+
 
 Route::get('/get-register', function () {
     return view('dashboard/src/html/pages/auths/auth-register');
@@ -223,6 +227,10 @@ Route::get('/admin/cancel-deposit-request/{id}', [DepositRequestController::clas
 
 Route::get('/user/get-kyc-page', [KycController::class, 'uploadDocPage']);
 Route::post('/user/kyc-document/create', [KycController::class, 'create']);
+Route::get('/admin/get-pending-kyc', [KycController::class, 'pendingKyc']);
+Route::get('/admin/approve/{id}', [KycController::class, 'approve']);
+Route::get('/admin/decline/{id}', [KycController::class, 'decline']);
+
 
 
 
