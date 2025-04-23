@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Controllers\Image\ImageController;
 use Illuminate\Http\Request;
 use App\Models\Kyc;
+use App\Models\User;
 use Validator, Auth;
 
 class KycController extends Controller
@@ -43,14 +44,14 @@ class KycController extends Controller
         $validator = Validator::make($request->all(),
         [
         'name' => 'required',
-        'doc_image' => 'required',
+        'image' => 'required',
       
         ]);
 
         if($validator->fails()){
             return redirect()->back()->withErrors($validator);
         } 
-         return $request->all();
+        // return $request['doc_image'];
        // return  $request['doc_image'];
          $find = Kyc::where('user_id', Auth::user()->id)->first();
           if(empty($find->id)){
@@ -100,8 +101,21 @@ class KycController extends Controller
      * 
      */
 
-     public static function verifyKyc($request){
+     public static function approve($id){
         if(Auth::user()->access_level == 'admin'){
+         $kyc = Kyc::where('id', $id)->with('user')->first();
+         
+         if(!empty($kyc->id)){
+            $kyc->status = 'verified';
+            $kyc->save();
+            $user = User::find($kyc->user->id);
+            $user->kyc_status = 'verified';
+            $user->save();
+            return redirect()->back()->with('success', 'User KYC approved');
+         }else{
+            return redirect()->back()->with('error', 'Something went wrong you could not approve this KYC. Try again');
+         }
+        
 
         }else{
         return redirect()->back()->with('error', 'Something went wrong you can not perform this operation');
@@ -124,4 +138,51 @@ class KycController extends Controller
         return view('dashboard/src/html/components/forms/upload-kyc-documents');
   
       }
+
+       /**
+     * approve KYC
+     * 
+     * @return true
+     * 
+     * @param $settings page
+     * 
+     */
+    public static function decline($id){
+      
+      if(Auth::user()->access_level == 'admin'){
+         $kyc = Kyc::where('id', $id)->with('user')->first();
+         if(!empty($kyc->id)){
+            $kyc->status = 'declined';
+            $kyc->save();
+            $suer = User::find($kyc->user->id);
+            $user->kyc_status = 'declined';
+            $user->save();
+            return redirect()->back()->with('success', 'User KYC declined');
+         }else{
+            return redirect()->back()->with('error', 'Something went wrong you could not decline this KYC. Try again');
+         }
+        
+        }else{
+        return redirect()->back()->with('error', 'Something went wrong you can not perform this operation');
+           }
+
+    }
+
+
+      
+      /**
+     * returns pending kyc submited
+     * 
+     * @return true
+     * 
+     * @param $settings page
+     * 
+     */
+    public static function pendingKyc(){
+      $kyc = Kyc::where('status', 'pending')->get();
+      return view('dashboard/src/html/components/elements/kyc-display')->with(['kyc'=>$kyc, 'user']);
+
+    }
+
+
 }

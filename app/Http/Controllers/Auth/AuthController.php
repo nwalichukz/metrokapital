@@ -32,7 +32,9 @@ class AuthController extends Controller
             return redirect()->back()->withErrors($validator);
         } 
 
-        $credentials = ['email' => $request['email'], 'password'=>$request['password']];
+        $credentials = ['email' => $request['email'], 'password'=>$request['password'], 'kyc_status'=>'verified'];
+        $credentials_not_verified = ['email' => $request['email'], 'password'=>$request['password'], 'kyc_status'=>'not-verified'];
+        $credentials_declined = ['email' => $request['email'], 'password'=>$request['password'], 'kyc_status'=>'declined'];
 
          if($user = Auth::attempt($credentials)){
             $user = Auth::user();
@@ -41,7 +43,12 @@ class AuthController extends Controller
             }elseif(Auth::user()->access_level=='user'){
                 return redirect('/user-signin/'.$user->id )->with(['myTransactions'=>'transactionHistory']);
               }
-          
+            }elseif($user = Auth::attempt($credentials_not_verified)){
+                $user = Auth::attempt(['email' => $request['email'], 'password'=>$request['password']]);
+                return redirect('get-login-no-kyc');
+            }elseif($user = Auth::attempt($credentials_declined)){
+                $user = Auth::attempt(['email' => $request['email'], 'password'=>$request['password']]);
+                return redirect('get-login-no-kyc');
          }else{
             return redirect()->back()->with('error', 'Invalid user details');
          }

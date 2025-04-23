@@ -16,17 +16,27 @@ class ImageController extends Controller
      * 
      */
     public static function uploadKyc($request){
-        $file = $request['doc_image'];
+       /* $file = $request['doc_image'];
         $filename = mt_rand().time().'.'.'png';
-        $file = base64_decode(preg_replace('#^data:image/\w+;base64,#i', '',  $file)); // decode the file
+        // $file = base64_decode(preg_replace('#^data:image/\w+;base64,#i', '',  $file)); // decode the file
         $upload = Image::make($file)->resize(180, 180, function ($constraint){
          $constraint->aspectRatio();
-       })->stream();
+       }); //->stream();
        $upload = $upload->__toString();
       // $s3 = Storage::disk('s3');
          $filepath = 'images/Kyc/'.$filename;
           $upload->save($filepath);
-          return $filepath;
+          return $filepath; */
+          $image = $request->file('image');
+
+          $input['imagename'] = hexdec(uniqid()).$image->getClientOriginalName();
+      
+          $location = public_path("images/Kyc");
+      
+          $imgs = Image::make($image->getPathname());
+      
+          $imgs->resize(400 , 300, function ($constraint) { $constraint->aspectRatio(); })->save($location.'/'.$input['imagename']);
+          return $input['imagename'];
 
     }
 

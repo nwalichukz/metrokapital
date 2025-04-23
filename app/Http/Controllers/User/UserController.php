@@ -46,7 +46,7 @@ class UserController extends Controller
             $user->password = bcrypt($request['password']);
             $user->mobile_number = $request['mobile_number'];
             $user->country = $request['country'];
-            $user->access_level = 'admin';
+            $user->access_level = 'user';
             $user->save();      
         return $user->id;
      }
@@ -250,6 +250,7 @@ class UserController extends Controller
         if(!empty($user->id)){
           if(Auth::user()->user_level =='admin'){
             $user->user_level = 'admin';
+            $user->kyc_status = 'verified';
             $user->save();
             return redirect()->back()->with('success', 'User made admin successfully');
           }else{
