@@ -268,18 +268,18 @@ class UserWalletController extends Controller
      * @return $response
      */
     public static function transferToAnotherUserWalletId(Request $request){
-        /*$validation = Validator::make($request->all(),
+        $validation = Validator::make($request->all(),
             [
-                //"sender_wallet_no" => "required",
+                "sender_wallet_no" => "required",
                 "receiver_wallet_no" =>"required",
                 "amount"=>"required"
             ]);
          // return 345;
         if($validation->fails()){
             return redirect()->back()->withErrors($validation);
-        }*/
-      return $request->all();
-        if(true/*$request['receiver_wallet_no'] == $request['sender_wallet_no']*/){
+        }
+      // return $request->all();
+        if($request['receiver_wallet_no'] !== $request['sender_wallet_no']){
         if(self::checkAmt($request['sender_user_id'], $request['amount'])){
             try{
                 $credit = UserWallet::where('wallet_no', $request['receiver_wallet_no'])->with(['user'])->lockForUpdate()->first();
@@ -305,12 +305,12 @@ class UserWalletController extends Controller
                         'user_id' => $credit->user_id,
                         'amount' => $request['amount'],
                         'transaction_type' => 'credit',
-                        'purpose' => 'transfer',
+                        'purpose' => 'transfer from '.$credit->user->name,
                     ];
                     UserTransactionHistoryController::save($credit_transaction_record);
                 });
 
-                return redirect()->back()->with('success', $request['amount'].' transfered successfully to '.$credit->user->name);
+                return redirect()->back()->with('success', '$'.$request['amount'].' transfered successfully to '.$credit->user->name);
                
             }catch(Exception $e){
                 return redirect()->back()->with('error', 'Something went wrong transfer could not be completed successfully. Please try again');

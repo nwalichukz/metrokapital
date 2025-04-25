@@ -217,7 +217,7 @@
                                 </li><!-- .nk-menu-item -->
 
                                 
-
+                              @if(Auth::user()->access_level == 'admin')
 
                                 <li class="nk-menu-item has-sub">
                                     <a href="#" class="nk-menu-link nk-menu-toggle">
@@ -387,7 +387,7 @@
          
                                     </ul><!-- .nk-menu-sub -->
                                 </li><!-- .nk-menu-item -->
-
+                       @endif
                                 
 
 
@@ -543,13 +543,13 @@
                             </div>
                             <div class="nk-header-brand d-xl-none">
                                 <a href="{{url('/')}}" class="logo-link">
-                                    <img class="logo-light logo-img" src="{{ asset('dashboard/images/logo.png')}}" srcset="dashboard/images/logo.png 2x" alt="logo">
-                                    <img class="logo-dark logo-img" src="{{ asset('dashboard/images/logo.png')}}" srcset="dashboard/images/logo.png 2x" alt="logo">
+                                    <img class="logo-light logo-img" src="{{ asset('dashboard/images/logo.png')}}" srcset="{{ asset('dashboard/images/logo.png')}}" alt="logo">
+                                    <img class="logo-dark logo-img" src="{{ asset('dashboard/images/logo.png')}}" srcset="{{ asset('dashboard/images/logo.png')}}" alt="logo">
                                 </a>
                             </div><!-- .nk-header-brand -->
                             <div class="nk-header-news d-none d-xl-block">
                                 <div class="nk-news-list">
-                                    <a class="nk-news-item" href="#">
+                                    <a class="nk-news-item" href="{{url('/')}}">
                                         <div class="nk-news-icon">
                                             <em class="icon ni ni-card-view"></em>
                                         </div>
@@ -624,8 +624,7 @@
                                             <div class="dropdown-inner">
                                                 <ul class="link-list">
                                                     <li><a href="{{url('/user-profile-setting/'.Auth::user()->id)}}"><em class="icon ni ni-user-alt"></em><span>View Profile</span></a></li>
-                                                    <li><a href="{{url('/user/security-setting/'.Auth::user()->id)}}"><em class="icon ni ni-setting-alt"></em><span>Account Setting</span></a></li>
-                                                    <li><a href="html/user-profile-activity.html"><em class="icon ni ni-activity-alt"></em><span>Login Activity</span></a></li>
+                                                    <li><a href="{{url('/user/change-password')}}"><em class="icon ni ni-setting-alt"></em><span>Change Password</span></a></li>
                                                     <li><a class="dark-switch" href="#"><em class="icon ni ni-moon"></em><span>Dark Mode</span></a></li>
                                                 </ul>
                                             </div>

@@ -13,11 +13,11 @@
                                             <div class="card-head">
                                                 <h5 class="card-title">Internal Transfer</h5>
                                             </div>
-                                            <form method="POST" action="{{url('/user/confirm-wallet-details')}}">
+                                            <form method="POST" action="{{url('/user/internal-transfer/create')}}">
                                             @csrf
                                                 <div class="form-group">
                                                     <label class="form-label" for="cf-full-name">Wallet No</label>
-                                                    <input type="number" name="wallet_no" class="form-control" id="cf-full-name" required>
+                                                    <input type="number" name="receiver_wallet_no" class="form-control" id="cf-full-name" required>
                                                 </div>
                                                 <div class="form-group">
                                                     <label class="form-label" for="cf-email-address">Amount</label>
@@ -25,9 +25,10 @@
                                                 </div>
                                                
                                               
-                                              
+                                                <input type="hidden" name="sender_wallet_no" value="{{Auth::user()->userWallet->wallet_no}}" class="form-control" id="cf-full-name" required>
+                                                <input type="hidden" name="sender_user_id" value="{{Auth::user()->id}}" class="form-control" id="" required>
                                                 <div class="form-group">
-                                                    <button type="submit" class="btn btn-lg btn-primary">Confirm Details</button>
+                                                    <button type="submit" class="btn btn-lg btn-primary">Make Transfer</button>
                                                 </div>
                                             </form>
                                         </div>
