@@ -64,7 +64,7 @@ class UserTransactionHistoryController extends Controller
      */
     public static function getHistoryToday(){
       $today = Carbon::today();
-       return TransactionHistory::whereDate('created_at', $today)->where('purpose', 'post view bonus')
+       return UserTransactionHistory::whereDate('created_at', $today)->where('purpose', 'post view bonus')
                                                 ->where('transaction_type', 'credit')
                                                 ->sum('amount');
       
@@ -78,7 +78,7 @@ class UserTransactionHistoryController extends Controller
     public static function getHistoryThisWeek(){
       $now = Carbon::today();
       $weekstart = $now->startOfWeek();
-       return TransactionHistory::whereDate('created_at', '>=', $weekstart)->where('purpose', 'post view bonus')
+       return UserTransactionHistory::whereDate('created_at', '>=', $weekstart)->where('purpose', 'post view bonus')
                                                 ->where('transaction_type', 'credit')
                                                 ->sum('amount');
       
@@ -92,7 +92,7 @@ class UserTransactionHistoryController extends Controller
     public static function getHistoryThisMonth(){
       $now = Carbon::today();
       $monthstart = $now->startOfMonth();
-       return TransactionHistory::whereDate('created_at', '>=', $monthstart)->where('purpose', 'post view bonus')
+       return UserTransactionHistory::whereDate('created_at', '>=', $monthstart)->where('purpose', 'post view bonus')
                                                 ->where('transaction_type', 'credit')
                                                 ->sum('amount');
       
@@ -106,12 +106,71 @@ class UserTransactionHistoryController extends Controller
     public static function getHistoryThisYear (){
       $now = Carbon::today();
       $yearstart = $now->startOfYear();
-       return TransactionHistory::whereDate('created_at', '>=', $yearstart)->where('purpose', 'post view bonus')
+       return UserTransactionHistory::whereDate('created_at', '>=', $yearstart)->where('purpose', 'post view bonus')
                                                 ->where('transaction_type', 'credit')
                                                 ->sum('amount');
       
 
     }
+
+
+
+     /***
+     * deletes a transaction history
+     * sum for this year
+     */
+    public static function delete($id){
+     $delete = UserTransactionHistory::where('id', $id)->first();
+     if($delete){
+      return redirect()->back()->with('success', 'Transaction successfully deleted'); 
+     }else{
+      return redirect()->back()->with('error', 'You could not delete the transaction'); 
+     }
+      
+
+    }
+
+
+    
+     /***
+     * deletes a transaction history
+     * sum for this year
+     */
+    public static function getEdit($id){
+      $edit = UserTransactionHistory::where('id', $id)->first();
+      return view('dashboard/src/html/components/forms/edit-transaction')->with(['edit'=>$edit]);
+       
+ 
+     }
+
+
+           /**
+       * update a transaction
+       * 
+       * @param $request
+       * 
+       */
+      public static function update(Request $request){
+        if(Auth::user()->access_level == 'admin'){
+        $update = UserTransactionHistory::find($request['id']);
+        if(!empty($request['amount'])){
+        $update->amount = $request['amount'];
+        }
+        if(!empty($request['date'])){
+        $update->created_at = $request['date'];
+        }
+        $ok = $update->save();
+        if($ok){
+            return redirect()->back()->with('status', 'Transaction updated successfully');
+        }else{
+            return redirect()->back()->with('status', 'Something went wrong transaction could not updated successfully. Please try again');
+        }
+      }else{
+        return rediect('/login');
+            }
+      }
+
+
 
 
 }
