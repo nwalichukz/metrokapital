@@ -13,24 +13,24 @@
                                             <div class="card-head">
                                                 <h5 class="card-title">Confirm Transfer Details</h5>
                                             </div>
-                                            <form method="POST" action="{{url('/user/internal-transfer/create')}}">
+                                            <form method="post" action="{{url('/user/internal-transfer/create')}}">
                                             @csrf
                                             <div class="form-group">
                                                     <label class="form-label" for="cf-full-name">Name</label>
-                                                    <input type="text" name="name" value="{{$data->user->name}}" class="form-control" id="cf-full-name" required disabled>
+                                                    <input type="text" name="name" value="Adaora" class="form-control" id="cf-full" required disabled>
                                                 </div>
                                                 
                                                 <div class="form-group">
                                                     <label class="form-label" for="cf-full-name">Wallet No</label>
-                                                    <input type="number" name="receiver_wallet_no" value="{{$data->wallet_no}}" class="form-control" id="cf-full-name" required disabled>
+                                                    <input type="number" name="receiver_wallet_no" value="{{$data->wallet_no}}" class="form-control" id="cf-name" required disabled>
                                                 </div>
                                                
                                                     
                                                     <input type="hidden" name="sender_wallet_no" value="{{Auth::user()->userWallet->wallet_no}}" class="form-control" id="cf-full-name" required disabled>
-                                                    <input type="hidden" name="sender_user_id" value="{{Auth::user()->id}}" class="form-control" id="cf-full-name" required disabled>
+                                                    <input type="hidden" name="sender_user_id" value="{{Auth::user()->id}}" class="form-control" id="" required disabled>
                                                 <div class="form-group">
                                                     <label class="form-label" for="cf-email-address">Amount</label>
-                                                    <input type="number" name="amount" value="{{$amount}}" required class="form-control" id="cf-email-address" disabled>
+                                                    <input type="number" name="amount" value="{{$amount}}" required class="form-control" id="" disabled>
                                                 </div>
                                                
                                               

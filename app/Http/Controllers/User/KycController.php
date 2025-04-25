@@ -26,6 +26,7 @@ class KycController extends Controller
         $save = new Kyc;
         $save->user_id = Auth::user()->id;
         $save->name = $request['name'];
+        $save->status = 'pending';
         $save->file_name = ImageController::uploadKyc($request);
         $save->save();
         return $save->id;
