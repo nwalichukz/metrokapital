@@ -41,18 +41,18 @@
                                                                 <tr class="nk-tb-item">
                                                                   
                                                                     <td class="nk-tb-col">
-                                                                        <span>{{$myTransact->purpose}}<span class="dot dot-success d-lg-none ms-1"></span></span>
+                                                                        <span>{{substr($myTransact->purpose, 0, 20)}}<span class="dot dot-success d-lg-none ms-1"></span></span>
                                                                     </td>
                                                                     <td class="nk-tb-col">
                                                                         <span>{{$myTransact->transaction_type}}</span>
                                                                     </td>
 
                                                                     <td class="nk-tb-col">
-                                                                        <span>{{$myTransact->amount}}</span>
+                                                                        <span>${{number_format($myTransact->amount)}}</span>
                                                                     </td>
 
                                                                     <td class="nk-tb-col">
-                                                                        <span>{{$myTransact->created_at->diffForHumans()}}</span>
+                                                                        <span>{{date_format($myTransact->created_at, 'd M, Y H:i')}}</span>
                                                                     </td>
                                                                    
                                                                     <td class="nk-tb-col nk-tb-col-tools">
@@ -62,7 +62,8 @@
                                                                                     <a href="#" class="dropdown-toggle btn btn-icon btn-trigger" data-bs-toggle="dropdown"><em class="icon ni ni-more-h"></em></a>
                                                                                     <div class="dropdown-menu dropdown-menu-end">
                                                                                         <ul class="link-list-opt no-bdr">
-                                                                                            <li><a data-bs-toggle="modal" href="#editDataDash"><em class="icon ni ni-trash"></em><span>Delete</span></a></li>
+                                                                                
+                                                                                            <li><a data-bs-toggle="modal" href="#editDataDash"><em class="icon ni ni-trash"></em><span>Full view</span></a></li>
                                                                                          
                                                                                         </ul>
                                                                                     </div>
