@@ -200,5 +200,22 @@ class InvestmentTypeController extends Controller
     }
 
 
+      /**
+     * returns acc plans
+     * 
+     * page
+     * 
+     * @param request
+     * 
+     * @return response
+     * 
+     */
+    public function getAccountPlans($name){
+      $acc_plans = InvestmentType::where('parent_name', $name)->get();
+      return view('dashboard/src/html/crm/account-plans')->with(['acc_plans'=>$acc_plans, 'name'=>$name]);
+     
+    }
+
+
 
 }

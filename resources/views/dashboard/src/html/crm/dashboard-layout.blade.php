@@ -63,16 +63,16 @@
                                     <ul class="nk-menu-sub">
                                        
                                         <li class="nk-menu-item">
-                                            <a href="{{url('/get-savings-account-plans')}}" class="nk-menu-link"><span class="nk-menu-text">Savings</span></a>
+                                            <a href="{{url('user/get-account-plans/Savings')}}" class="nk-menu-link"><span class="nk-menu-text">Savings</span></a>
                                         </li>
                                         <li class="nk-menu-item">
-                                            <a href="{{url('/get-retirement-account-plans')}}" class="nk-menu-link"><span class="nk-menu-text">Retirement</span></a>
+                                            <a href="{{url('/user/get-account-plans/Retirement Plan')}}" class="nk-menu-link"><span class="nk-menu-text">Retirement</span></a>
                                         </li>
                                         <li class="nk-menu-item">
-                                            <a href="{{url('/get-joint-account-plans')}}" class="nk-menu-link"><span class="nk-menu-text">Joint</span></a>
+                                            <a href="{{url('user/get-account-plans/Joint')}}" class="nk-menu-link"><span class="nk-menu-text">Joint</span></a>
                                         </li>
                                         <li class="nk-menu-item">
-                                            <a href="{{url('/get-current-account-plans')}}" class="nk-menu-link"><span class="nk-menu-text">Current</span></a>
+                                            <a href="{{url('user/get-account-plans/Current')}}" class="nk-menu-link"><span class="nk-menu-text">Current</span></a>
                                         </li>
                                     </ul><!-- .nk-menu-sub -->
                                 </li><!-- .nk-menu-item -->
