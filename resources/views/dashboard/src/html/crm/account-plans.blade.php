@@ -546,7 +546,7 @@
                                                 <div class="card-inner border-bottom">
                                                     <div class="card-title-group">
                                                         <div class="card-title">
-                                                            <h6 class="title">Choose from Savings Account Plans</h6>
+                                                            <h6 class="title">Choose from {{$name}} Account Plans</h6>
                                                         </div>
                                                         <div class="card-tools">
                                                             <a href="#" class="link">   </a>
@@ -555,12 +555,13 @@
                                                 </div>
 
                                                 <ul class="nk-support">
+                                                    @foreach($acc_plans as $plan)
 
                                                     <li class="nk-support-item">
                                                         
                                                         <div class="nk-support-content">
                                                             <div class="title">
-                                                                <span>Joint Account 01</span>
+                                                                <span>{{$plan->name}}</span>
                                                                 <br/>
                                                              
                                                                 <div class="status delivered">
@@ -568,16 +569,19 @@
                                                                 </div>
                                                             </div>
                                                            
-                                                            <p> <span><b>&nbsp;&nbsp;  8%</b> </span> &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    <span><b>&nbsp;&nbsp; &nbsp;&nbsp;   90</b></span></p>
+                                                            <p> <span><b>&nbsp;&nbsp;  {{$plan->earning_percentage}}%</b> </span> &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    <span><b>&nbsp;&nbsp; &nbsp;&nbsp;   {{$plan->duration}}</b></span></p>
                                                             <p><span>(int. rate)   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;     (Days Lockin)</span></p>
                                                             <hr>
-                                                           <div>Minimum  &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;$1000   </div>
-                                                           <div>Maxiimum  &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;$100, 000   </div>
+                                                           <div>Minimum  &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;${{number_format($plan->min_amt)}}  </div>
+                                                           <div>Maxiimum  &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;${{number_format($plan->max_amt)}}  </div>
                                                            <br/>
+                                                           <a href="{{url('/user/confirm-investment-type/'.$plan->id)}}">
                                                            <button> Apply Now</button>
+                                        </a>
                                                         </div>
                                                         
                                                     </li>
+                                                    @endforeach
 
                                                 </ul>
                                             </div>

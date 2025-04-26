@@ -185,6 +185,8 @@ Route::any('/user/confirm-investment-type/{id}', [InvestmentTypeController::clas
 
 Route::get('/admin/get-all-investment-type', [InvestmentTypeController::class, 'getAll']);
 
+Route::get('/user/get-account-plans/{name}', [InvestmentTypeController::class, 'getAccountPlans']);
+
 Route::get('/admin/inv-type/delete/{id}', [InvestmentTypeController::class, 'delete']);
 
 Route::get('/admin/get-all-wallet-address', [WalletAddressController::class, 'getAll']);
