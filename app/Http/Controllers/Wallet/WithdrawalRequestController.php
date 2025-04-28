@@ -3,192 +3,180 @@
 namespace App\Http\Controllers\Wallet;
 
 use App\Http\Controllers\Controller;
-use App\Http\Controllers\Wallet\WalletController;
+use App\Http\Controllers\Wallet\UserWalletController;
 use Illuminate\Http\Request;
-use App\Models\WithdrawRequest;
+use App\Models\WithdrawalRequest;
 use App\Models\User;
 use Carbon\Carbon;
-use Validator;
+use Validator, Auth;
 
 class WithdrawalRequestController extends Controller
 {
+      /**
+     * saves user data to db
+     * @param $reqest
+     * @return response
+     * 
+     */
+
+     public static function save($request){
+      $user = new  WithdrawalRequest;
+           $user->amount = $request['amount'];
+           $user->user_id = Auth::user()->id;
+           $user->save();
+       
+       return $user->id;
+    }
+
     /**
-     * saves withdrawal request
-     * 
-     * 
-     * @param request
-     * 
-     * @return response
-     * 
-     */
-    public static function save($request){
-        $save = new WithdrawRequest;
-        $save->user_id = $request['user_id'];
-        $save->amount = $request['amount'];
-        $save->recieving_wallet_address = $request['recieving_wallet_address'];
-        $save->status = 'pending';
-        $save->save();
-        return $save->id;
+    * page
+    * 
+    * 
+    * @return response
+    * 
+    */
+   public function myDepositRequest(){
+     return view('dashboard.wallet.my-deposit-request');
+   }
+
+
+    /**
+    * deletes deposit request
+    * 
+    * 
+    * @param id
+    * 
+    * @return response
+    * 
+    */
+   public static function delete($id){
+     $delete = WithdrawalRequest::where('id', $id)->delete();
+     if($delete){
+        return redirect()->back()->with('success', 'Withdrawal request deleted successfully');
+     }else{
+        return redirect()->back()->with('error', 'Something went wrong, withdrawal request not deleted successfully');
      }
+   }
 
-
-       /**
-     * creates withdrawal request
-     * 
-     * 
-     * @param request
-     * 
-     * @return response
-     * 
-     */
-    public function create(Request $request){
+   
+     /**
+      * creates a user request
+      *
+      * @param Request
+      *
+      *@return respoonse
+      */
+      public static function create(Request $request){
         $validator = Validator::make($request->all(),
         [
-        'user_id' => 'required',
-        'amount' => 'required',
-        'recieving_wallet_address' => 'required',
+        'amount' => 'required|numeric',
       
         ]);
-  
+        $create = self::save($request);
+
         if($validator->fails()){
             return redirect()->back()->withErrors($validator);
         } 
-        if(WalletController::checkAmt($request['user_id'], $request['amount'])){
-          $user = WithdrawRequest::where(['user_id'=>$request['user_id'], 'status'=>'pending'])->first();
-          if(empty($user->id)){
-        $create = self::save($request);
+
         if($create){
-           return redirect('/dashboard/wallet-info');
-  
-        }else{
-           return redirect()->back()->with('error', 'Something went wrong, Investment not created. Please try again');
-  
-        }  }else{
-          return redirect()->back()->with('error', 'You have a pending withdrawal request. That one has to be resolved before you place another request');
-        }
+          return redirect()->back()->with('success', 'Withdrawal request successful');
       }else{
-        return redirect()->back()->with('error', 'Insuffient balance');
-      }
-  
+          return redirect()->back()->with('error', 'Something went wrong withdrawal request not created successfully');
+                  }
+     
+
       }
 
 
-      
+   
+   /**
+    * get settle deposit request
+    * 
+    * 
+    * @return response
+    * 
+    * @param $id
+    */
+   public static function settlePage($id){
+     $deposit = WithdrawalRequest::where('id', $id)->first();
+     return view('dashboard/src/html/components/forms/settle-withdrawal-request')->with(['deposit'=>$deposit]);
+   }
+
+   /**
+    * get get all deposit request
+    * 
+    * 
+    * @return response
+    * 
+    * @param $id
+    */
+    public static function getPendingRequest(){
+      $deposit = WithdrawalRequest::where('status', 'pending')->orderBy('created_at', 'DESC')->paginate(20);
+      return view('dashboard/src/html/view-withdrawal-request')->with(['deposit'=>$deposit, 'user']);
+    }
+
+
     /**
-     * gets single deposit request
-     * 
-     * 
-     * @param request
-     * 
-     * @return response
-     * 
-     */
-    public function get($id){
-        $depositrequest = WithdrawRequest::find($id);
-        return view('dashboard.wallet.edit-withdrawal-request')->with(['deposit-request'=>$depositrequest]);
-      }
-  
-      /**
-       * get many deposit request
-       * 
-       * 
-       * 
-       * @return response
-       * 
-       */
-      public function getAll(){
-        $allRequest = WithdrawRequest::where(['status'=>'pending'])->orderBy('created_at', 'DESC')->paginate(15);
-        return view('user.withdrawalrequest')->with(['user', 'allrequest'=>$allRequest]);
-      }
-  
-  
-      /**
-       * creates deposit request
-       * page
-       * 
-       * 
-       * @return view
-       * 
-       */
-      public function myWithdrawalRequest($user_id){
-        return view('dashboard.wallet.my-withdrawal-request');
-      }
-  
-  
-       /**
-       * deletes deposit request
-       * 
-       * 
-       * @param id
-       * 
-       * @return response
-       * 
-       */
-      public static function delete($id){
-        $delete = WithdrawRequest::where('id', $id)->delete();
-        if($delete){
-           return redirect()->back()->with('success', 'Withdrawal request deleted successfully');
-        }else{
-           return redirect()->back()->with('error', 'Something went wrong, withdrawal request not deleted successfully');
-        }
-      }
-
-       /**
-       * settles a withdrawal request
-       * 
-       * 
-       * @return response
-       * 
-       * @param $id
-       */
-      public function settleWithdrawalRequest($id){
-        $settle = WithdrawRequest::find($id);
-        $settle->status = 'settled';
-        $settle->updated_at = Carbon::now();
-        $settle->save();
-
-        if(WalletController::checkAmt($settle->user_id, $settle->amount)) {
-       
-         try{
-             $data = [
-                 'user_id'=>$settle->user_id,
-                 'amount'=>$settle->amount,
-                 'purpose'=>'Withdrawal for payout',
-             ];
-         WalletController::debit($data);
+    * settles a deposit request
+    * 
+    * 
+    * @return response
+    * 
+    * @param $id
+    */
+   public function settleWithdrawalRequest(Request $request){
+   // return $request->all();
+     if(Auth::check()){
+       if(Auth::user()->access_level== 'admin'){
+      $settle = WithdrawalRequest::find($request['id']);
+      $settle->status = 'settled';
+      $settle->updated_at = Carbon::now();
+      $settle->save();
      
-         }catch(Exception $e){
-     
-             return redirect()->back()->with('error', $e->message);
-     
+       try{
+           $data = [
+               'user_id'=>$settle->user_id,
+               'amount'=>$request['amount'],
+               'purpose'=>'Withrawal Request settlement',
+           ];
+       UserWalletController::debit($data);
+   
+       }catch(Exception $e){
+   
+         return redirect()->back()->with('error', $e->message);
+   
          }
-        // return redirect()->back()->with('success', 'Withdrawal request settled successfully. Thanks');
-         return redirect()->back()->with('success', 'Withdrawal request settled successfully. Thanks');
-     }else{
-      return redirect()->back()->with('error', 'Insufficient balance');
-     }
+       return redirect('/admin/withdrawal-request/get-all')->with('success', 'Withdrawal request settled successfully.');
+            }else{
+         Auth::logout();
+         return redirect('get-login');
+          }
+       }else{
+       Auth::logout();
+       return redirect('get-login');
+      }
+  
 
-    }
+ }
 
 
-      /**
-       * cancel a withdrawal request
-       * 
-       * 
-       * @return response
-       * 
-       * @param $id
-       */
-      public function cancelWithdrawalRequest($id){
-        $settle = WithdrawRequest::find($id);
-        $settle->status = 'cancel';
-        $settle->updated_at = Carbon::now();
-        $settle->save();
-       
-         return redirect()->back()->with('success', 'Withdrawal request canceled successfully. Thanks');
-     
+  /**
+    * cancel a deposit request
+    * 
+    * 
+    * @return response
+    * 
+    * @param $id
+    */
+   public function cancelWithdrawalRequest($id){
+     $settle = WithdrawalRequest::find($id);
+     $settle->status = 'cancel';
+     $settle->updated_at = Carbon::now();
+     $settle->save();
+     return redirect()->back()->with('success', 'Withdrawal request canceled successfully. Thanks');
 
-    }
+
+  }
 
     
 

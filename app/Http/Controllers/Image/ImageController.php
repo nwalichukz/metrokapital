@@ -40,6 +40,28 @@ class ImageController extends Controller
 
     }
 
+        /**
+     * upload the property image
+     * 
+     * returns the uploaded file
+     * 
+     */
+    public static function uploadPropertyImage($request){     
+          
+           $image = $request->file('image');
+           $input['imagename'] = hexdec(uniqid()).$image->getClientOriginalName();
+       
+           $location = public_path("images/Property");
+       
+           $imgs = Image::make($image->getPathname());
+       
+           $imgs->resize(400 , 300, function ($constraint) { $constraint->aspectRatio(); })->save($location.'/'.$input['imagename']);
+           return $input['imagename'];
+           
+ 
+     }
+ 
+
 
      /**
      * upload the avatar image

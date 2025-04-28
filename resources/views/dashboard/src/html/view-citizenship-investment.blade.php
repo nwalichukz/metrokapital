@@ -42,7 +42,7 @@
                                                                         <span>{{$all->country_name}}<span class="dot dot-success d-lg-none ms-1"></span></span>
                                                                     </td>
                                                                     <td class="nk-tb-col">
-                                                                        <span>{{$all->description}}</span>
+                                                                        <span>{{substr($all->description, 0, 100)}}...</span>
                                                                     </td>
                                                                    
                                                                     <td class="nk-tb-col nk-tb-col-tools">

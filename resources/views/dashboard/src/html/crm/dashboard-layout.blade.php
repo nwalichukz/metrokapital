@@ -87,6 +87,10 @@
                                             <a href="{{url('/dashboard/get-fund-account')}}" class="nk-menu-link"><span class="nk-menu-text">FUND ACCOUNT</span></a>
                                         </li>
 
+                                        <li class="nk-menu-item">
+                                            <a href="{{url('/dashboard/get-withdrawal-request')}}" class="nk-menu-link"><span class="nk-menu-text">WITHDRAWAL REQUEST</span></a>
+                                        </li>
+
                                         {{--<li class="nk-menu-item">
                                             <a href="{{url('/user/wallet-info')}}" class="nk-menu-link"><span class="nk-menu-text">WALLET INFO</span></a>
                                         </li>--}}
@@ -377,6 +381,21 @@
                                     <ul class="nk-menu-sub">
                                     <li class="nk-menu-item">
                                             <a href="{{url('/admin/deposit-request/get-all')}}" class="nk-menu-link"><span class="nk-menu-text">View Funding Request</span></a>
+                                        </li>
+
+
+                                        </ul>   
+                                        </li>
+
+
+                                        <li class="nk-menu-item has-sub">
+                                    <a href="#" class="nk-menu-link nk-menu-toggle">
+                                        <span class="nk-menu-icon"><em class="icon ni ni-money"></em></span>
+                                        <span class="nk-menu-text">Withdrawal Request</span>
+                                    </a>
+                                    <ul class="nk-menu-sub">
+                                    <li class="nk-menu-item">
+                                            <a href="{{url('/admin/withdrawal-request/get-all')}}" class="nk-menu-link"><span class="nk-menu-text">View Withdrawal Request</span></a>
                                         </li>
 
 

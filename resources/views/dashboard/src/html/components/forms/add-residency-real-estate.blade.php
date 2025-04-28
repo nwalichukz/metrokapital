@@ -26,6 +26,11 @@
                                                                     <textarea id="invdesc" name="description" class="form-control no-resize" id="default-textarea" placeholder="Enter your" required>  </textarea>
                                                                 </div>
                                                             </div>
+
+                                                            <div class="form-group">
+                                                    <label class="form-label" for="cf-full-name">Upload Image</label>
+                                                    <input name="image[]" type="file" class="form-control" id="cf-nam" placeholder="Select Image" multiple required>
+                                                </div>
                                                   
                                               
                                               
