@@ -584,7 +584,7 @@
                                                                 </div>
                                                             </div>
                                                             <tip>Joint account helps you make more profit  </tip>
-                                                            <a href="{{url('/user/grt-joint-account')}}">
+                                                            <a href="{{url('/user/get-account-plans/Joint Plan')}}">
                                                             <span class="time primary">Create Account</span>
                                                             </a>
                                                         </div>
@@ -602,7 +602,7 @@
                                                                 </div>
                                                             </div>
                                                             <p> </p>
-                                                            <a href="#">
+                                                            <a href="{{url('/user/get-account-plans/Current')}}">
                                                             <span class="time">Create Account</span>
                                         </a>
                                                         </div>
@@ -621,7 +621,7 @@
                                                                 </div>
                                                             </div>
                                                             <p> </p>
-                                                            <a href="#">
+                                                            <a href="{{url('/user/get-account-plans/Retirement Plan')}}">
                                                             <span class="time">Create Account</span>
                                         </a>
                                                         </div>

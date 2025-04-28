@@ -429,6 +429,7 @@ class UserWalletController extends Controller
         }
 
     }
+  
 
      /**
      *
@@ -447,6 +448,24 @@ class UserWalletController extends Controller
        }
 
     }
+
+     /**
+     *
+     * returns  page
+     *
+     * cash out
+     *
+     */
+    public static function getWithdrawalPage(){
+        if(Auth::check()){
+         return view('dashboard/src/html/components/forms/withdrawal-fund');
+ 
+        }else{
+         Auth::logout();
+         return redirect('/logout');
+        }
+ 
+     }
 
     /**
      *

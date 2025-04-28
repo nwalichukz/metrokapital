@@ -197,6 +197,7 @@ Route::get('/admin/add-wallet-address', [UserWalletController::class, 'getAddWal
 Route::get('/dashboard/get-withdrawal-page', [WalletController::class, 'getWithdrawalPage']);
 
 Route::get('dashboard/get-fund-account', [UserWalletController::class, 'getFundAccount']);
+Route::get('dashboard/get-withdrawal-request', [UserWalletController::class, 'getWithdrawalPage']);
 Route::get('dashboard/get-internal-transfer', [UserWalletController::class, 'getInternalTransfer']);
 Route::get('dashboard/get-external-transfer', [UserWalletController::class, 'getExternalTransfer']);
 
@@ -222,7 +223,6 @@ Route::post('user/deposit-request/create', [DepositRequestController::class, 'cr
 Route::get('/dashboard/my-deposit-request/{user_id}', [DepositRequestController::class, 'MyDepositRequest']);
 Route::get('/admin/deposit-request/get-all', [DepositRequestController::class, 'getPendingRequest']);
 Route::get('/admin/delete-deposit-request/{id}', [DepositRequestController::class, 'delete']);
-
 Route::get('/admin/settle-deposit-request/{id}', [DepositRequestController::class, 'settlePage']);
 Route::get('/admin/cancel-deposit-request/{id}', [DepositRequestController::class, 'cancelDepositRequest']);
 
@@ -235,14 +235,13 @@ Route::get('/admin/decline/{id}', [KycController::class, 'decline']);
 
 
 
-
 /// withdrawal request
-Route::post('/dashboard/withdrawal-request/create', [WithdrawalRequestController::class, 'create']);
-Route::get('/dashboard/withdrawal-request/get/{id}', [WithdrawalRequestController::class, 'get']);
-Route::get('/dashboard/my-withdrawal-request/{user_id}', [WithdrawalRequestController::class, 'MyWithdrawalRequest']);
-Route::get('/admin/withdrawal-request/get-all', [WithdrawalRequestController::class, 'getAll']);
+Route::post('/admin/settle-withdrawal-request/create', [WithdrawalRequestController::class, 'settleWithdrawalRequest']);
+Route::post('user/withdrawal-request/create', [WithdrawalRequestController::class, 'create']);
+// Route::get('/dashboard/my-withdrawal-request/{user_id}', [WithdrawalRequestController::class, 'MyWithdrawalRequest']);
+Route::get('/admin/withdrawal-request/get-all', [WithdrawalRequestController::class, 'getPendingRequest']);
 Route::get('/admin/delete-withdrawal-request/{id}', [WithdrawalRequestController::class, 'delete']);
-Route::get('/admin/settle-withdrawal-request/{id}', [WithdrawalRequestController::class, 'settleWithdrawalRequest']);
+Route::get('/admin/settle-withdrawal-request/{id}', [WithdrawalRequestController::class, 'settlePage']);
 Route::get('/admin/cancel-withdrawal-request/{id}', [WithdrawalRequestController::class, 'cancelWithdrawalRequest']);
 
 

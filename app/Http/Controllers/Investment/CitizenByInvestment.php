@@ -3,8 +3,10 @@
 namespace App\Http\Controllers\Investment;
 
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\Image\ImageController;
 use Illuminate\Http\Request;
 use App\Models\CitizenshipByInvestment;
+use App\Models\InvestmentImage;
 use Validator, Auth;
 
 class CitizenByInvestment extends Controller
@@ -49,6 +51,14 @@ class CitizenByInvestment extends Controller
           return redirect()->back()->withErrors($validator);
       } 
       $create = self::save($request);
+      if($request->file('image')){
+      //  return $request->all();
+        $img = new InvestmentImage;
+        $img->rcr_id = $create;
+        $img->name = ImageController::uploadPropertyImage($request);
+        $img->inv_type = 'cbi'; 
+        $img->save();
+      }
       if($create){
          return redirect()->back()->with('success', 'Citizenship by investment created successfully');
 

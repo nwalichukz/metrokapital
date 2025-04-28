@@ -3,8 +3,10 @@
 namespace App\Http\Controllers\Investment;
 
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\Image\ImageController;
 use Illuminate\Http\Request;
  use App\Models\ResidencyByInvestmentModel;
+ use App\Models\InvestmentImage;
 use Validator, Auth;
 
 class ResidencyByInvestment extends Controller
@@ -50,6 +52,13 @@ class ResidencyByInvestment extends Controller
           return redirect()->back()->withErrors($validator);
       } 
       $create = self::save($request);
+      if(!empty($request->file('image'))){
+        $img = new InvestmentImage;
+        $img->rcr_id = $create;
+        $img->name = ImageController::uploadPropertyImage($request);
+        $img->inv_type = 'rbi'; 
+        $img->save();
+      }
       if($create){
          return redirect()->back()->with('success', 'Residency by investment created successfully');
 
