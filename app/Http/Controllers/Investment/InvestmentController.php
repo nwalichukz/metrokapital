@@ -138,9 +138,9 @@ class InvestmentController extends Controller
       public function getAll(){
         if(Auth::check()){
           if(Auth::user()->access_level == 'admin'){
-        $invAll = Investment::where('status', 'active')->with(['invType', 'user'])->orderBy('created_at', 'DESC')->paginate(15);
+        $invAll = Investment::where('status', 'active')->orderBy('created_at', 'DESC')->paginate(15);
         //$total = Investment::where('status', 'active')->sum();
-        return view('dashboard/src/html/view-all-investments')->with(['invall'=>$invAll, 'inv_type', 'user']);
+        return view('dashboard/src/html/view-all-investments')->with(['invall'=>$invAll, 'invType'=>'invType', 'user'=>'user']);
           }else{
             return redirect('/get-login');
           }
@@ -190,9 +190,9 @@ class InvestmentController extends Controller
       public function myInvestments($user_id){
         if(Auth::check()){
           if(Auth::user()->access_level == 'admin'){
-         $invAll = Investment::where('status', 'active')->with(['invType', 'user'])->orderBy('created_at', 'DESC')->paginate(15);
+         $invAll = Investment::where('status', 'active')/*->with(['invType', 'user'])*/->orderBy('created_at', 'DESC')->paginate(15);
         //$total = Investment::where('status', 'active')->sum();
-        return view('dashboard/src/html/view-my-investments')->with(['invall'=>$invAll]);
+        return view('dashboard/src/html/view-my-investments')->with(['invall'=>$invAll, 'invType'=>'inv_type', 'user'=>'user']);
           }else{
             return redirect('/get-login');
           }
@@ -213,7 +213,7 @@ class InvestmentController extends Controller
         //  AuthController::checkAuth(Auth::check());
           $invAll = Investment::where('user_id', $user_id)->get();
          // $end_date =   Carbon::now()->addDays(10);
-          return view('dashboard/src/html/view-all-investments')->with(['invall'=>$invAll, 'inv_type'=>'invType', 'user'=>'user']);
+          return view('dashboard/src/html/view-all-investments')->with(['invall'=>$invAll, 'invType'=>'inv_type', 'user'=>'user']);
   
          // return view('dashboard.my-investment')->with(['inv_type'=>$inv_type, 'end_date' =>$end_date, 'investmentType']);
         }
