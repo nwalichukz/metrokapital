@@ -140,7 +140,7 @@ class AccountPlanSeeder extends Seeder
                                                     'parent_name' => 'Retirement Plan',
                                                     'name' => 'MTC Retirement 4',
                                                     'min_amt'=>'1000',
-                                                    'max_amt' => '1000000',
+                                                    'max_amt' => '100000000',
                                                     'monthly_contribution' =>'2000',
                                                     'earning_percentage'=> '3',
                                                     'int_interval'=> '30',
