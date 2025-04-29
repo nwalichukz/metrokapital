@@ -56,7 +56,7 @@ class AccountPlanSeeder extends Seeder
                         'parent_name' => 'Savings',
                         'name' => 'MTC Saving 4',
                         'min_amt'=>'150000',
-                        'max_amt' => '500000',
+                        'max_amt' => '100000000',
                         'earning_percentage'=> '2',
                         'duration' => '365',
                         'int_interval'=> '7',
