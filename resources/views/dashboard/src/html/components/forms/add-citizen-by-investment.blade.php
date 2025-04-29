@@ -11,7 +11,7 @@
                                             <div class="card-head">
                                                 <h5 class="card-title"> Add Citizen By Investment </h5>
                                             </div>
-                                            <form method="POST" action="{{url('/admin/create-citizenship-by-investment')}}">
+                                            <form method="POST" action="{{url('/admin/create-citizenship-by-investment')}}" enctype="multipart/form-data" accept=true>
                                             @csrf
                                                 
 

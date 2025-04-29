@@ -297,7 +297,7 @@ class UserWalletController extends Controller
                             'receiver_id' => $credit->user_id,
                         ];
                         UserTransactionHistoryController::save($debit_transaction_record);
-                    }
+                    
                     // $credit = Wallet::where('wallet_no', $request['receiver_wallet_no'])->with(['user'])->first();
                     $credit->balance = $credit->balance + $request['amount'];
                     $credit->save();
@@ -308,6 +308,8 @@ class UserWalletController extends Controller
                         'purpose' => 'transfer from '.$credit->user->name,
                     ];
                     UserTransactionHistoryController::save($credit_transaction_record);
+                          }
+                          
                 });
 
                 return redirect()->back()->with('success', '$'.$request['amount'].' transfered successfully to '.$credit->user->name);

@@ -86,7 +86,7 @@ class InvestmentController extends Controller
         return redirect()->back()->with('error', $e->message);
 
     }
-    return redirect()->back()->with('success', 'Investment successful. Thanks');
+    return redirect('user/get-my-investments/'.Auth::user()->id)->with('success', 'Investment successful. Thanks');
 }else{
     return redirect()->back()->with('error', 'You do not have enough wallet balance to carry out this transaction');
          }
@@ -138,9 +138,9 @@ class InvestmentController extends Controller
       public function getAll(){
         if(Auth::check()){
           if(Auth::user()->access_level == 'admin'){
-         $invAll = Investment::where('status', 'active')->with(['invType', 'user'])->orderBy('created_at', 'DESC')->paginate(15);
+        $invAll = Investment::where('status', 'active')->with(['invType', 'user'])->orderBy('created_at', 'DESC')->paginate(15);
         //$total = Investment::where('status', 'active')->sum();
-        return view('dashboard/src/html/view-all-investments')->with(['invall'=>$invAll]);
+        return view('dashboard/src/html/view-all-investments')->with(['invall'=>$invAll, 'inv_type', 'user']);
           }else{
             return redirect('/get-login');
           }

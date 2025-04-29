@@ -573,7 +573,16 @@
                                                             <p><span>(int. rate)   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;     (Days Lockin)</span></p>
                                                             <hr>
                                                            <div>Minimum  &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;${{number_format($plan->min_amt)}}  </div>
+                                                           <br/>
                                                            <div>Maxiimum  &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;${{number_format($plan->max_amt)}}  </div>
+                                                           <br/>
+                                                           @if(!empty($plan->monthly_contribution))
+                                                           <div>Mon. Contr.  &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;${{number_format($plan->monthly_contribution)}}  </div>
+                                                           @endif
+                                                           <br/>
+                                                           @if(!empty($plan->int_interval))
+                                                           <div>Int nterval  &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;${{$plan->int_interval}}  </div>
+                                                           @endif
                                                            <br/>
                                                            <a href="{{url('/user/confirm-investment-type/'.$plan->id)}}">
                                                            <button> Apply Now</button>

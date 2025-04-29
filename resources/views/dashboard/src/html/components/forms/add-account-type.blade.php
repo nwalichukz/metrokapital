@@ -55,18 +55,30 @@
                                                                 <div class="form-control-wrap ">
                                                                     <select name="duratn_in_mnth" class="form-select js-select2" id="fv-topics" name="fv-topics" data-placeholder="Select a option" required>
                                                                         <option label="empty" value="">Select duration</option>
-                                                                        <option value="10">10</option>
-                                                                        <option value="14">14</option>
-                                                                        <option value="15">15</option>
-                                                                        <option value="20">20</option>
-                                                                        <option value="30">30</option>
-                                                                        <option value="40">40</option>
-                                                                        <option value="50">50</option>
-                                                                        <option value="60">60</option>
-                                                                        <option value="70">70</option>
-                                                                        <option value="80">80</option>
-                                                                        <option value="90">90</option>
-                                                                        <option value="100">100</option>
+                                                                        <option value="5">5</option>
+                                                                        <option value="7"> 1 Week</option>
+                                                                        <option value="10">10 Days</option>
+                                                                        <option value="14">2 Weeks</option>
+                                                                        <option value="21">3 Weeks</option>
+                                                                        <option value="30">1 Month</option>
+                                                                        <option value="40">40 Days</option>
+                                                                        <option value="50">50 Days</option>
+                                                                        <option value="60">2 Months</option>
+                                                                        <option value="90">3 months</option>
+                                                                        <option value="120">4 Months</option>
+                                                                        <option value="150">5 Months</option>
+                                                                        <option value="180">6 Months</option>
+                                                                        <option value="210">7 Months</option>
+                                                                        <option value="240">8 Months</option>
+                                                                        <option value="270">9 Months</option>
+                                                                        <option value="300">10 Months</option>
+                                                                        <option value="330"> 11 Months</option>
+                                                                        <option value="360">12 Months </option>
+                                                                        <option value="365"> 1 Year</option>
+                                                                        <option value="730"> 2 Years</option>
+                                                                        <option value="1095">3 Years </option>
+                                                                        <option value="1460">4 Years </option>
+                                                                        <option value="1825">5 Years </option>
                                                                     </select>
                                                                 </div>
                                                             </div>

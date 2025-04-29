@@ -11,7 +11,14 @@
                 <div class="content-box">
                  
                   
-
+                <div class="image-layer">
+                    @if(!empty($image->name))
+                <figure class="image-1">
+                    <img src="{{asset('images/Property/'.$image->name)}}" alt="Property Image">
+            
+            </figure>
+              @endif
+            </div>
 
                {!!$data->description !!}
 
