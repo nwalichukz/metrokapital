@@ -11,7 +11,7 @@
                                             <div class="card-head">
                                                 <h5 class="card-title">Add Residency By Investment </h5>
                                             </div>
-                                            <form method="POST" action="{{url('/admin/create-residency-by-investment')}}">
+                                            <form method="POST" action="{{url('/admin/create-residency-by-investment')}}" enctype="multipart/form-data" accept=true>
                                             @csrf
                                                 
 
@@ -29,7 +29,7 @@
 
                                                             <div class="form-group">
                                                     <label class="form-label" for="cf-full-name">Upload Image</label>
-                                                    <input name="image[]" type="file" class="form-control" id="cf-nam" placeholder="Select Image" multiple required>
+                                                    <input name="image" type="file" class="form-control" id="cf-nam" placeholder="Select Image" multiple required>
                                                 </div>
                                                   
                                               

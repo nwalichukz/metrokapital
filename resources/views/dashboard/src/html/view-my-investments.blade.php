@@ -254,7 +254,7 @@
                                                         
 
                                                         <div class="nk-tb-col tb-col-mb">
-                                                            <span class="tb-amount">{{strtoupper($inv->invType->parent_name)}} <br/></span>
+                                                            <span class="tb-amount">{{strtoupper($inv->invType->label_name)}} <br/></span>
                                                             <span class="tb-amount">{{$inv->invType->name}}  </span>
                                                         </div>
 
