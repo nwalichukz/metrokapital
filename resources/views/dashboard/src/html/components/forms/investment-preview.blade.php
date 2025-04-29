@@ -54,7 +54,7 @@
                                                 </div>--}}
 
                                                 <div class="form-group">
-                                                    <label class="form-label" for="cf-email-address">Duration in Months</label>
+                                                    <label class="form-label" for="cf-email-address">Duration</label>
                                                     <input name="duration" type="text" class="form-control" id="cf-email-address" value="{{$inv_type->duration}}" disabled required>
                                                 </div>
 

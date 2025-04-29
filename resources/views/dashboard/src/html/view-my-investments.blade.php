@@ -254,8 +254,8 @@
                                                         
 
                                                         <div class="nk-tb-col tb-col-mb">
-                                                            <span class="tb-amount">{{strtoupper($inv->invType->label_name)}} <br/></span>
-                                                            <span class="tb-amount">{{$inv->invType->name}}  </span>
+                                                            <span class="tb-amount">@if(!empty($inv->invType->parent_name)){{strtoupper($inv->invType->parent_name)}} @endif<br/></span>
+                                                            <span class="tb-amount">@if(!empty($inv->invType->name)){{$inv->invType->name}} @endif </span>
                                                         </div>
 
                                                         <div class="nk-tb-col tb-col-mb">
@@ -271,7 +271,7 @@
                                                         </div>
 
                                                         <div class="nk-tb-col tb-col-mb">
-                                                            <span class="tb-amount"> {{$inv->invType->duration}}  </span>
+                                                            <span class="tb-amount">@if(!empty($inv->invType->duration)) {{$inv->invType->duration}}  @endif</span>
                                                         </div>
 
                                                         <div class="nk-tb-col tb-col-lg">

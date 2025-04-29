@@ -581,7 +581,7 @@
                                                            @endif
                                                            <br/>
                                                            @if(!empty($plan->int_interval))
-                                                           <div>Int nterval  &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;${{$plan->int_interval}}  </div>
+                                                           <div>Int nterval  &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;{{$plan->int_interval}} (Days) </div>
                                                            @endif
                                                            <br/>
                                                            <a href="{{url('/user/confirm-investment-type/'.$plan->id)}}">
