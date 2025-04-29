@@ -518,6 +518,12 @@
                                     </a>
                                 </li>--}}<!-- .nk-menu-item -->
                                 <li class="nk-menu-item">
+                                    <a href="{{url('/user/get-account-officer')}}" class="nk-menu-link">
+                                        <span class="nk-menu-icon"><em class="icon ni ni-chat-circle-fill"></em></span>
+                                        <span class="nk-menu-text">Account Officer</span>
+                                    </a>
+                                </li><!-- .nk-menu-item -->
+                                <li class="nk-menu-item">
                                     <a href="html/crm/support.html" class="nk-menu-link">
                                         <span class="nk-menu-icon"><em class="icon ni ni-chat-circle-fill"></em></span>
                                         <span class="nk-menu-text">Support</span>
