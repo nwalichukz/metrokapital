@@ -128,7 +128,7 @@ Route::get('/user-signin/{id}', [AuthController::class, 'dashboard']);
 
 Route::get('/logout', [AuthController::class, 'logout']);
 
-Route::get('/user/grt-joint-account', [InvestmentController::class, 'getJointAccount']);
+Route::get('/user/get-joint-account', [InvestmentController::class, 'getJointAccount']);
 Route::get('/admin/end-investment/{id}', [InvestmentController::class, 'endInv']);
 Route::get('/user/delete-investment/{id}', [InvestmentController::class, 'delete']);
 
@@ -206,6 +206,7 @@ Route::any('/user/wallet-info', [UserWalletController::class, 'myWalletDetails']
 Route::post('/admin/fund-account', [UserWalletController::class, 'makeCredit']);
 
 Route::post('/register/get-started', [UserController::class, 'getStarted']);
+Route::get('/user/get-account-officer', [UserController::class, 'accountOfficer']);
 
 Route::get('/admin/make-admin/{id}', [UserController::class, 'makeAdmin']);
 Route::get('/admin/remove-admin/{id}', [UserController::class, 'removeAdmin']);

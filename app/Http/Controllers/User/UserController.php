@@ -473,6 +473,21 @@ public static function changePassword(Request $request){
       }
     }
 
+     
+      /**
+     * returns account officer
+     * 
+     * @return true
+     * 
+     * @param $settings page
+     * 
+     */
+    public static function accountOfficer(){
+      $user = User::where('account_officer', 'yes')->get();
+      return view('dashboard/src/html/components/elements/account-officer-display')->with(['user'=>$user]);
+
+    }
+
 
 
 
