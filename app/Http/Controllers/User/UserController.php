@@ -359,13 +359,10 @@ public static function changePassword(Request $request){
       $update = User::find($data['user_id']);
       $update->password = bcrypt($data['new_password']);
       $update->save();
-       return redirect()->back()->with([
-            'status' => 'success',
-            'success' => 'Password updated successfully']);
+      Auth::logout();
+       return redirect('get-login')->with('success', 'Password updated successfully');
     }else{
-      return redirect()->back()->with([
-        'status' => 'success',
-        'error' => 'Password updated successfully']);
+      return redirect()->back()->with('error', 'Password not updated successfully. Old Password wrong');
     }
 }
 
@@ -485,6 +482,20 @@ public static function changePassword(Request $request){
     public static function accountOfficer(){
       $user = User::where('account_officer', 'yes')->get();
       return view('dashboard/src/html/components/elements/account-officer-display')->with(['user'=>$user]);
+
+    }
+
+       /**
+     * returns account officer
+     * 
+     * @return true
+     * 
+     * @param $settings page
+     * 
+     */
+    public static function getChangePassword(){
+     
+      return view('dashboard/src/html/components/forms/change-password');
 
     }
 

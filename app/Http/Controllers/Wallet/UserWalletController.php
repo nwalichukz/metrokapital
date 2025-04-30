@@ -293,10 +293,10 @@ class UserWalletController extends Controller
                             'user_id' => $request['sender_user_id'],
                             'amount' => $request['amount'],
                             'transaction_type' => 'debit',
-                            'purpose' => 'transfer',
-                            'receiver_id' => $credit->user_id,
+                            'purpose' => 'transfer to '.$credit->user->name,
                         ];
                         UserTransactionHistoryController::save($debit_transaction_record);
+                    }
                     
                     // $credit = Wallet::where('wallet_no', $request['receiver_wallet_no'])->with(['user'])->first();
                     $credit->balance = $credit->balance + $request['amount'];
@@ -305,11 +305,11 @@ class UserWalletController extends Controller
                         'user_id' => $credit->user_id,
                         'amount' => $request['amount'],
                         'transaction_type' => 'credit',
-                        'purpose' => 'transfer from '.$credit->user->name,
+                        'purpose' => 'transfer from '.$debit->user->name,
                     ];
                     UserTransactionHistoryController::save($credit_transaction_record);
-                          }
-                          
+                       
+
                 });
 
                 return redirect()->back()->with('success', '$'.$request['amount'].' transfered successfully to '.$credit->user->name);

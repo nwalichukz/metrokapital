@@ -207,6 +207,8 @@ Route::post('/admin/fund-account', [UserWalletController::class, 'makeCredit']);
 
 Route::post('/register/get-started', [UserController::class, 'getStarted']);
 Route::get('/user/get-account-officer', [UserController::class, 'accountOfficer']);
+Route::get('/user/change-password', [UserController::class, 'getChangePassword']);
+Route::post('/user/post-change-password', [UserController::class, 'changePassword']);
 
 Route::get('/admin/make-admin/{id}', [UserController::class, 'makeAdmin']);
 Route::get('/admin/remove-admin/{id}', [UserController::class, 'removeAdmin']);
