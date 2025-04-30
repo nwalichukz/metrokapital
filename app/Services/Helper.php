@@ -8,6 +8,8 @@ use App\Models\InvestmentType;
 use App\Models\CitizenshipByInvestment;
 use App\Models\ResidencyByInvestmentModel;
 use App\Models\ResidencyByRealEstateModel;
+use App\Models\UserTransactionHistory;
+use Carbon\carbon;
 use Auth, Validator;
 
 
@@ -94,20 +96,7 @@ class Helper extends Controller
      
     }
 
-      /**
-     * getssingle investment type
-     * 
-     * 
-     * @param request
-     * 
-     * @return response
-     * 
-     */
-    public function getAccountPlans($name){
-      $acc_plans = InvestmentType::where('parent_name', strtolower($name))->get();
-      return view('dashboard/src/html/crm/account-plans')->with(['acc_plans'=>$acc_plans, 'name'=>$name]);
-     
-    }
+    
 
     /**
      * get many investment type
@@ -196,6 +185,18 @@ class Helper extends Controller
 
       
     }
+
+      /***
+     * returns transaction history
+     * 
+     * @param $user_id
+     * 
+     */
+    public static function getUserHistory($user_id){
+      return UserTransactionHistory::where('user_id', $user_id)->orderBy('created_at', 'DESC')->paginate(5);
+     // return view('dashboard/src/html/my-transactions')->with(['myTransactions'=>$transactions]);
+   }
+
 
 
    /**
