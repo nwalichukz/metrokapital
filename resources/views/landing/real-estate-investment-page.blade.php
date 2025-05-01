@@ -10,7 +10,14 @@
             <div class="auto-container">
                 <div class="content-box">
                  
-                  
+                <div class="image">
+                    @if(!empty($image->name))
+                <figure class="">
+                    <img src="{{asset('images/Property/'.$image->name)}}" alt="Property Image">
+            
+            </figure>
+              @endif
+            </div>        
 
 
                {!!$data->description !!}

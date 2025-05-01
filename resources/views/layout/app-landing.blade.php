@@ -146,9 +146,12 @@
                 <div class="header-top">
                     <div class="top-inner">
                         <ul class="links-list clearfix">
+                            @if(Auth::check())
+                            <li><a href="{{url('/user-signin/'.Auth::user()->id)}}">Dashboard</a></li>
+                            @else
                            <li><a href="{{url('/get-login')}}">Login</a></li>
                             <li><a href="{{url('/get-register')}}">Register</a></li>
-                          
+                          @endif
                         </ul>
 
                         <ul class="info-list clearfix"> 
@@ -301,8 +304,12 @@
                                 </div>
                             </nav>
                             <div class="menu-right-content ml_70">
+                                @if(Auth::check())
+                                <a href="{{url('/user-signin/.Auth::user()->id')}}" class="theme-btn btn-two mr_20">Dashboard</a>
+                                @else
                                 <a href="{{url('/get-login')}}" class="theme-btn btn-two mr_20">Login</a>
                                 <a href="{{url('/get-register')}}" class="theme-btn btn-one">Register</a>
+                                @endif
                             </div>
                         </div>
                     </div>

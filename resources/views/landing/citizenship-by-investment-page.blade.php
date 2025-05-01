@@ -11,9 +11,9 @@
                 <div class="content-box">
                  
                   
-                <div class="image-layer">
+                <div class="image">
                     @if(!empty($image->name))
-                <figure class="image-1">
+                <figure class="">
                     <img src="{{asset('images/Property/'.$image->name)}}" alt="Property Image">
             
             </figure>

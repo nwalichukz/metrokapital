@@ -569,7 +569,7 @@
                             <div class="nk-header-brand d-xl-none">
                                 <a href="{{url('/')}}" class="logo-link">
                                     <img class="logo-light logo-img" src="{{ asset('dashboard/images/logo.png')}}" srcset="{{ asset('dashboard/images/logo.png')}}" alt="logo">
-                                    <img class="logo-dark logo-img" src="{{ asset('dashboard/images/logo.png')}}" srcset="{{ asset('dashboard/images/logo.png')}}" alt="logo">
+                                    <img class="logo-light logo-img" src="{{ asset('dashboard/images/logo.png')}}" srcset="{{ asset('dashboard/images/logo.png')}}" alt="logo">
                                 </a>
                             </div><!-- .nk-header-brand -->
                             <div class="nk-header-news d-none d-xl-block">
@@ -717,7 +717,7 @@
                         <div class="nk-footer-wrap">
                             <div class="nk-footer-copyright"> &copy; {{Date('Y')}} <a href="https://metrokapital.org" target="_blank">MetroKapital</a>
                             </div>
-                            <div class="nk-footer-links">
+                            {{--<div class="nk-footer-links">
                                 <ul class="nav nav-sm">
                                     <li class="nav-item dropup">
                                         <a href="#" class="dropdown-toggle dropdown-indicator has-indicator nav-link" data-bs-toggle="dropdown" data-offset="0,10"><span>English</span></a>
@@ -750,7 +750,7 @@
                                         <a data-bs-toggle="modal" href="#region" class="nav-link"><em class="icon ni ni-globe"></em><span class="ms-1">Select Region</span></a>
                                     </li>
                                 </ul>
-                            </div>
+                            </div>--}}
                         </div>
                     </div>
                 </div>

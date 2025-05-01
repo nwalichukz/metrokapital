@@ -11,7 +11,7 @@
                                                     <div class="card-inner">
                                                         <div class="card-title-group">
                                                             <div class="card-title">
-                                                                <h6 class="title">My Transactions</h6>
+                                                                <h6 class="title">All Transactions</h6>
                                                             </div>
                                                             <div class="card-tools">
                                                                 <a href="html/crm/recent-sale.html" class="link">Edit All</a>
@@ -22,7 +22,7 @@
                                                         <table class="nk-tb-list nk-tb-ulist">
                                                             <thead>
                                                                 <tr class="nk-tb-item nk-tb-head">
-                                                                  
+                                                                    <th class="nk-tb-col"><span class="sub-text">Name</span></th>
                                                                     <th class="nk-tb-col"><span class="sub-text">Desc</span></th>
                                                                     <th class="nk-tb-col"><span class="sub-text">Type</span></th>
                                                                     <th class="nk-tb-col"><span class="sub-text">Amount</span></th>
@@ -39,6 +39,9 @@
                                                             <tbody>
                                                                 @foreach($transactions as $myTransact)
                                                                 <tr class="nk-tb-item">
+                                                                <td class="nk-tb-col">
+                                                                        <span>{{substr($myTransact->user->name, 0, 80)}}<span class="dot dot-success d-lg-none ms-1"></span></span>
+                                                                    </td>
                                                                   
                                                                     <td class="nk-tb-col">
                                                                         <span>{{substr($myTransact->purpose, 0,20)}}<span class="dot dot-success d-lg-none ms-1"></span></span>
