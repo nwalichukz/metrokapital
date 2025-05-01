@@ -189,13 +189,11 @@ class InvestmentController extends Controller
        */
       public function myInvestments($user_id){
         if(Auth::check()){
-          if(Auth::user()->access_level == 'admin'){
+          
          $invAll = Investment::where('status', 'active')/*->with(['invType', 'user'])*/->orderBy('created_at', 'DESC')->paginate(15);
         //$total = Investment::where('status', 'active')->sum();
         return view('dashboard/src/html/view-my-investments')->with(['invall'=>$invAll, 'invType'=>'inv_type', 'user'=>'user']);
-          }else{
-            return redirect('/get-login');
-          }
+        
         }else{
           return redirect('/get-login');
         }
