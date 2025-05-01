@@ -161,12 +161,12 @@ class UserTransactionHistoryController extends Controller
         }
         $ok = $update->save();
         if($ok){
-            return redirect()->back()->with('status', 'Transaction updated successfully');
+            return redirect('admin/all-transactions')->with('status', 'Transaction updated successfully');
         }else{
             return redirect()->back()->with('status', 'Something went wrong transaction could not updated successfully. Please try again');
         }
       }else{
-        return rediect('/login');
+        return rediect('/get-login');
             }
       }
 

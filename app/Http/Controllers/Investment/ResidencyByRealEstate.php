@@ -94,7 +94,8 @@ class ResidencyByRealEstate extends Controller
      */
     public static function getRealEstateInvPage($id){
       $citi_inv = ResidencyByRealEstateModel::where('id', $id)->find($id);
-       return view('landing/real-estate-investment-page')->with(['data'=>$citi_inv]);
+      $image = InvestmentImage::where(['rcr_id'=>$citi_inv->id, 'inv_type'=>'cbi'])->first();
+       return view('landing/real-estate-investment-page')->with(['data'=>$citi_inv, 'image'=>$image]);
      
  
      }
