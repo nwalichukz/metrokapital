@@ -76,7 +76,7 @@ class InvestmentController extends Controller
     $create->amount = $request['amount'];
     $create->user_id = Auth::user()->id;
     $create->investment_type_id = $request['investment_type_id'];
-    $create->end_date = $now->addMonths($inv_type->duration);
+    $create->end_date = $now->addDays($inv_type->duration);
     $create->possible_total_earning =  ($request['amount'] + ($inv_type->duration * $request['amount'] * $percentage));
     $create->status = 'active';
     $create->save();
