@@ -1,3 +1,4 @@
+@inject('appData', 'App\Services\Helper')
 @extends('dashboard/src/html/crm/dashboard-layout')
 @section('content')   
 
@@ -30,7 +31,7 @@
                                                             <div class="card-inner">
                                                                 <h5 class="card-title">{{$data->name}}</h5>
                                                                 <p class="card-text">{{$data->mobile_number}}, {{$data->email}}</p>
-                                                                <p class="card-text">Contact: <a href="https://wa.me/234{{substr($data->mobile_number, 1, 13)}}/text=Hello"> Whatsapp</a></p>
+                                                                <p class="card-text">Contact: <a href="https://wa.me/{{$appData->countries($n='Nigeria')}}{{substr($data->mobile_number, 1, 13)}}/text=Hello"> Whatsapp</a></p>
                                                                 {{--<a href="{{url('admin/approve/'.$data->id)}}" class="btn btn-primary" title="When approved user can access dashboard">Approve</a>
                                                                 <a href="{{url('admin/decline/'.$data->id)}}" class="btn btn-warning" title="If declined user will not be able to login">Decline</a>--}}
                                                             </div>

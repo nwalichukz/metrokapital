@@ -1,3 +1,4 @@
+@inject('appData', 'App\Services\Helper')
 <!DOCTYPE html>
 <html lang="zxx" class="js">
 
@@ -14,6 +15,17 @@
     <!-- StyleSheets  -->
     <link rel="stylesheet" href="{{ asset('dashboard/assets/css/dashlite.css?ver=3.2.4')}}">
     <link id="skin-default" rel="stylesheet" href="{{ asset('dashboard/assets/css/theme.css?ver=3.2.4')}}">
+    <script>
+    
+    function myFunction() {
+  var x = document.getElementById("password");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+</script>
 </head>
 
 <body class="nk-body bg-white npc-general pg-auth">
@@ -63,7 +75,7 @@
                                     <div class="form-group">
                                         <label class="form-label" for="password">Password</label>
                                         <div class="form-control-wrap">
-                                            <a href="#" class="form-icon form-icon-right passcode-switch lg" data-target="password">
+                                            <a onclick="myFunction()" class="form-icon form-icon-right passcode-switch lg" data-target="password">
                                                 <em class="passcode-icon icon-show icon ni ni-eye"></em>
                                                 <em class="passcode-icon icon-hide icon ni ni-eye-off"></em>
                                             </a>
@@ -88,12 +100,23 @@
                                             <input name="mobile_number" type="number" class="form-control form-control-lg" id="email" placeholder="Enter your mobile number" required>
                                         </div>
                                     </div>
+
+            
+
                                     <div class="form-group">
-                                        <label class="form-label" for="country">Country </label>
-                                        <div class="form-control-wrap">
-                                            <input name="country" class="form-control form-control-lg" id="email" placeholder="Enter your country" required>
-                                        </div>
-                                    </div>
+                                                                <label class="form-label" for="fv-topics">Country</label>
+                                                                <div class="form-control-wrap ">
+                                                                    <select name="country" class="form-select js-select2" id="fv-topics" data-placeholder="Select a option" required>
+                                                                        <option label="Select Country" value="">Select Country</option>
+                                                                        @foreach($appData->countries() as $country)
+                                                                        <option value="{{$country['name']}}">{{$country['name']}}</option>
+                                                                      @endforeach
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+
+
+
                                     <div class="form-group">
                                         <div class="custom-control custom-control-xs custom-checkbox">
                                             <input name="agree" type="checkbox" class="custom-control-input" id="checkbox" required>

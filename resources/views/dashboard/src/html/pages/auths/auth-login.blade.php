@@ -16,6 +16,17 @@
 
  <link id="skin-default" rel="stylesheet"
   href="{{ asset('dashboard/assets/css/theme.css?ver=3.2.4')}}">
+  <script>
+    
+    function myFunction() {
+  var x = document.getElementById("password");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+</script>
 </head>
 
 <body class="nk-body bg-white npc-general pg-auth">
@@ -62,7 +73,7 @@
                                             <a class="link link-primary link-sm" href="{{url('/get-reset')}}">Forgot Password?</a>
                                         </div>
                                         <div class="form-control-wrap">
-                                            <a href="#" class="form-icon form-icon-right passcode-switch lg" data-target="password">
+                                            <a onclick="myFunction()" class="form-icon form-icon-right passcode-switch lg" data-target="password">
                                                 <em class="passcode-icon icon-show icon ni ni-eye"></em>
                                                 <em class="passcode-icon icon-hide icon ni ni-eye-off"></em>
                                             </a>
