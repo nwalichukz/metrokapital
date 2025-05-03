@@ -523,12 +523,13 @@
                                         <span class="nk-menu-text">Account Officer</span>
                                     </a>
                                 </li><!-- .nk-menu-item -->
-                                <li class="nk-menu-item">
+                                {{--<li class="nk-menu-item">
                                     <a href="html/crm/support.html" class="nk-menu-link">
                                         <span class="nk-menu-icon"><em class="icon ni ni-chat-circle-fill"></em></span>
                                         <span class="nk-menu-text">Support</span>
                                     </a>
-                                </li><!-- .nk-menu-item -->
+                                </li>--}}
+                                <!-- .nk-menu-item -->
                                 <li class="nk-menu-item">
                                     <a href="html/crm/settings.html" class="nk-menu-link">
                                         <span class="nk-menu-icon"><em class="icon ni ni-setting-alt-fill"></em></span>
@@ -1161,6 +1162,18 @@
     <script src="{{ asset('dashboard/assets/js/bundle.js?ver=3.2.4')}}"></script>
             <script src="{{ asset('dashboard/assets/js/scripts.js?ver=3.2.4')}}"></script>
     <script src="{{ asset('dashboard/assets/js/charts/chart-crm.js?ver=3.2.4')}}"></script>
+
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/6814b567bfcbab190c7a9162/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
 </body>
 
 </html>

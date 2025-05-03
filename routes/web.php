@@ -113,6 +113,8 @@ Route::post('/post-reset-password', [Mailer::class, 'postResetPassword']);
 
 Route::get('/user-profile-setting/{id?}', [UserController::class, 'userProfileSetting']);
 
+Route::get('/user/support', [UserController::class, 'support']);
+
 Route::get('/user/security-setting/{id?}', [UserController::class, 'userSecuritySetting']);
 
 Route::get('/admin/user-list', [UserController::class, 'userList']);

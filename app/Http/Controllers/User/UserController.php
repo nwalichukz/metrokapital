@@ -438,6 +438,19 @@ public static function changePassword(Request $request){
 
     }
 
+        /**
+     * returns support page
+     * 
+     * @return true
+     * 
+     * @param $settings page
+     * 
+     */
+    public static function support(){
+      return view(' dashboard/src/html/crm/support');
+
+    }
+   
        /**
      * returns user settings page
      * 
