@@ -572,7 +572,7 @@
 
 
 
-                                                    <li class="nk-support-item">
+                                                    {{--<li class="nk-support-item">
                                                         <div class="user-avatar bg-purple-dim">
                                                             <span>JA</span>
                                                         </div>
@@ -588,7 +588,7 @@
                                                             <span class="time primary">Create Account</span>
                                                             </a>
                                                         </div>
-                                                    </li>
+                                                    </li>--}}
 
                                                     <li class="nk-support-item">
                                                         <div class="user-avatar bg-purple-dim">
