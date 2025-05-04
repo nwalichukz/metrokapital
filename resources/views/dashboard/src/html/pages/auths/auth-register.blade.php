@@ -206,6 +206,17 @@
     <script src="{{ asset('dashboard/assets/js/bundle.js?ver=3.2.4')}}"></script>
     <script src="{{ asset('dashboard//assets/js/scripts.js?ver=3.2.4"></script>
     <!-- select region modal -->
+    <script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/6814b567bfcbab190c7a9162/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
     <div class="modal fade" tabindex="-1" role="dialog" id="region">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
