@@ -11,7 +11,7 @@
                                     <div class="nk-block-head nk-block-head-lg wide-sm">
                                         <div class="nk-block-head-content">
                                             <div class="nk-block-head-sub"><a class="back-to" href="html/components.html"><em class="icon ni ni-arrow-left"></em><span>Admin</span></a></div>
-                                            <h2 class="nk-block-title fw-normal"> You Account Officer</h2>
+                                            <h2 class="nk-block-title fw-normal"> Your Account Officer</h2>
                                            
                                         </div>
                                     </div>
@@ -31,7 +31,7 @@
                                                             <div class="card-inner">
                                                                 <h5 class="card-title">{{$data->name}}</h5>
                                                                 <p class="card-text">{{$data->mobile_number}}, {{$data->email}}</p>
-                                                                <p class="card-text">Contact: <a href="https://wa.me/{{$appData->countries($n='Nigeria')}}{{substr($data->mobile_number, 1, 13)}}/text=Hello"> Whatsapp</a></p>
+                                                                <p class="card-text">Contact: <a href="https://wa.me/{{$appData->countries($data->country)}}{{substr($data->mobile_number, 1, 13)}}/text=Hello"> Whatsapp</a></p>
                                                                 {{--<a href="{{url('admin/approve/'.$data->id)}}" class="btn btn-primary" title="When approved user can access dashboard">Approve</a>
                                                                 <a href="{{url('admin/decline/'.$data->id)}}" class="btn btn-warning" title="If declined user will not be able to login">Decline</a>--}}
                                                             </div>
