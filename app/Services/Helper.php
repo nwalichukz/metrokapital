@@ -92,7 +92,7 @@ class Helper extends Controller
      * 
      */
     public function getLabelName($name){
-      return InvestmentType::where('parent_name', strtolower($name))->get();
+      return InvestmentType::where(['parent_name'=> strtolower($name), 'user_id'=>Auth::user()->id])->get();
      
     }
 

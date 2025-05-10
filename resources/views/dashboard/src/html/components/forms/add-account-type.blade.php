@@ -47,6 +47,7 @@
                                                 <div class="form-group">
                                                     <label class="form-label" for="cf-email-address">Percentage Profit</label>
                                                     <input name="earning_percentage" type="text" class="form-control" id="cf-email-address" required>
+                                                     <input name="user_id" type="hidden" value="{{$user_id}}">
                                                 </div>
 
                                                 
