@@ -7,6 +7,7 @@ use App\Http\Controllers\Wallet\UserWalletController;
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\Referral\ReferralController;
 use App\Http\Controllers\Email\Mailer;
+use App\Http\Controllers\Image\ImageController;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\UserWallet;
@@ -509,6 +510,43 @@ public static function changePassword(Request $request){
     public static function getChangePassword(){
      
       return view('dashboard/src/html/components/forms/change-password');
+
+    }
+
+    
+       /**
+     * returns account officer image
+     * 
+     * @return true
+     * 
+     * @param $settings page
+     * 
+     */
+    public static function uploadAccountOfficerProfile(Request $request){
+      $acc_officer = User::where('account_officer', 'yes')->first();
+      $acc_officer->avatar = ImageController::uploadAccOfficerImage($request);
+      if($acc_officer){
+        return redirect('user/get-account-officer')->with('success', 'Account Officer Image uploaded successfully');
+      }else{
+        return redirect()->back()->with('error', 'Account Officer Image  not uploaded successfully. Pls try again');
+
+      }
+     
+      return view('dashboard/src/html/components/forms/change-password');
+
+    }
+
+    /**
+     * returns upload profile image page
+     * 
+     * @return true
+     * 
+     * @param $settings page
+     * 
+     */
+    public static function uploadAccountOfficerProfileImagePage(){
+      
+      return view('dashboard/src/html/components/forms/upload-profile-image');
 
     }
 

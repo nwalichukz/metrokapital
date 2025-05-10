@@ -26,6 +26,7 @@ class InvestmentTypeController extends Controller
         $save->name = $request['account_name'];
         $save->min_amt = $request['min_amount'];
         $save->max_amt = $request['max_amount'];
+        $save->user_id = $request['user_id'];
         $save->earning_percentage = $request['earning_percentage'];
         $save->duration = $request['duratn_in_mnth'];
         $save->description = $request['description'];
@@ -89,8 +90,8 @@ class InvestmentTypeController extends Controller
      * @return response
      * 
      */
-    public function getAll(){
-      $invAll = InvestmentType::where('id', '!=', NULL)->orderBy('created_at', 'DESC')->paginate(15);
+    public function getAll($user_id = null){
+      $invAll = InvestmentType::where('user_id', $user_id)->orderBy('created_at', 'DESC')->paginate(15);
      // $allInv = $invAll->paginate(15);
       //$total = $invAll->count();
       return view('dashboard/src/html/view-plans')->with(['invall'=>$invAll]);
@@ -178,9 +179,9 @@ class InvestmentTypeController extends Controller
      * @param $settings page
      * 
      */
-    public static function addAccountTyePage(){
+    public static function addAccountTyePage($user_id=null){
       
-      return view('dashboard/src/html/components/forms/add-account-type');
+      return view('dashboard/src/html/components/forms/add-account-type')->with(['user_id'=>$user_id]);
 
     }
 

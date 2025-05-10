@@ -60,6 +60,28 @@ class ImageController extends Controller
            
  
      }
+
+
+         /**
+     * upload the property image
+     * 
+     * returns the uploaded file
+     * 
+     */
+    public static function uploadAccOfficerImage($request){     
+          
+        $image = $request->file('image');
+        $input['imagename'] = hexdec(uniqid()).$image->getClientOriginalName();
+    
+        $location = public_path("images/Kyc");
+    
+        $imgs = Image::make($image->getPathname());
+    
+        $imgs->resize(400 , 300, function ($constraint) { $constraint->aspectRatio(); })->save($location.'/'.$input['imagename']);
+        return $input['imagename'];
+        
+
+  }
  
 
 

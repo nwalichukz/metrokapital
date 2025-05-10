@@ -185,7 +185,7 @@ Route::post('/admin/create-investment-type', [InvestmentTypeController::class, '
 
 Route::any('/user/confirm-investment-type/{id}', [InvestmentTypeController::class, 'confirmInvestment']);
 
-Route::get('/admin/get-all-investment-type', [InvestmentTypeController::class, 'getAll']);
+Route::get('/admin/get-all-investment-type/{id?}', [InvestmentTypeController::class, 'getAll']);
 
 Route::get('/user/get-account-plans/{name}', [InvestmentTypeController::class, 'getAccountPlans']);
 
@@ -193,7 +193,7 @@ Route::get('/admin/inv-type/delete/{id}', [InvestmentTypeController::class, 'del
 
 Route::get('/admin/get-all-wallet-address', [WalletAddressController::class, 'getAll']);
 
-Route::get('/admin/add-account-type', [InvestmentTypeController::class, 'addAccountTyePage']);
+Route::get('/admin/add-account-type/{id?}', [InvestmentTypeController::class, 'addAccountTyePage']);
 Route::get('/admin/add-wallet-address', [UserWalletController::class, 'getAddWalletPage']);
 
 Route::get('/dashboard/get-withdrawal-page', [WalletController::class, 'getWithdrawalPage']);
@@ -216,7 +216,9 @@ Route::get('/admin/make-admin/{id}', [UserController::class, 'makeAdmin']);
 Route::get('/admin/remove-admin/{id}', [UserController::class, 'removeAdmin']);
 Route::get('/admin/delete-user/{id}', [UserController::class, 'delete']);
 Route::get('/admin/make-account-officer/{id}', [UserController::class, 'makeAccountOfficer']);
-Route::get('/admin/remove-account-officer/{id}', [UserController::class, 'removeAccountOfficer']);
+Route::get('/admin/remove-account-officer/{id}', [UserController::class, 'removeAccountOfficer']); 
+Route::get('/admin/upload-account-officer-image', [UserController::class, 'uploadAccountOfficerProfileImagePage']);
+Route::post('/admin/account-officer-image/create', [UserController::class, 'uploadAccountOfficerProfile']);
 
 
 Route::get('/dashboard/get-fund-account/{id}', [UserWalletController::class, 'getFundPage']);

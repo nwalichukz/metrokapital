@@ -311,9 +311,9 @@
                                         <span class="nk-menu-text">Account Officers</span>
                                     </a>
                                     <ul class="nk-menu-sub">
-                                    {{--<li class="nk-menu-item">
-                                            <a href="{{url('/admin/add-wallet-address')}}" class="nk-menu-link"><span class="nk-menu-text">Add Account officer</span></a>
-                                        </li>--}}
+                                    <li class="nk-menu-item">
+                                            <a href="{{url('/admin/upload-account-officer-image')}}" class="nk-menu-link"><span class="nk-menu-text">Upload Profile Image</span></a>
+                                        </li>
 
                                         <li class="nk-menu-item">
                                             <a href="{{url('/admin/get-account-officer')}}" class="nk-menu-link"><span class="nk-menu-text">View Account officer</span></a>
