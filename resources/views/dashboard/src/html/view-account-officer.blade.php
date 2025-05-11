@@ -54,6 +54,7 @@
                                                                 <div class="dropdown-menu dropdown-menu-end">
                                                                     <ul class="link-list-opt no-bdr">
                                                                         <li><a href="{{url('/admin/remove-account-officer/'.$user->id)}}"><em class="icon ni ni-focus"></em><span>Remove</span></a></li>
+                                                                        <li><a href="{{url('/admin/upload-account-officer-image/'.$user->id)}}"><em class="icon ni ni-focus"></em><span>Upload Image</span></a></li>
                                                                         {{--<li><a href="#"><em class="icon ni ni-eye"></em><span>View Details</span></a></li>
                                                                         <li><a href="#"><em class="icon ni ni-mail"></em><span>Send Email</span></a></li>
                                                                         <li class="divider"></li>

@@ -53,8 +53,8 @@
                                                                                     <div class="dropdown-menu dropdown-menu-end">
                                                                                         <ul class="link-list-opt no-bdr">
                                                                                             <li><a data-bs-toggle="" href="{{url('/admin/settle-withdrawal-request/'.$all->id)}}"><em class="icon ni ni-trash"></em><span>Settle</span></a></li>
-                                                                                            <li><a data-bs-toggle="modal" href="#editDataDash"><em class="icon ni ni-trash"></em><span>Cacel</span></a></li>
-                                                                                            <li><a data-bs-toggle="modal" href="#editDataDash"><em class="icon ni ni-trash"></em><span>Delete</span></a></li>
+                                                                                            {{--<li><a data-bs-toggle="modal" href="#editDataDash"><em class="icon ni ni-trash"></em><span>Cacel</span></a></li>--}}
+                                                                                            <li><a href="{{url('/admin/cancel-withdrawal-request/'.$all->id)}}"><em class="icon ni ni-trash"></em><span>Cancel</span></a></li>
                                                                                          
                                                                                          
                                                                                         </ul>

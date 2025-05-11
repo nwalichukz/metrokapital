@@ -212,12 +212,15 @@ Route::get('/user/get-account-officer', [UserController::class, 'accountOfficer'
 Route::get('/user/change-password', [UserController::class, 'getChangePassword']);
 Route::post('/user/post-change-password', [UserController::class, 'changePassword']);
 
+Route::get('/admin/suspend-user/{id}', [UserController::class, 'suspend']);
+Route::get('/admin/unsuspend-user/{id}', [UserController::class, 'unsuspend']);
+
 Route::get('/admin/make-admin/{id}', [UserController::class, 'makeAdmin']);
 Route::get('/admin/remove-admin/{id}', [UserController::class, 'removeAdmin']);
 Route::get('/admin/delete-user/{id}', [UserController::class, 'delete']);
 Route::get('/admin/make-account-officer/{id}', [UserController::class, 'makeAccountOfficer']);
 Route::get('/admin/remove-account-officer/{id}', [UserController::class, 'removeAccountOfficer']); 
-Route::get('/admin/upload-account-officer-image', [UserController::class, 'uploadAccountOfficerProfileImagePage']);
+Route::get('/admin/upload-account-officer-image/{id}', [UserController::class, 'uploadAccountOfficerProfileImagePage']);
 Route::post('/admin/account-officer-image/create', [UserController::class, 'uploadAccountOfficerProfile']);
 
 

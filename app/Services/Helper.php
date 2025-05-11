@@ -5,6 +5,7 @@ namespace App\Services;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\InvestmentType;
+use App\Models\User;
 use App\Models\CitizenshipByInvestment;
 use App\Models\ResidencyByInvestmentModel;
 use App\Models\ResidencyByRealEstateModel;
@@ -126,6 +127,19 @@ class Helper extends Controller
     public function getInvPage(){
       return view('dashboard.investment.inv-type-page');
     }
+
+     /**
+     * creates investment type
+     * page
+     * 
+     * 
+     * @return response
+     * 
+     */
+    public function totalUser(){
+     return User::where('id', '!=', null)->count();
+    }
+
 
 
      /**

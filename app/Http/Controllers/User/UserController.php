@@ -263,6 +263,52 @@ class UserController extends Controller
         }
       }
 
+        /**
+       * get a user
+       * 
+       * @param $id
+       * 
+       * @return view
+       */
+      public static function suspend($id){
+        $user = User::find($id);
+        if(!empty($user->id)){
+          if(Auth::user()->user_level =='admin'){
+            $user->status = 'suspend';
+            $user->save();
+            return redirect()->back()->with('success', 'User suspended successfully');
+          }else{
+            return redirect()->back()->with('error', 'You do not have permission to carry out this transaction. Please try again');
+          }
+        }else{
+            return redirect()->back()->with('error', 'Something went wrong user not suspended successfully. Please try again');
+        }
+      }
+
+      
+        /**
+       * get a user
+       * 
+       * @param $id
+       * 
+       * @return view
+       */
+      public static function unsuspend($id){
+        $user = User::find($id);
+        if(!empty($user->id)){
+          if(Auth::user()->user_level =='admin'){
+            $user->status = 'active';
+            $user->save();
+            return redirect()->back()->with('success', 'User suspension lifted successfully');
+          }else{
+            return redirect()->back()->with('error', 'You do not have permission to carry out this transaction. Please try again');
+          }
+        }else{
+            return redirect()->back()->with('error', 'Something went wrong user suspension not lifted successfully. Please try again');
+        }
+      }
+
+
       
        /**
        * make account officer
@@ -494,8 +540,12 @@ public static function changePassword(Request $request){
      * 
      */
     public static function accountOfficer(){
+      if(Auth::check()){
       $user = User::where('account_officer', 'yes')->get();
       return view('dashboard/src/html/components/elements/account-officer-display')->with(['user'=>$user]);
+      }else{
+        return redirect('get-login');
+      }
 
     }
 
@@ -523,8 +573,9 @@ public static function changePassword(Request $request){
      * 
      */
     public static function uploadAccountOfficerProfile(Request $request){
-      $acc_officer = User::where('account_officer', 'yes')->first();
+      $acc_officer = User::find($request['user_id']);
       $acc_officer->avatar = ImageController::uploadAccOfficerImage($request);
+      $acc_officer =  $acc_officer->save();
       if($acc_officer){
         return redirect('user/get-account-officer')->with('success', 'Account Officer Image uploaded successfully');
       }else{
@@ -544,9 +595,9 @@ public static function changePassword(Request $request){
      * @param $settings page
      * 
      */
-    public static function uploadAccountOfficerProfileImagePage(){
+    public static function uploadAccountOfficerProfileImagePage($id){
       
-      return view('dashboard/src/html/components/forms/upload-profile-image');
+      return view('dashboard/src/html/components/forms/upload-profile-image')->with(['user_id'=>$id]);
 
     }
 

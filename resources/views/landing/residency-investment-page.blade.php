@@ -38,7 +38,7 @@
         <br/>      
         <p style="border: 20px;">
                     
-                    <a  href="#" class="theme-btn btn-one">Apply Today</a>
+                    <a  href="{{url('/user/get-account-officer')}}" class="theme-btn btn-one">Apply Today</a>
 </p>
 
 <br/>

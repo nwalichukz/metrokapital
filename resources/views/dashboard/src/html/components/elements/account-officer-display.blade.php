@@ -27,7 +27,11 @@
                                                 <div class="row">
                                                     <div class="col-lg-4">
                                                         <div class="card card-bordered">
+                                                            @if($data->avatar == null)
                                                             <img src="{{ asset('acc-officer/account-officer.jpg')}}" class="card-img-top" alt="">
+                                                            @else
+                                                            <img src="{{ asset('images/Kyc/'.$data->avatar)}}" class="card-img-top" alt="">
+                                                            @endif
                                                             <div class="card-inner">
                                                                 <h5 class="card-title">{{$data->name}}</h5>
                                                                 <p class="card-text">{{$data->mobile_number}}, {{$data->email}}</p>
