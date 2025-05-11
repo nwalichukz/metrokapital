@@ -250,12 +250,12 @@
                                         <span class="nk-menu-text">Investments</span>
                                     </a>
                                     <ul class="nk-menu-sub">
-                                    <li class="nk-menu-item">
+                                    {{--<li class="nk-menu-item">
                                             <a href="{{url('/admin/add-account-type')}}" class="nk-menu-link"><span class="nk-menu-text">Add Investment Type</span></a>
                                         </li>
                                         <li class="nk-menu-item">
                                             <a href="{{url('/admin/get-all-investment-type')}}" class="nk-menu-link"><span class="nk-menu-text">View All Investment Type </span></a>
-                                        </li>
+                                        </li>--}}
 
                                         <li class="nk-menu-item">
                                             <a href="{{url('/admin/get-all-investments')}}" class="nk-menu-link"><span class="nk-menu-text">View All Investment </span></a>
@@ -311,9 +311,7 @@
                                         <span class="nk-menu-text">Account Officers</span>
                                     </a>
                                     <ul class="nk-menu-sub">
-                                    <li class="nk-menu-item">
-                                            <a href="{{url('/admin/upload-account-officer-image')}}" class="nk-menu-link"><span class="nk-menu-text">Upload Profile Image</span></a>
-                                        </li>
+                                   
 
                                         <li class="nk-menu-item">
                                             <a href="{{url('/admin/get-account-officer')}}" class="nk-menu-link"><span class="nk-menu-text">View Account officer</span></a>

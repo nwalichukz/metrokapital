@@ -19,6 +19,7 @@
                                                 <div class="form-group">
                                                     <label class="form-label" for="cf-full-name">Upload Profile Image</label>
                                                     <input name="image" type="file" class="form-control" id="cf-nam" placeholder="Select Image" required>
+                                                    <input type="hidden" name="user_id" value="{{$user_id}}">
                                                 </div>
                                                                                      
 
