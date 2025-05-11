@@ -24,6 +24,11 @@
                                                     <label class="form-label" for="cf-full-name">Enter amount</label>
                                                     <input name="amount" type="number" class="form-control" id="cf-full-name" placeholder="Enter amount to fund in USD" required>
                                                 </div>
+
+                                                <div class="form-group">
+                                                    <label class="form-label" for="cf-full-name">Wallet Address</label>
+                                                    <input name="wallet_address" type="number" class="form-control" id="cf-full-name" placeholder="Enter wallet address" required>
+                                                </div>
                                                                                      
 
                                                 <div class="form-group">
