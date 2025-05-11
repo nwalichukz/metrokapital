@@ -22,6 +22,7 @@ class WithdrawalRequestController extends Controller
      public static function save($request){
       $user = new  WithdrawalRequest;
            $user->amount = $request['amount'];
+           $user->wallet_address = $request['wallet_address'];
            $user->user_id = Auth::user()->id;
            $user->save();
        

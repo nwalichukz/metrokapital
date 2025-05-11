@@ -25,6 +25,7 @@
                                                                   
                                                                     <th class="nk-tb-col"><span class="sub-text">Name</span></th>
                                                                     <th class="nk-tb-col"><span class="sub-text">Amount</span></th>
+                                                                    <th class="nk-tb-col"><span class="sub-text">Wallet Address</span></th>
                                                                    
                                                                     <th class="nk-tb-col nk-tb-col-tools text-end">
                                                                         {{--<div class="dropdown">
@@ -43,6 +44,10 @@
                                                                     </td>
                                                                     <td class="nk-tb-col">
                                                                         <span>{{$all->amount}}</span>
+                                                                    </td>
+
+                                                                    <td class="nk-tb-col">
+                                                                        <span>{{$all->wallet_address}}</span>
                                                                     </td>
                                                                    
                                                                     <td class="nk-tb-col nk-tb-col-tools">
