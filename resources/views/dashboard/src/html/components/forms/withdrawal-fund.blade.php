@@ -27,7 +27,7 @@
 
                                                 <div class="form-group">
                                                     <label class="form-label" for="cf-full-name">Wallet Address</label>
-                                                    <input name="wallet_address" type="number" class="form-control" id="cf-full-name" placeholder="Enter wallet address" required>
+                                                    <input name="wallet_address" type="text" class="form-control" id="cf-full-name" placeholder="Enter wallet address" required>
                                                 </div>
                                                                                      
 
