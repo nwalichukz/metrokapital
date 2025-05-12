@@ -199,9 +199,9 @@ class UserController extends Controller
         if(Auth::check() && Auth::user()->access_level== 'admin'){
         $user = User::where('id', $id)->delete();
         if($user){
-            return redirect()->back()->with('status', 'User deleted successfully');
+            return redirect()->back()->with('success', 'User deleted successfully');
         }else{
-            return redirect()->back()->with('status', 'Something went wrong not deleted successfully. Please try again');
+            return redirect()->back()->with('error', 'Something went wrong not deleted successfully. Please try again');
         }
       }else{
         return rediect('/get-login');
