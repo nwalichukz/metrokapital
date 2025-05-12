@@ -14,7 +14,7 @@
                                                                 <h6 class="title">Wallet Address</h6>
                                                             </div>
                                                             <div class="card-tools">
-                                                                <a href="html/crm/recent-sale.html" class="link">Edit All</a>
+                                                                <a href="#" class="link">Edit All</a>
                                                             </div>
                                                         </div>
                                                     </div>
