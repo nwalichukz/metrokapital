@@ -150,7 +150,7 @@ class UserController extends Controller
        */
       public static function getAll(){
         if(Auth::check()){
-          if(Auth::user()->user_level=='admin'){
+          if(Auth::user()->access_level=='admin'){
         $users = User::where('id', '!=', NULL)->orderBy('created_at', 'DESC')->paginate(3000);
         return view('user.all-users')->with(['users'=>$users]);
           }else{
@@ -250,7 +250,7 @@ class UserController extends Controller
       public static function makeAdmin($id){
         $user = User::find($id);
         if(!empty($user->id)){
-          if(Auth::user()->user_level =='admin'){
+          if(Auth::user()->access_level =='admin'){
             $user->user_level = 'admin';
             $user->kyc_status = 'verified';
             $user->save();
@@ -273,7 +273,7 @@ class UserController extends Controller
       public static function suspend($id){
         $user = User::find($id);
         if(!empty($user->id)){
-          if(Auth::user()->user_level =='admin'){
+          if(Auth::user()->access_level =='admin'){
             $user->status = 'suspend';
             $user->save();
             return redirect()->back()->with('success', 'User suspended successfully');
@@ -296,7 +296,7 @@ class UserController extends Controller
       public static function unsuspend($id){
         $user = User::find($id);
         if(!empty($user->id)){
-          if(Auth::user()->user_level =='admin'){
+          if(Auth::user()->access_level =='admin'){
             $user->status = 'active';
             $user->save();
             return redirect()->back()->with('success', 'User suspension lifted successfully');
@@ -367,8 +367,8 @@ class UserController extends Controller
       public static function removeAdmin($id){
         $user = User::find($id);
         if(!empty($user->id)){
-          if($user->user_level =='admin'){
-            $user->user_level = 'user';
+          if($user->access_level =='admin'){
+            $user->access_level = 'user';
             $user->save();
             return redirect()->back()->with('success', 'User admin previledge revoked successfully');
           }else{

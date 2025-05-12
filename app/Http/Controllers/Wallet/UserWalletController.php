@@ -284,9 +284,9 @@ class UserWalletController extends Controller
             try{
                 $credit = UserWallet::where('wallet_no', $request['receiver_wallet_no'])->with(['user'])->lockForUpdate()->first();
                 $debit = UserWallet::where('user_id', $request['sender_user_id'])->with(['user'])->lockForUpdate()->first();
+               
                 DB::transaction(function() use ($request, $credit, $debit){
-
-                    if($debit->balance >= $request['amount'] && is_int($request['amount'])){
+                    if($debit->balance >= $request['amount']){
                         $debit->balance = $debit->balance - $request['amount'];
                         $debit->save();
                      $debit_transaction_record = [
@@ -296,7 +296,7 @@ class UserWalletController extends Controller
                             'purpose' => 'transfer to '.$credit->user->name,
                         ];
                         UserTransactionHistoryController::save($debit_transaction_record);
-                    }
+                 
                     
                     // $credit = Wallet::where('wallet_no', $request['receiver_wallet_no'])->with(['user'])->first();
                     $credit->balance = $credit->balance + $request['amount'];
@@ -309,9 +309,9 @@ class UserWalletController extends Controller
                     ];
                     UserTransactionHistoryController::save($credit_transaction_record);
                        
-
+                   }
                 });
-
+         
                 return redirect()->back()->with('success', '$'.$request['amount'].' transfered successfully to '.$credit->user->name);
                
             }catch(Exception $e){
