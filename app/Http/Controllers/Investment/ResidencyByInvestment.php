@@ -94,8 +94,8 @@ class ResidencyByInvestment extends Controller
      * 
      */
     public static function getResidencyInvPage($id){
-      $citi_inv = ResidencyByInvestmentModel::where('id', $id)->find($id);
-      $image = InvestmentImage::where(['rcr_id'=>$citi_inv->id, 'inv_type'=>'cbi'])->first();
+      $citi_inv = ResidencyByInvestmentModel::where('id', $id)->first();
+      $image = InvestmentImage::where(['rcr_id'=>$citi_inv->id, 'inv_type'=>'rbi'])->first();
    
        return view('landing/citizenship-by-investment-page')->with(['data'=>$citi_inv, 'image'=>$image]);
      

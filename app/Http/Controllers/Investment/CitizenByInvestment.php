@@ -108,7 +108,7 @@ class CitizenByInvestment extends Controller
      * 
      */
     public static function getCitizenInvPage($id){
-      $citi_inv = CitizenshipByInvestment::where('id', $id)->find($id);
+      $citi_inv = CitizenshipByInvestment::where('id', $id)->first();
       $image = InvestmentImage::where(['rcr_id'=>$citi_inv->id, 'inv_type'=>'cbi'])->first();
        return view('landing/citizenship-by-investment-page')->with(['data'=>$citi_inv, 'image'=>$image]);
      
