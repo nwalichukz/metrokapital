@@ -311,7 +311,7 @@
                                                                                 @else
                                                                                 <li><a href="{{url('/admin/remove-account-officer/'.$user->id)}}"><em class="icon ni ni-shield-off"></em><span>Revoke Account Officer</span></a></li>
                                                                                 @endif
-                                                                                @if($user->access_level == 'admin')
+                                                                                @if(Auth::user()->access_level == 'admin')
                                                                                 @if($user->status == 'suspend')
                                                                                 <li><a href="{{url('/admin/unsuspend-user/'.$user->id)}}"><em class="icon ni ni-na"></em><span>UnSuspend User</span></a></li>
 
