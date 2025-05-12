@@ -294,7 +294,7 @@
                                                                                {{-- <li><a href="#"><em class="icon ni ni-focus"></em><span>Quick View</span></a></li>
                                                                                 <li><a href="#"><em class="icon ni ni-eye"></em><span>View Details</span></a></li>--}}
                                                                                 <li><a href="{{url('/admin/view-user-transactions/'.$user->id)}}"><em class="icon ni ni-repeat"></em><span>Transaction</span></a></li>
-                                                                                @if($user->access_level == 'admin')
+                                                                                @if(Auth::user()->access_level == 'admin')
                                                                                 <li><a href="{{url('admin/add-account-type/'.$user->id)}}"><em class="icon ni ni-activity-round"></em><span>Add Investment Type</span></a></li>
                                                                                 <li><a href="{{url('admin/get-all-investment-type/'.$user->id)}}"><em class="icon ni ni-activity-round"></em><span>View Investment Type</span></a></li>
                                                                                 @endif
