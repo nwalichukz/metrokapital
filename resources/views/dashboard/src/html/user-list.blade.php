@@ -311,11 +311,13 @@
                                                                                 @else
                                                                                 <li><a href="{{url('/admin/remove-account-officer/'.$user->id)}}"><em class="icon ni ni-shield-off"></em><span>Revoke Account Officer</span></a></li>
                                                                                 @endif
-                                                                                @if($user->status == ('suspend' | 'not-active'))
+                                                                                @if($user->access_level == 'admin')
+                                                                                @if($user->status == 'suspend')
                                                                                 <li><a href="{{url('/admin/unsuspend-user/'.$user->id)}}"><em class="icon ni ni-na"></em><span>UnSuspend User</span></a></li>
 
                                                                                 @elseif($user->status == 'active')
                                                                                 <li><a href="{{url('/admin/suspend-user/'.$user->id)}}"><em class="icon ni ni-na"></em><span>Suspend User</span></a></li>
+                                                                                @endif
                                                                                 @endif
                                                                             </ul>
 
