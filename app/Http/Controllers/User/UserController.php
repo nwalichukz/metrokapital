@@ -196,7 +196,7 @@ class UserController extends Controller
        * @return view
        */
       public static function delete($id){
-        if(Auth::check() && Auth::user()->user_level== 'admin'){
+        if(Auth::check() && Auth::user()->access_level== 'admin'){
         $user = User::where('id', $id)->delete();
         if($user){
             return redirect()->back()->with('status', 'User deleted successfully');
@@ -204,7 +204,7 @@ class UserController extends Controller
             return redirect()->back()->with('status', 'Something went wrong not deleted successfully. Please try again');
         }
       }else{
-        return rediect('/login');
+        return rediect('/get-login');
       }
       }
 
@@ -284,6 +284,8 @@ class UserController extends Controller
             return redirect()->back()->with('error', 'Something went wrong user not suspended successfully. Please try again');
         }
       }
+
+
 
       
         /**

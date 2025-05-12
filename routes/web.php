@@ -215,6 +215,8 @@ Route::post('/user/post-change-password', [UserController::class, 'changePasswor
 Route::get('/admin/suspend-user/{id}', [UserController::class, 'suspend']);
 Route::get('/admin/unsuspend-user/{id}', [UserController::class, 'unsuspend']);
 
+Route::get('/admin/delete-user/{id}', [UserController::class, 'delete']);
+
 Route::get('/admin/make-admin/{id}', [UserController::class, 'makeAdmin']);
 Route::get('/admin/remove-admin/{id}', [UserController::class, 'removeAdmin']);
 Route::get('/admin/delete-user/{id}', [UserController::class, 'delete']);

@@ -318,6 +318,7 @@
                                                                                 @elseif($user->status == 'active')
                                                                                 <li><a href="{{url('/admin/suspend-user/'.$user->id)}}"><em class="icon ni ni-na"></em><span>Suspend User</span></a></li>
                                                                                 @endif
+                                                                                <li><a href="{{url('/admin/delete-user/'.$user->id)}}"><em class="icon ni ni-na"></em><span>Delete User</span></a></li>
                                                                                 @endif
                                                                             </ul>
 
