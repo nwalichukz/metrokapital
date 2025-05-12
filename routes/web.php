@@ -175,6 +175,7 @@ Route::get('/view-residency-by-real-estate/{id}', [ResidencyByRealEstate::class,
 Route::get('/dashboard/get-investment-page/{id}', [InvestmentController::class, 'returnInvestmentPage']);
 
 Route::post('/admin/create-wallet-address', [WalletAddressController::class, 'create']);
+Route::get('/admin/delete-wallet-address/{id}', [WalletAddressController::class, 'delete']);
 Route::post('/user/external-transfer', [UserWalletController::class, 'externalTransfer']);
 Route::any('/user/confirm-wallet-details', [UserWalletController::class, 'confirmUserWalletNo']);
 

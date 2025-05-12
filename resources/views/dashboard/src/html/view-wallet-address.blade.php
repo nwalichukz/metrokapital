@@ -52,7 +52,7 @@
                                                                                     <a href="#" class="dropdown-toggle btn btn-icon btn-trigger" data-bs-toggle="dropdown"><em class="icon ni ni-more-h"></em></a>
                                                                                     <div class="dropdown-menu dropdown-menu-end">
                                                                                         <ul class="link-list-opt no-bdr">
-                                                                                            <li><a data-bs-toggle="modal" href="#editDataDash"><em class="icon ni ni-trash"></em><span>Delete</span></a></li>
+                                                                                            <li><a  href="{{url('/admin/delete-wallet-address/'.$all->id)}}"><em class="icon ni ni-trash"></em><span>Delete</span></a></li>
                                                                                          
                                                                                         </ul>
                                                                                     </div>

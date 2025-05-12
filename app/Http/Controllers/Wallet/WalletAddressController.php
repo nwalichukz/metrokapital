@@ -98,12 +98,17 @@ class WalletAddressController extends Controller
      * 
      */
     public function delete($id){
-        $delete = WalletAddress::delete($id);
+      if(Auth::user()->access_level == 'admin'){
+        $delete = WalletAddress::where('id', $id)->delete();
         if($delete){
            return redirect()->back()->with('success', 'Wallet address deleted successfully');
         }else{
            return redirect()->back()->with('error', 'Something went wrong, wallet address not deleted successfully');
         }
+      }else{
+         return redirect('get-login');
+      }
+      
       }
   
   
