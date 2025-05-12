@@ -53,7 +53,9 @@ class UserTransactionHistoryController extends Controller
         }else{
           return redirect('/get-login');
         }
-       }
+       }else{
+        return redirect('/get-login');
+      }
      }
 
     /***
