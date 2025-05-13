@@ -108,7 +108,7 @@ Route::get('/get-reset', function () {
 
 Route::post('/create-user', [UserController::class, 'create']);
 Route::post('/update-user', [UserController::class, 'update']);
-Route::any('/search-user', [UserController::class, 'searchUser']);
+Route::any('/admin/search-user', [UserController::class, 'searchUser']);
 Route::post('/post-reset-password', [Mailer::class, 'postResetPassword']);
 
 Route::get('/user-profile-setting/{id?}', [UserController::class, 'userProfileSetting']);
