@@ -357,8 +357,6 @@ class UserController extends Controller
       }
 
 
-
-
        /**
        * get a user
        * 
@@ -454,7 +452,7 @@ public static function changePassword(Request $request){
         $user = User::where('email', $request['term'])
                      ->orWhere('name', $request['term'])->first();
         if(!empty($user->id)){
-        return view('user.single-user')->with(['user'=>$user]);
+        return view('dashboard/src/html/single-user')->with(['user'=>$user, 'userwallet'])->paginate(15);
         }else{
             return redirect()->back()->with('error', 'User not found. Make sure the name or email is spelt correctly and try again');
         }

@@ -1,3 +1,4 @@
+@inject('appData', 'App\Services\Helper')
 @extends('dashboard/src/html/crm/dashboard-layout')
 @section('content')
      <!-- content @s -->
@@ -8,25 +9,27 @@
                                 <div class="nk-block-head nk-block-head-sm">
                                     <div class="nk-block-between">
                                         <div class="nk-block-head-content">
-                                            <h3 class="nk-block-title page-title">Users Lists</h3>
+                                            <h3 class="nk-block-title page-title">All Users </h3>
                                             <div class="nk-block-des text-soft">
-                                                <p>You have total 2,595 users.</p>
+                                                <p> </p>
                                             </div>
                                         </div><!-- .nk-block-head-content -->
                                         <div class="nk-block-head-content">
                                             <div class="toggle-wrap nk-block-tools-toggle">
+                                               
                                                 <a href="#" class="btn btn-icon btn-trigger toggle-expand me-n1" data-target="pageMenu"><em class="icon ni ni-menu-alt-r"></em></a>
                                                 <div class="toggle-expand-content" data-content="pageMenu">
                                                     <ul class="nk-block-tools g-3">
-                                                        <li><a href="#" class="btn btn-white btn-outline-light"><em class="icon ni ni-download-cloud"></em><span>Export</span></a></li>
+                                                        {{--<li><a href="#" class="btn btn-white btn-outline-light">
+                                                            <em class="icon ni ni-download-cloud"></em><span>Export</span></a></li>--}}
                                                         <li class="nk-block-tools-opt">
                                                             <div class="drodown">
                                                                 <a href="#" class="dropdown-toggle btn btn-icon btn-primary" data-bs-toggle="dropdown"><em class="icon ni ni-plus"></em></a>
                                                                 <div class="dropdown-menu dropdown-menu-end">
                                                                     <ul class="link-list-opt no-bdr">
-                                                                        <li><a href="#"><span>Add User</span></a></li>
+                                                                        {{--<li><a href="#"><span>Add User</span></a></li>
                                                                         <li><a href="#"><span>Add Team</span></a></li>
-                                                                        <li><a href="#"><span>Import User</span></a></li>
+                                                                        <li><a href="#"><span>Import User</span></a></li>--}}
                                                                     </ul>
                                                                 </div>
                                                             </div>
@@ -45,16 +48,22 @@
                                                     <div class="card-tools">
                                                         <div class="form-inline flex-nowrap gx-3">
                                                             <div class="form-wrap w-150px">
-                                                                <select class="form-select js-select2" data-search="off" data-placeholder="Bulk Action">
-                                                                    <option value="">Bulk Action</option>
+                                                            <form method="POST" action="{{url('/admin/search-user')}}">
+                                                                     @csrf
+                                                           <input type="text" name="term" placeholder="Enter email or name of user" required>
+                                                                            </br><br/>
+                                                            <input type="submit" value="Search">
+                                                              </form>
+                                                                {{--<select class="form-select js-select2" data-search="off" data-placeholder="Bulk Action">
+                                                                   <option value="">Bulk Action</option>
                                                                     <option value="email">Send Email</option>
                                                                     <option value="group">Change Group</option>
                                                                     <option value="suspend">Suspend User</option>
                                                                     <option value="delete">Delete User</option>
-                                                                </select>
+                                                                </select>--}}
                                                             </div>
                                                             <div class="btn-wrap">
-                                                                <span class="d-none d-md-block"><button class="btn btn-dim btn-outline-light disabled">Apply</button></span>
+                                                               {{--<span class="d-none d-md-block"><button class="btn btn-dim btn-outline-light disabled">Apply</button></span>--}}
                                                                 <span class="d-md-none"><button class="btn btn-dim btn-outline-light btn-icon disabled"><em class="icon ni ni-arrow-right"></em></button></span>
                                                             </div>
                                                         </div><!-- .form-inline -->
@@ -101,10 +110,10 @@
                                                                                                     <div class="form-group">
                                                                                                         <label class="overline-title overline-title-alt">Role</label>
                                                                                                         <select class="form-select js-select2">
-                                                                                                            <option value="any">Any Role</option>
+                                                                                                            {{--<option value="any">Any Role</option>
                                                                                                             <option value="investor">Investor</option>
                                                                                                             <option value="seller">Seller</option>
-                                                                                                            <option value="buyer">Buyer</option>
+                                                                                                            <option value="buyer">Buyer</option>--}}
                                                                                                         </select>
                                                                                                     </div>
                                                                                                 </div>
@@ -112,11 +121,11 @@
                                                                                                     <div class="form-group">
                                                                                                         <label class="overline-title overline-title-alt">Status</label>
                                                                                                         <select class="form-select js-select2">
-                                                                                                            <option value="any">Any Status</option>
+                                                                                                           {{-- <option value="any">Any Status</option>
                                                                                                             <option value="active">Active</option>
                                                                                                             <option value="pending">Pending</option>
                                                                                                             <option value="suspend">Suspend</option>
-                                                                                                            <option value="deleted">Deleted</option>
+                                                                                                            <option value="deleted">Deleted</option>--}}
                                                                                                         </select>
                                                                                                     </div>
                                                                                                 </div>
@@ -228,7 +237,7 @@
                                                     </div><!-- .nk-tb-item -->
 
 
-                                                   @foreach($users as $user)
+                                               
                                                     <div class="nk-tb-item">
                                                         <div class="nk-tb-col nk-tb-col-check">
                                                             <div class="custom-control custom-control-sm custom-checkbox notext">
@@ -292,7 +301,7 @@
                                                                                {{-- <li><a href="#"><em class="icon ni ni-focus"></em><span>Quick View</span></a></li>
                                                                                 <li><a href="#"><em class="icon ni ni-eye"></em><span>View Details</span></a></li>--}}
                                                                                 <li><a href="{{url('/admin/view-user-transactions/'.$user->id)}}"><em class="icon ni ni-repeat"></em><span>Transaction</span></a></li>
-                                                                                @if($user->access_level == 'admin')
+                                                                                @if(Auth::user()->access_level == 'admin')
                                                                                 <li><a href="{{url('admin/add-account-type/'.$user->id)}}"><em class="icon ni ni-activity-round"></em><span>Add Investment Type</span></a></li>
                                                                                 <li><a href="{{url('admin/get-all-investment-type/'.$user->id)}}"><em class="icon ni ni-activity-round"></em><span>View Investment Type</span></a></li>
                                                                                 @endif
@@ -309,11 +318,14 @@
                                                                                 @else
                                                                                 <li><a href="{{url('/admin/remove-account-officer/'.$user->id)}}"><em class="icon ni ni-shield-off"></em><span>Revoke Account Officer</span></a></li>
                                                                                 @endif
-                                                                                @if($user->status == ('suspend' | 'not-active'))
+                                                                                @if(Auth::user()->access_level == 'admin')
+                                                                                @if($user->status == 'suspend')
                                                                                 <li><a href="{{url('/admin/unsuspend-user/'.$user->id)}}"><em class="icon ni ni-na"></em><span>UnSuspend User</span></a></li>
 
                                                                                 @elseif($user->status == 'active')
                                                                                 <li><a href="{{url('/admin/suspend-user/'.$user->id)}}"><em class="icon ni ni-na"></em><span>Suspend User</span></a></li>
+                                                                                @endif
+                                                                                <li><a href="{{url('/admin/delete-user/'.$user->id)}}"><em class="icon ni ni-na"></em><span>Delete User</span></a></li>
                                                                                 @endif
                                                                             </ul>
 
@@ -323,7 +335,7 @@
                                                             </ul>
                                                         </div>
                                                     </div><!-- .nk-tb-item -->
-                                                       @endforeach
+                                                   
                                                 
 
 

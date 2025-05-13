@@ -16,6 +16,7 @@
                                         </div><!-- .nk-block-head-content -->
                                         <div class="nk-block-head-content">
                                             <div class="toggle-wrap nk-block-tools-toggle">
+                                               
                                                 <a href="#" class="btn btn-icon btn-trigger toggle-expand me-n1" data-target="pageMenu"><em class="icon ni ni-menu-alt-r"></em></a>
                                                 <div class="toggle-expand-content" data-content="pageMenu">
                                                     <ul class="nk-block-tools g-3">
@@ -47,6 +48,12 @@
                                                     <div class="card-tools">
                                                         <div class="form-inline flex-nowrap gx-3">
                                                             <div class="form-wrap w-150px">
+                                                     <form method="POST" action="{{url('/admin/search-user')}}">
+                                                            @csrf
+                                                       <input type="text" name="term" placeholder="Enter email or name of user" required>
+                                                                        </br><br/>
+                                                        <input type="submit" value="Search">
+                                                            </form>
                                                                 {{--<select class="form-select js-select2" data-search="off" data-placeholder="Bulk Action">
                                                                    <option value="">Bulk Action</option>
                                                                     <option value="email">Send Email</option>
