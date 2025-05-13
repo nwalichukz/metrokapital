@@ -40,7 +40,7 @@
                                                                 @foreach($transactions as $myTransact)
                                                                 <tr class="nk-tb-item">
                                                                 <td class="nk-tb-col">
-                                                                        <span>{{substr($myTransact->user->name, 0, 80)}}<span class="dot dot-success d-lg-none ms-1"></span></span>
+                                                                        <span>@if(!empty($myTransact->user->name)){{substr($myTransact->user->name, 0, 80)}} @endif<span class="dot dot-success d-lg-none ms-1"></span></span>
                                                                     </td>
                                                                   
                                                                     <td class="nk-tb-col">
