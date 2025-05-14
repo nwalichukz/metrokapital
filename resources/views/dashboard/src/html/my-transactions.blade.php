@@ -63,7 +63,7 @@
                                                                                     <div class="dropdown-menu dropdown-menu-end">
                                                                                         <ul class="link-list-opt no-bdr">
                                                                                 
-                                                                                            <li><a data-bs-toggle="modal" href="#editDataDash"><em class="icon ni ni-trash"></em><span>Full view</span></a></li>
+                                                                                            {{--<li><a data-bs-toggle="modal" href="#editDataDash"><em class="icon ni ni-trash"></em><span>Full view</span></a></li>--}}
                                                                                          
                                                                                         </ul>
                                                                                     </div>
