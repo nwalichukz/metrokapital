@@ -268,9 +268,13 @@ Route::post('/admin/send-email', [Mailer::class, 'sendSingleMail']);
 
 Route::get('/admin/all-investments', [InvestmentController::class, 'getAll']);
 Route::get('/admin/end-inv/{id}', [InvestmentController::class, 'endInv']);
+
+
 Route::get('/admin/all-transactions', [UserTransactionHistoryController::class, 'getAll']);
 Route::get('/user/my-transactions/{id}', [UserTransactionHistoryController::class, 'getUserHistory']);
 Route::get('/admin/edit-transaction/{id}', [UserTransactionHistoryController::class, 'getEdit']);
 Route::get('/admin/delete-transaction/{id}', [UserTransactionHistoryController::class, 'delete']);
+Route::get('/admin/get-add-transaction/{id}', [UserTransactionHistoryController::class, 'getAddTransaction']);
 
 Route::post('admin/transaction/update', [UserTransactionHistoryController::class, 'update']);
+Route::post('admin/create-user-transaction', [UserTransactionHistoryController::class, 'create']);

@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Wallet;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\UserTransactionHistory;
-use Auth;
+use Auth, Validator;
 
 class UserTransactionHistoryController extends Controller
 {
@@ -25,6 +25,37 @@ class UserTransactionHistoryController extends Controller
         $save->save();
         return $save->id;
     }
+
+    
+   
+     /**
+      * creates a user transaction
+      *
+      * @param Request
+      *
+      *@return respoonse
+      */
+      public static function create(Request $request){
+        $validator = Validator::make($request->all(),
+        [
+        'amount' => 'required|numeric',
+        'purpose' => 'required',
+        'transaction_type'=> 'required'
+      
+        ]);
+        
+        if($validator->fails()){
+            return redirect()->back()->withErrors($validator);
+        } 
+        $create = self::save($request);
+        if($create){
+          return redirect()->back()->with('success', 'User transaction created successful');
+      }else{
+          return redirect()->back()->with('error', 'Something went wrong withdrawal rUser transaction not created successfully');
+                  }
+     
+
+      }
 
 
      /***
@@ -144,6 +175,19 @@ class UserTransactionHistoryController extends Controller
        
  
      }
+
+
+      /***
+     * deletes a transaction history
+     * sum for this year
+     */
+    public static function getAddTransaction($id){
+    
+      return view('dashboard/src/html/components/forms/add-user-transaction')->with(['user_id'=>$id]);
+       
+ 
+     }
+
 
 
            /**
