@@ -52,7 +52,7 @@
                                                                     </td>
 
                                                                     <td class="nk-tb-col">
-                                                                        <span>{{date_format($myTransact->created_at, 'd M, Y H:i')}}</span>
+                                                                        <span>{{date_format($myTransact->created_at, 'd M, Y h:i:sa')}}</span>
                                                                     </td>
                                                                    
                                                                     <td class="nk-tb-col nk-tb-col-tools">

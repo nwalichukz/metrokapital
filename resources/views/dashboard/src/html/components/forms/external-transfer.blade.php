@@ -16,18 +16,19 @@
                                                
                                             <div class="form-group">
                                                     <label class="form-label" for="cf-email-address">Enter Bank Name</label>
-                                                    <input type="text" class="form-control" id="cf-email-address">
+                                                    <input type="text" name="bank_name" class="form-control" id="cf-email-address" required>
                                                 </div>
                                                             
                                                       
                                                 <div class="form-group">
                                                     <label class="form-label" for="cf-email-address">Account Number</label>
-                                                    <input type="text" class="form-control" id="cf-email-address">
+                                                    <input type="text" name="account_number" class="form-control" id="cf-email-address">
+                                                     <input type="hidden" name="sender_user_id" value="{{Auth::user()->id}}" required>
                                                 </div>
 
                                                 <div class="form-group">
                                                     <label class="form-label" for="cf-email-address">Amount</label>
-                                                    <input type="text" class="form-control" id="cf-email-address">
+                                                    <input type="text" name="amount" class="form-control" id="cf-email-address" required>
                                                 </div>
                                               
                                               

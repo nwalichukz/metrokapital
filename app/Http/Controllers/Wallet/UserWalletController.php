@@ -409,7 +409,51 @@ class UserWalletController extends Controller
      *
      */
     public static function externalTransfer(Request $request){
-        return redirect()->back()->with('success', 'Transaction successful'); 
+        $validation = Validator::make($request->all(),
+        [
+            "sender_user_id" => "required",
+            "amount"=>"required"
+        ]);
+     // return 345;
+    if($validation->fails()){
+        return redirect()->back()->withErrors($validation);
+    }
+  // return $request->all();
+   
+    if(self::checkAmt($request['sender_user_id'], $request['amount'])){
+        try{
+          //  $credit = UserWallet::where('wallet_no', $request['receiver_wallet_no'])->with(['user'])->lockForUpdate()->first();
+            $debit = UserWallet::where('user_id', $request['sender_user_id'])->with(['user'])->lockForUpdate()->first();
+           
+            DB::transaction(function() use ($request, $debit){
+                if($debit->balance >= $request['amount']){
+                    $debit->balance = $debit->balance - $request['amount'];
+                    $debit->save();
+                 $debit_transaction_record = [
+                        'user_id' => $request['sender_user_id'],
+                        'amount' => $request['amount'],
+                        'transaction_type' => 'debit',
+                        'purpose' => 'external transfer '.$request['bank_name'],
+                    ];
+                    UserTransactionHistoryController::save($debit_transaction_record);
+             
+                   
+               }
+            });
+     
+            return redirect()->back()->with('success', '$'.$request['amount'].' transfered successfully to '.$request['bank_name']);
+           
+        }catch(Exception $e){
+            return redirect()->back()->with('error', 'Something went wrong transfer could not be completed successfully. Please try again');
+
+        }
+    }else{
+        return redirect()->back()->with('error', 'You do not have sufficient balance in your wallet to carry out this transaction'); 
+
+    }
+
+
+
     }
 
     /**
