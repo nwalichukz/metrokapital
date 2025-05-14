@@ -16,7 +16,7 @@
                                                 
                                                             <div class="form-group">
                                                     <label class="form-label" for="cf-email-address">Investment Type</label>
-                                                    <input name="inv_type" type="text" class="form-control" id="cf-email-address"  value="{{$inv_type->min_amt}}" disabled>
+                                                    <input name="inv_type" type="text" class="form-control" id="cf-email-address"  value="{{$inv_type->parent_name}}" disabled>
                                                     <input type="hidden" name="investment_type_id" value="{{$inv_type->id}}" required>
                                                     <input type="hidden" name="user_id" value="{{Auth::user()->id}}" required>
                                                 </div>
