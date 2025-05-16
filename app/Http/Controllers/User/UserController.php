@@ -251,7 +251,7 @@ class UserController extends Controller
         $user = User::find($id);
         if(!empty($user->id)){
           if(Auth::user()->access_level =='admin'){
-            $user->user_level = 'admin';
+            $user->access_level = 'admin';
             $user->kyc_status = 'verified';
             $user->save();
             return redirect()->back()->with('success', 'User made admin successfully');
