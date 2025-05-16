@@ -12,7 +12,7 @@
                                         <div class="card-inner">
                                             <div class="card-head">
                                                 <h5 class="card-title">UPLOAD KYC DOCUMENTS</h5>
-                                                <h6>You must complete this photo ID verification before you can continue. If you have upload your documents. Wait for verication or contact admin</h6>
+                                                <h6></h6>
                                             </div>
                                             <form method="post" action="{{url('user/kyc-document/create')}}" enctype="multipart/form-data" accept=true>
                                             @csrf
