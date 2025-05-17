@@ -64,7 +64,7 @@
                                                         <div class="data-head">
                                                             
                                                         </div>
-                                                        <div class="data-item">
+                                                        {{--<div class="data-item">
                                                             
                                                             <div class="data-col data-col-end"><a href="#" class="link link-primary">Change Language</a></div>
                                                         </div><!-- data-item -->
@@ -75,7 +75,7 @@
                                                         <div class="data-item">
                                                            
                                                             <div class="data-col data-col-end"><a href="#" class="link link-primary">Change</a></div>
-                                                        </div><!-- data-item -->
+                                                        </div><!-- data-item -->--}}
                                                     </div><!-- data-list -->
                                                 </div><!-- .nk-block -->
                                             </div>

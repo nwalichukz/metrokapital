@@ -191,7 +191,8 @@
                                                         <div class="nk-tb-col tb-col-md"><span class="sub-text">Amount</span></div>
                                                         <div class="nk-tb-col tb-col-lg"><span class="sub-text">Status</span></div>
                                                         <div class="nk-tb-col tb-col-lg"><span class="sub-text">Possible Earning</span></div>
-                                                        <div class="nk-tb-col tb-col-lg"><span class="sub-text">Duration in Day(s)</span></div>
+                                                        <div class="nk-tb-col tb-col-lg"><span class="sub-text">Duration</span></div>
+                                                        <div class="nk-tb-col tb-col-lg"><span class="sub-text">start Date</span></div>
                                                         <div class="nk-tb-col tb-col-lg"><span class="sub-text">End Date</span></div>
                                                        
                                                         <div class="nk-tb-col nk-tb-col-tools text-end">
@@ -276,7 +277,14 @@
 
                                                         <div class="nk-tb-col tb-col-lg">
                                                             <ul class="list-status">
-                                                                <li><em class="icon text-success ni ni-check-circle"></em> <span>{{ date_format($inv->created_at, 'd/m/Y', )}}</span></li>
+                                                                <li><em class="icon text-success ni ni-check-circle"></em> <span>{{ $inv->created_at }}</span></li>
+                                                               
+                                                            </ul>
+                                                        </div>
+
+                                                        <div class="nk-tb-col tb-col-lg">
+                                                            <ul class="list-status">
+                                                                <li><em class="icon text-success ni ni-check-circle"></em> <span>{{ $inv->end_date}}</span></li>
                                                                
                                                             </ul>
                                                         </div>

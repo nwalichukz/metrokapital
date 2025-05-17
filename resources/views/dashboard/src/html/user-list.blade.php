@@ -307,7 +307,7 @@
                                                                                 <li><a href="{{url('admin/get-add-transaction/'.$user->id)}}"><em class="icon ni ni-activity-round"></em><span>Create Transaction</span></a></li>
                                                                                 @endif
                                                                                 <li class="divider"></li>
-                                                                                <li><a href=""><em class="icon ni ni-shield-star"></em><span>Reset Pass</span></a></li>
+                                                                               {{-- <li><a href=""><em class="icon ni ni-shield-star"></em><span>Reset Pass</span></a></li>--}}
                                                                                 @if($user->access_level == 'user')
                                                                                 <li><a href="{{url('/admin/make-admin/'.$user->id)}}"><em class="icon ni ni-shield-off"></em><span>Make Admin</span></a></li>
                                                                                 @else
