@@ -9,7 +9,7 @@
                                 <div class="components-preview wide-md mx-auto">
                                     <div class="nk-block-head nk-block-head-lg wide-sm">
                                         <div class="nk-block-head-content">
-                                            <div class="nk-block-head-sub"><a class="back-to" href="html/components.html"><em class="icon ni ni-arrow-left"></em><span>Admin</span></a></div>
+                                            <div class="nk-block-head-sub"><a class="back-to" href=""><em class="icon ni ni-arrow-left"></em><span>Admin</span></a></div>
                                             <h2 class="nk-block-title fw-normal"> KYC Verifications</h2>
                                            
                                         </div>
