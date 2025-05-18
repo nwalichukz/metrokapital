@@ -86,7 +86,7 @@ class InvestmentController extends Controller
         return redirect()->back()->with('error', $e->message);
 
     }
-    return redirect('/user/get-my-investments/'.Auth::user()->id)->with('success', 'Investment successful. Thanks');
+    return redirect('/user/get-my-investments/'.$create->user_id)->with('success', 'Investment successful. Thanks');
 }else{
     return redirect()->back()->with('error', 'You do not have enough wallet balance to carry out this transaction');
          }
