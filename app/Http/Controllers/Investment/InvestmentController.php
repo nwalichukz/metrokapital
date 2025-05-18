@@ -71,7 +71,7 @@ class InvestmentController extends Controller
     UserWalletController::debit($data);
     $now = Carbon::now();
     $inv_type = InvestmentType::find($request['investment_type_id']);
-    $percentage = $inv_type->earning_percentage/100;
+    var_dump($percentage = $inv_type->earning_percentage/100);
     $create = new Investment;
     $create->amount = $request['amount'];
     $create->user_id = Auth::user()->id;
