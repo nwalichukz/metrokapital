@@ -71,7 +71,7 @@ class InvestmentController extends Controller
     UserWalletController::debit($data);
     $now = Carbon::now();
     $inv_type = InvestmentType::find($request['investment_type_id']);
-    return $percentage = $inv_type->earning_percentage/100;
+    $percentage = $inv_type->earning_percentage/100;
     $create = new Investment;
     $create->amount = $request['amount'];
     $create->user_id = Auth::user()->id;
@@ -86,8 +86,8 @@ class InvestmentController extends Controller
         return redirect()->back()->with('error', $e->message);
 
     }
-    return redirect()->back()->with('success', 'Ok good');
-  //  return redirect('/user/get-my-investments/'.$create->user_id)->with('success', 'Investment successful. Thanks');
+    //return redirect()->back()->with('success', 'Ok good');
+    return redirect('/user/get-my-investments/'.$create->user_id)->with('success', 'Investment successful. Thanks');
 }else{
     return redirect()->back()->with('error', 'You do not have enough wallet balance to carry out this transaction');
          }
