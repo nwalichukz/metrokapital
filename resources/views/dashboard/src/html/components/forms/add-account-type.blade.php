@@ -41,12 +41,12 @@
 
                                                 <div class="form-group">
                                                     <label class="form-label" for="cf-email-address">Max. Amount</label>
-                                                    <input name="max_amount" type="text" class="form-control" id="cf-email-address" required>
+                                                    <input name="max_amount" type="number" class="form-control" id="cf-email-address" required>
                                                 </div>
 
                                                 <div class="form-group">
                                                     <label class="form-label" for="cf-email-address">Percentage Profit</label>
-                                                    <input name="earning_percentage" type="text" class="form-control" id="cf-email-address" required>
+                                                    <input name="earning_percentage" type="number" class="form-control" id="cf-email-address" required>
                                                      <input name="user_id" type="hidden" value="{{$user_id}}">
                                                 </div>
 
