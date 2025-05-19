@@ -94,4 +94,18 @@ class JointAccountController extends Controller
         return view('dashboard/src/html/components/forms/fund-joint-account');
     }
     }
+
+  
+
+        /**
+     * returns page for creating
+     * 
+     * joint account
+     */
+    public static function   getTransferTowalletPage(){
+       
+    
+            return view('dashboard/src/html/components/forms/transfer-funds-to-balance');
+     
+    }
 }

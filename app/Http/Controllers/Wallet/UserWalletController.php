@@ -457,6 +457,62 @@ class UserWalletController extends Controller
 
     }
 
+     /**
+     *
+     * transfers money to another user in the paltform
+     *
+     * @param $sender_user_id, $receiver_wallet_no, $amount
+     * @return $response
+     */
+    public static function transferToWallet(Request $request){
+        $validation = Validator::make($request->all(),
+            [
+                "amount"=>"required",
+                "user_id"=>"required"
+            ]);
+         // return 345;
+        if($validation->fails()){
+            return redirect()->back()->withErrors($validation);
+        }
+      // return $request->all();
+    
+        if(self::checkAmtTwo($request['user_id'], $request['amount'])){
+            try{
+               
+                $debit = UserWallet::where('user_id', $request['user_id'])->with(['user'])->lockForUpdate()->first();
+               
+                DB::transaction(function() use ($request, $debit){
+                    if($debit->balance >= $request['amount']){
+                        $debit->balance_two = $debit->balance_two - $request['amount'];
+                        $debit->balance = $debit->balance + $request['amount'];
+                        $debit->save();
+                     $debit_transaction_record = [
+                            'user_id' => $request['user_id'],
+                            'amount' => $request['amount'],
+                            'transaction_type' => 'credit',
+                            'purpose' => $request['amount'].' transferred back to your main wallet',
+                        ];
+                        UserTransactionHistoryController::save($debit_transaction_record);
+                 
+                  
+                   }
+                });
+         
+                return redirect()->back()->with('success', '$'.$request['amount'].' transfered to your main account');
+               
+            }catch(Exception $e){
+                return redirect()->back()->with('error', 'Something went wrong transfer could not be completed successfully. Please try again');
+
+            }
+        }else{
+            return redirect()->back()->with('error', 'You do not have sufficient balance in your wallet to carry out this transaction'); 
+
+        }
+  
+
+    }
+
+
     /**
      *
      * transfers money to another user in the paltform

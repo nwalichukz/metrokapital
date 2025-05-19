@@ -204,6 +204,9 @@ Route::get('/admin/inv-type/delete/{id}', [InvestmentTypeController::class, 'del
 Route::get('/user/get-joint-account', [JointAccountController::class, 'getPage']);
 Route::post('/user/joint-account-create', [JointAccountController::class, 'create']);
 
+Route::get('/user/get-transfer-from-joint-account', [JointAccountController::class, 'getTransferTowalletPage']);
+
+
 
 Route::get('/admin/get-all-wallet-address', [WalletAddressController::class, 'getAll']);
 
@@ -216,6 +219,8 @@ Route::get('dashboard/get-fund-account', [UserWalletController::class, 'getFundA
 Route::get('dashboard/get-withdrawal-request', [UserWalletController::class, 'getWithdrawalPage']);
 Route::get('dashboard/get-internal-transfer', [UserWalletController::class, 'getInternalTransfer']);
 Route::get('dashboard/get-external-transfer', [UserWalletController::class, 'getExternalTransfer']);
+Route::post('user/transfer-from-joint-account/create', [UserWalletController::class, 'transferToWallet']);
+
 
 Route::any('/user/wallet-info', [UserWalletController::class, 'myWalletDetails']);
 
