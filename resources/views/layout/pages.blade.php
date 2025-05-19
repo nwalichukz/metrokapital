@@ -307,7 +307,7 @@
                         <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
                             <div class="footer-widget links-widget">
                                 <div class="widget-title">
-                                    <h4>Usefull Links</h4>
+                               
                                 </div>
                                 <div class="widget-content">
                                     <ul class="links-list clearfix">
@@ -323,7 +323,7 @@
                         <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
                             <div class="footer-widget contact-widget">
                                 <div class="widget-title">
-                                    <h4>Find Our Branch & ATM</h4>
+                               
                                 </div>
                                 <div class="form-inner">
                                     <form method="post" action="index.html">
