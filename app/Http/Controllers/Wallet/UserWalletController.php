@@ -140,6 +140,41 @@ class UserWalletController extends Controller
 
     }
 
+      /**
+     * debit a user
+     *
+     * @param $request
+     */
+    public static function debitTwo($request){
+        $data = [
+            'user_id' => $request['user_id'],
+            'amount' => $request['amount'],
+            'transaction_type' => 'debit',
+            'purpose' => $request['purpose'],
+            'comment' => 'Your wallet has been debited '.$request['amount'].' for '.$request['purpose'],
+            'action_id' => $request['user_id'],
+            'action' => 'Wallet',
+        ];
+
+           $result = DB::transaction(function() use ($request, $data){
+                $debit = UserWallet::where('user_id', $request['user_id'])->with(['user'])->lockForUpdate()->first();
+                if($debit->balance_two >= $request['amount']) {
+                    $debit->balance_two = $debit->balance_two - $request['amount'];
+                    $debit->save();
+                    // NewNotificationController::save($data);
+                    return UserTransactionHistoryController::save($data);
+                    //  Mailer::debitMail($debit->user->email, $request['amount'], $debit->balance, $request['purpose']);
+                }else{
+                    return false;
+                }
+
+            });
+
+           return $result;
+
+
+    }
+
     /**
      *
      * debits a user
@@ -193,6 +228,25 @@ class UserWalletController extends Controller
 
     }
 
+      /**
+     *
+     * checks if amount is
+     * greater than balance
+     * @param $user_id, $amount
+     *
+     */
+    public static function checkAmtTwo($user_id, $amount){
+
+        //$new_amout = 300;
+        $wallet = UserWallet::where('user_id', $user_id)->lockForUpdate()->first();
+        if ($wallet->balance_two >= $amount) {
+            return true;
+        } else {
+            return false;
+        }
+
+}
+
     /**
      *
      * debits a user
@@ -222,6 +276,25 @@ class UserWalletController extends Controller
         if(!empty($user_id)){
             $balance = UserWallet::where('user_id', $user_id)->lockForUpdate()->first();
             return $balance->balance;
+        }elseif(empty($user_id)){
+
+            return response()->json([
+                'status' => 'error',
+                'message' => 'Something went wrong, balance could not be retrieved. Please try again'
+            ]);
+        }
+    }
+
+       /**
+     *
+     * get balance
+     * @param $user_id
+     *
+     */
+    public static function balanceTwo($user_id){
+        if(!empty($user_id)){
+            $balance = UserWallet::where('user_id', $user_id)->lockForUpdate()->first();
+            return $balance->balance_two;
         }elseif(empty($user_id)){
 
             return response()->json([
@@ -325,6 +398,62 @@ class UserWalletController extends Controller
     }else{
         return redirect()->back()->with('error', 'You can not make a transfer to yourself'); 
     }
+
+    }
+
+
+     /**
+     *
+     * transfers money to another user in the paltform
+     *
+     * @param $sender_user_id, $receiver_wallet_no, $amount
+     * @return $response
+     */
+    public static function fundSecondWallet(Request $request){
+        $validation = Validator::make($request->all(),
+            [
+                "amount"=>"required",
+                "user_id"=>"required"
+            ]);
+         // return 345;
+        if($validation->fails()){
+            return redirect()->back()->withErrors($validation);
+        }
+      // return $request->all();
+    
+        if(self::checkAmt($request['user_id'], $request['amount'])){
+            try{
+               
+                $debit = UserWallet::where('user_id', $request['user_id'])->with(['user'])->lockForUpdate()->first();
+               
+                DB::transaction(function() use ($request, $debit){
+                    if($debit->balance >= $request['amount']){
+                        $debit->balance = $debit->balance - $request['amount'];
+                        $debit->balance_two = $debit->balance_two + $request['amount'];
+                        $debit->save();
+                     $debit_transaction_record = [
+                            'user_id' => $request['user_id'],
+                            'amount' => $request['amount'],
+                            'transaction_type' => 'credit',
+                            'purpose' => $request['amount'].' deposited to your joint acc',
+                        ];
+                        UserTransactionHistoryController::save($debit_transaction_record);
+                 
+                  
+                   }
+                });
+         
+                return redirect()->back()->with('success', '$'.$request['amount'].' transfered to your Joint account');
+               
+            }catch(Exception $e){
+                return redirect()->back()->with('error', 'Something went wrong transfer could not be completed successfully. Please try again');
+
+            }
+        }else{
+            return redirect()->back()->with('error', 'You do not have sufficient balance in your wallet to carry out this transaction'); 
+
+        }
+  
 
     }
 

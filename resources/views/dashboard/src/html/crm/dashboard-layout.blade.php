@@ -69,7 +69,7 @@
                                             <a href="{{url('/user/get-account-plans/Retirement Plan')}}" class="nk-menu-link"><span class="nk-menu-text">Retirement</span></a>
                                         </li>
                                         <li class="nk-menu-item">
-                                            <a href="{{url('user/get-account-plans/Joint')}}" class="nk-menu-link"><span class="nk-menu-text">Joint</span></a>
+                                            <a href="{{url('user/get-joint-account')}}" class="nk-menu-link"><span class="nk-menu-text">Joint</span></a>
                                         </li>
                                         <li class="nk-menu-item">
                                             <a href="{{url('user/get-account-plans/Current')}}" class="nk-menu-link"><span class="nk-menu-text">Current</span></a>
@@ -154,7 +154,7 @@
                                     <ul class="nk-menu-sub">
                                         @foreach($appData->getLabelName($fdr = "FDR") as $country)
                                         <li class="nk-menu-item">
-                                            <a href="{{url('user/confirm-investment-type/'.$country->id)}}" class="nk-menu-link"><span class="nk-menu-text">{{$country->name}}</span></a>
+                                            <a href="{{url('user/confirm-investment-type_two/'.$country->id)}}" class="nk-menu-link"><span class="nk-menu-text">{{$country->name}}</span></a>
                                         </li>
                                        @endforeach
                                     </ul><!-- .nk-menu-sub -->
@@ -168,7 +168,7 @@
                                         
                                         @foreach($appData->getLabelName($fdr = "Annuities") as $country)
                                         <li class="nk-menu-item">
-                                    <a href="{{url('user/confirm-investment-type/'.$country->id)}}" class="nk-menu-link"><span class="nk-menu-text">{{$country->name}}</span></a>
+                                    <a href="{{url('user/confirm-investment-type_two/'.$country->id)}}" class="nk-menu-link"><span class="nk-menu-text">{{$country->name}}</span></a>
                                         </li>
                                        @endforeach
                                     
@@ -183,7 +183,7 @@
                                     <ul class="nk-menu-sub">
                                     @foreach($appData->getLabelName($fdr = "DPS") as $country)
                                         <li class="nk-menu-item">
-                                            <a href="{{url('user/confirm-investment-type/'.$country->id)}}" class="nk-menu-link"><span class="nk-menu-text">{{$country->name}}</span></a>
+                                            <a href="{{url('user/confirm-investment-type_two/'.$country->id)}}" class="nk-menu-link"><span class="nk-menu-text">{{$country->name}}</span></a>
                                         </li>
                                        @endforeach
                                   
@@ -212,7 +212,7 @@
                                     <ul class="nk-menu-sub">
                                     @foreach($appData->getLabelName($fdr = "Trading") as $country)
                                         <li class="nk-menu-item">
-                                            <a href="{{url('user/confirm-investment-type/'.$country->id)}}" class="nk-menu-link"><span class="nk-menu-text">{{$country->name}}</span></a>
+                                            <a href="{{url('user/confirm-investment-type_two/'.$country->id)}}" class="nk-menu-link"><span class="nk-menu-text">{{$country->name}}</span></a>
                                         </li>
                                        @endforeach
                                   
@@ -417,7 +417,7 @@
                                     <ul class="nk-menu-sub">
                                     @foreach($appData->getLabelName($fdr = "Arbitrage") as $country)
                                         <li class="nk-menu-item">
-                                            <a href="{{url('user/confirm-investment-type/'.$country->id)}}" class="nk-menu-link"><span class="nk-menu-text">{{$country->name}}</span></a>
+                                            <a href="{{url('user/confirm-investment-type_two/'.$country->id)}}" class="nk-menu-link"><span class="nk-menu-text">{{$country->name}}</span></a>
                                         </li>
                                        @endforeach
                                       
@@ -448,7 +448,7 @@
                                     <ul class="nk-menu-sub">
                                     @foreach($appData->getLabelName($fdr = "Islamic Banking") as $country)
                                         <li class="nk-menu-item">
-                                            <a href="{{url('user/confirm-investment-type/'.$country->id)}}" class="nk-menu-link"><span class="nk-menu-text">{{$country->name}}</span></a>
+                                            <a href="{{url('user/confirm-investment-type_two/'.$country->id)}}" class="nk-menu-link"><span class="nk-menu-text">{{$country->name}}</span></a>
                                         </li>
                                        @endforeach
                                       
@@ -498,7 +498,7 @@
                                     <ul class="nk-menu-sub">
                                     @foreach($appData->getLabelName($fdr = "Loans") as $country)
                                         <li class="nk-menu-item">
-                                            <a href="{{url('user/confirm-investment-type/'.$country->id)}}" class="nk-menu-link"><span class="nk-menu-text">{{$country->name}}</span></a>
+                                            <a href="{{url('user/confirm-investment-type_two/'.$country->id)}}" class="nk-menu-link"><span class="nk-menu-text">{{$country->name}}</span></a>
                                         </li>
                                        @endforeach
                                     </ul><!-- .nk-menu-sub -->
