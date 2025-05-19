@@ -34,7 +34,7 @@
                                                                 <div class="form-control-wrap ">
                                                                     <select class="form-select js-select2" id="fv-topics" name="select_balance" data-placeholder="Select balance" required>
                                                                         <option value="">Select balance</option>
-                                                                        <option value="{{number_format(Auth::user()->userWallet->balance)}}">Balance({{number_format(Auth::user()->userWallet->balance)}}) USD</option>
+                                                                        <option value="{{number_format(Auth::user()->userWallet->balance)}}">Balance ({{number_format(Auth::user()->userWallet->balance)}}) USD</option>
                                                                       
                                                                     </select>
                                                                 </div>

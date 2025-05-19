@@ -289,20 +289,15 @@
                                                             <span class="tb-amount">@if(!empty($inv->invType->duration)) {{$inv->invType->duration}} @endif </span>
                                                         </div>
 
-                                                        <div class="nk-tb-col tb-col-lg tb-col-ms">
-                                                            <ul class="list-status">
-                                                                <li><em class="icon text-success ni ni-check-circle"></em> <span>{{ $inv->created_at}}</span></li>
-                                                               
-                                                            </ul>
+                                                        <div class="nk-tb-col tb-col-mb tb-col-ms">
+                                                            <span class="tb-amount"> {{$inv->created_at}} </span>
                                                         </div>
 
-                                                        <div class="nk-tb-col tb-col-lg tb-col-ms">
-                                                            <ul class="list-status">
-                                                                <li><em class="icon text-success ni ni-check-circle"></em> <span>{{ $inv->end_date}}</span></li>
-                                                               
-                                                            </ul>
+                                                      
+
+                                                        <div class="nk-tb-col tb-col-mb tb-col-ms">
+                                                            <span class="tb-amount"> {{$inv->end_date}} </span>
                                                         </div>
-                                                       
                                                        
                                                         <div class="nk-tb-col nk-tb-col-tools">
                                                             <ul class="nk-tb-actions gx-1">
