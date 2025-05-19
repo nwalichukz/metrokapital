@@ -13,7 +13,7 @@
                                 <p>Metrokapital are a forward-thinking digital investment bank committed to 
                                     redefining the future of finance...</p>
                                 <ul class="social-links">
-                                    <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                                    <li><a href="https://www.youtube.com/@metrokapitalor"><i class="fab fa-youtube"></i></a></li>
                                     <li><a href="#"><i class="fab fa-twitter"></i></a></li>
                                     <li><a href="#"><i class="fab fa-instagram"></i></a></li>
                                 </ul>
