@@ -572,7 +572,7 @@
 
 
 
-                                                    {{--<li class="nk-support-item">
+                                                    <li class="nk-support-item">
                                                         <div class="user-avatar bg-purple-dim">
                                                             <span>JA</span>
                                                         </div>
@@ -584,11 +584,11 @@
                                                                 </div>
                                                             </div>
                                                             <tip>Joint account helps you make more profit  </tip>
-                                                            <a href="{{url('/user/get-account-plans/Joint Plan')}}">
+                                                            <a href="{{url('/user/get-joint-account')}}">
                                                             <span class="time primary">Create Account</span>
                                                             </a>
                                                         </div>
-                                                    </li>--}}
+                                                    </li>
 
                                                     <li class="nk-support-item">
                                                         <div class="user-avatar bg-purple-dim">
