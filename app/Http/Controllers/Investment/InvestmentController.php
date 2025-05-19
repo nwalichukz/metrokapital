@@ -145,8 +145,38 @@ class InvestmentController extends Controller
  }
  //return redirect()->back()->with('success', 'Ok good');
  return redirect('/user/get-my-investments/'.$create->user_id)->with('success', 'Investment successful. Thanks');
+}elseif(UserWalletController::checkAmt($request['user_id'], $request['amount'])){
+       
+ try{
+  $data = [
+      'user_id'=> $request['user_id'],
+      'amount'=> $request['amount'],
+      'purpose'=>'Debit for investment',
+  ];
+$user = User::find($request['user_id']);
+UserWalletController::debit($data);
+$now = Carbon::now();
+$inv_type = InvestmentType::find($request['investment_type_id']);
+$percentage = $inv_type->earning_percentage/100;
+$create = new Investment;
+$create->amount = $request['amount'];
+$create->user_id = Auth::user()->id;
+$create->investment_type_id = $request['investment_type_id'];
+$create->end_date = $now->addDays($inv_type->duration);
+$create->possible_total_earning =  ($request['amount'] + ($inv_type->duration * $request['amount'] * $percentage));
+$create->status = 'active';
+$create->save();
+// ReferralController::fulfill($user->referral_code, $request['amount']);
+}catch(Exception $e){
+
+  return redirect()->back()->with('error', $e->message);
+
+}
+//return redirect()->back()->with('success', 'Ok good');
+return redirect('/user/get-my-investments/'.$create->user_id)->with('success', 'Investment successful. Thanks');
+
 }else{
- return redirect()->back()->with('error', 'You do not have enough joint account wallet balance to carry out this transaction');
+ return redirect()->back()->with('error', 'You do not have sufficient wallet balance to carry out this transaction');
       }
 }
 

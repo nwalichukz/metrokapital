@@ -188,12 +188,12 @@
                                                         </div>
                                                         <div class="nk-tb-col"><span class="sub-text">User</span></div>
                                                         <div class="nk-tb-col tb-col-mb"><span class="sub-text">Investment type</span></div>
-                                                        <div class="nk-tb-col tb-col-md"><span class="sub-text">Amount</span></div>
-                                                        <div class="nk-tb-col tb-col-lg"><span class="sub-text">Status</span></div>
-                                                        <div class="nk-tb-col tb-col-lg"><span class="sub-text">Possible Earning</span></div>
-                                                        <div class="nk-tb-col tb-col-lg"><span class="sub-text">Duration</span></div>
-                                                        <div class="nk-tb-col tb-col-lg"><span class="sub-text">Start Date</span></div>
-                                                        <div class="nk-tb-col tb-col-lg"><span class="sub-text">End Date</span></div>
+                                                        <div class="nk-tb-col tb-col-mb"><span class="sub-text">Amount</span></div>
+                                                        <div class="nk-tb-col tb-col-mb"><span class="sub-text">Status</span></div>
+                                                        <div class="nk-tb-col tb-col-mb"><span class="sub-text">Possible Earning</span></div>
+                                                        <div class="nk-tb-col tb-col-mb"><span class="sub-text">Duration</span></div>
+                                                        <div class="nk-tb-col tb-col-mb"><span class="sub-text">Start Date</span></div>
+                                                        <div class="nk-tb-col tb-col-mb"><span class="sub-text">End Date</span></div>
                                                        
                                                         <div class="nk-tb-col nk-tb-col-tools text-end">
                                                             <div class="dropdown">
