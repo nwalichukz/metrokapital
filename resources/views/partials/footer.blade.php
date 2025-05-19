@@ -10,11 +10,12 @@
                         <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
                             <div class="footer-widget logo-widget">
                                 <figure class="footer-logo"><a href="index.html"><img src="assets/images/logo-2.png" alt=""></a></figure>
-                                <p>Tincidunt neque pretium lectus donec risus. Mauris mi tempor nunc orc leo consequat vitae erat gravida lobortis nec et sagittis.</p>
+                                <p>Metrokapital are a forward-thinking digital investment bank committed to 
+                                    redefining the future of finance...</p>
                                 <ul class="social-links">
-                                    <li><a href="index.html"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="index.html"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="index.html"><i class="fab fa-instagram"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -25,16 +26,14 @@
                                 </div>
                                 <div class="widget-content">
                                     <ul class="links-list clearfix">
-                                        <li><a href="about.html">About Us</a></li>
-                                        <li><a href="index.html">Testimonials</a></li>
-                                        <li><a href="career.html">Careers</a></li>
-                                        <li><a href="career-details.html">Career Detail</a></li>
-                                        <li><a href="faq.html">Faq’s</a></li>
+                                        <li><a href="{{url('/about-us')}}">About Us</a></li>
+                                        
                                     </ul>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
+
+                        {{--<div class="col-lg-3 col-md-6 col-sm-12 footer-column">
                             <div class="footer-widget links-widget">
                                 <div class="widget-title">
                                     <h4>Usefull Links</h4>
@@ -49,8 +48,9 @@
                                     </ul>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
+                        </div>--}}
+
+                        {{--<div class="col-lg-3 col-md-6 col-sm-12 footer-column">
                             <div class="footer-widget contact-widget">
                                 <div class="widget-title">
                                     <h4>Find Our Branch & ATM</h4>
@@ -66,7 +66,8 @@
                                                    <option value="3">New York</option>
                                                 </select>
                                             </div>
-                                        </div>
+                                        </div>--}}
+
                                         <div class="form-group">
                                             <input type="text" name="location" placeholder="Location">
                                         </div>
