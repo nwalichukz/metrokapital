@@ -68,12 +68,13 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="col-lg-4 col-md-6 col-sm-12 info-column">
                         <div class="info-block-one wow fadeInUp animated" data-wow-delay="300ms" data-wow-duration="1500ms">
                             <div class="inner-box">
                                 <div class="icon-box"><i class="icon-43"></i></div>
                                 <h3>Email Address</h3>
-                                <p><a href="mailto:contactmetrokapital@gmail.com">contactmetrokapital@gmail.com</a><br /> <a href="mailto:support@metrokapital.org">support@metrokapital.org</a></p>
+                                <p><a href="mailto:contactmetrokapital@gmail.com">contactmetrokapital@gmail.com</a><br /> </p>
                             </div>
                         </div>
                     </div>
