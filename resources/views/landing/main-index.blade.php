@@ -237,11 +237,11 @@
                 <div class="row clearfix">
                     <div class="col-lg-3 col-md-6 col-sm-12 service-block">
                         <div class="service-block-one wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1500ms">
-                            <figure class="image-box"><a href="service-details.html">
+                            <figure class="image-box"><a href="#">
                                 <img src="{{ asset('assets/images/service/service-3.jpg')}}" alt=""></a></figure>
                             <div class="inner-box">
                                 <div class="icon-box"><i class="icon-12"></i></div>
-                                <h4><a href="service-details.html">Digital Banking</a></h4>
+                                <h4>Digital Banking</h4>
                                 <ul class="list-item clearfix">
                                     <li>Bank & savings accounts</li>
                                     <li>Credit cards</li>
@@ -252,11 +252,11 @@
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-12 service-block">
                         <div class="service-block-one wow fadeInUp animated" data-wow-delay="300ms" data-wow-duration="1500ms">
-                            <figure class="image-box"><a href="service-details-2.html">
+                            <figure class="image-box"><a href="#">
                                 <img src="assets/images/service/service-6.jpg" alt=""></a></figure>
                             <div class="inner-box">
                                 <div class="icon-box"><i class="icon-13"></i></div>
-                                <h4><a href="service-details-2.html">Mobile & Web Banking</a></h4>
+                                <h4>Mobile & Web Banking</h4>
                                 <ul class="list-item clearfix">
                                     <li>Instant Access</li>
                                     <li>Savings Fixed Term</li>
@@ -267,10 +267,10 @@
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-12 service-block">
                         <div class="service-block-one wow fadeInUp animated" data-wow-delay="600ms" data-wow-duration="1500ms">
-                            <figure class="image-box"><a href="service-details-3.html"><img src="assets/images/service/service-7.jpg" alt=""></a></figure>
+                            <figure class="image-box"><a href="#"><img src="assets/images/service/service-7.jpg" alt=""></a></figure>
                             <div class="inner-box">
                                 <div class="icon-box"><i class="icon-14"></i></div>
-                                <h4><a href="service-details-3.html">Insurance Policies</a></h4>
+                                <h4>Insurance Policies</h4>
                                 <ul class="list-item clearfix">
                                     <li>Pet insurance</li>
                                     <li>Transport Insurance</li>
@@ -281,10 +281,10 @@
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-12 service-block">
                         <div class="service-block-one wow fadeInUp animated" data-wow-delay="900ms" data-wow-duration="1500ms">
-                            <figure class="image-box"><a href="service-details-4.html"><img src="{{ asset('assets/images/service/service-8.jpg')}}" alt=""></a></figure>
+                            <figure class="image-box"><a href="#"><img src="{{ asset('assets/images/service/service-8.jpg')}}" alt=""></a></figure>
                             <div class="inner-box">
                                 <div class="icon-box"><i class="icon-15"></i></div>
-                                <h4><a href="service-details-4.html">Home & Property Loan</a></h4>
+                                <h4>Property Loan</h4>
                                 <ul class="list-item clearfix">
                                     <li>Residential Mortgages</li>
                                     <li>Buy-to-let Mortgages</li>
@@ -296,11 +296,11 @@
                     <div class="col-lg-3 col-md-6 col-sm-12 service-block">
                         <div class="service-block-one wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1500ms">
                             <figure class="image-box">
-                                <a href="service-details-5.html">
+                                <a href="#">
                                     <img src="{{ asset('assets/images/service/service-9.jpg')}}" alt=""></a></figure>
                             <div class="inner-box">
                                 <div class="icon-box"><i class="icon-16"></i></div>
-                                <h4><a href="service-details-5.html">All Bank Account</a></h4>
+                                <h4>All Bank Account</h4>
                                 <ul class="list-item clearfix">
                                     <li>Instant Access Savings</li>
                                     <li>Instant Access Cash</li>
@@ -313,11 +313,11 @@
                     <div class="col-lg-3 col-md-6 col-sm-12 service-block">
                         <div class="service-block-one wow fadeInUp animated" data-wow-delay="300ms" data-wow-duration="1500ms">
                             <figure class="image-box">
-                                <a href="service-details-6.html">
+                                <a href="#">
                                     <img src="{{ asset('assets/images/service/service-10.jpg')}}" alt=""></a></figure>
                             <div class="inner-box">
                                 <div class="icon-box"><i class="icon-17"></i></div>
-                                <h4><a href="service-details-6.html">borrowing accounts</a></h4>
+                                <h4>Borrowing accounts</h4>
                                 <ul class="list-item clearfix">
                                     <li>Bank Credit Card</li>
                                     <li>Setter personal loan</li>
@@ -328,11 +328,11 @@
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-12 service-block">
                         <div class="service-block-one wow fadeInUp animated" data-wow-delay="600ms" data-wow-duration="1500ms">
-                            <figure class="image-box"><a href="service-details-7.html">
+                            <figure class="image-box"><a href="#">
                                 <img src="{{ asset('assets/images/service/service-11.jpg')}}" alt=""></a></figure>
                             <div class="inner-box">
                                 <div class="icon-box"><i class="icon-18"></i></div>
-                                <h4><a href="service-details-7.html">Private Banking</a></h4>
+                                <h4>Private Banking</h4>
                                 <ul class="list-item clearfix">
                                     <li>Dedicated personal service</li>
                                     <li>Specialist teams</li>
@@ -344,11 +344,11 @@
                     <div class="col-lg-3 col-md-6 col-sm-12 service-block">
                         <div class="service-block-one wow fadeInUp animated" data-wow-delay="900ms" data-wow-duration="1500ms">
                             <figure class="image-box">
-                                <a href="service-details-8.html">
+                                <a href="#">
                                 <img src="{{ asset('assets/images/service/service-12.jpg')}}" alt=""></a></figure>
                             <div class="inner-box">
                                 <div class="icon-box"><i class="icon-19"></i></div>
-                                <h4><a href="service-details-8.html">Fixed term accounts</a></h4>
+                                <h4>Fixed term accounts</h4>
                                 <ul class="list-item clearfix">
                                     <li>Fixed Term Saving</li>
                                     <li>Fixed Rate Cash</li>
