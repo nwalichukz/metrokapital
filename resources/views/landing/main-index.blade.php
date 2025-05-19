@@ -12,14 +12,16 @@
                     </div>
                     <div class="auto-container">
                         <div class="content-box">
-                            <h2>Open our Current Account Online</h2>
-                            <p>This statistic is based on our average personal current account online opening time from the last 12 months.</p>
+                            <h2>Open Current Account Online</h2>
+                            <p> A current account is designed for frequent transactions, making it ideal for individuals or
+                                 businesses that need regular access to their funds</p>
                             <div class="btn-box">
-                                <a href="{{url('/get-register')}}" class="theme-btn btn-three">Create Savings Account</a>
+                                <a href="{{url('/get-register')}}" class="theme-btn btn-three">Create Account</a>
                             </div>
                         </div> 
                     </div>
                 </div>
+
                 <div class="slide-item p_relative">
                     <div class="bg-layer" style="background-image: url(assets/images/banner/banner-8.jpg);"></div>
                     <div class="pattern-layer">
@@ -28,14 +30,33 @@
                     </div>
                     <div class="auto-container">
                         <div class="content-box">
-                            <h2>Open our Current Account Online</h2>
-                            <p>This statistic is based on our average personal current account online opening time from the last 12 months.</p>
+                            <h2>Open our Savings Account Online</h2>
+                            <p>A savings account is a secure place to store your money while earning interest over time. </p>
                             <div class="btn-box">
-                                <a href="{{url('/get-register')}}" class="theme-btn btn-three">Create Current Account</a>
+                                <a href="{{url('/get-register')}}" class="theme-btn btn-three">Create Account</a>
                             </div>
                         </div> 
                     </div>
                 </div>
+
+                <div class="slide-item p_relative">
+                    <div class="bg-layer" style="background-image: url(assets/images/banner/banner-8.jpg);"></div>
+                    <div class="pattern-layer">
+                        <div class="pattern-4" style="background-image: url(assets/images/shape/shape-14.png);"></div>
+                        <div class="pattern-5" style="background-image: url(assets/images/shape/shape-15.png);"></div>
+                    </div>
+                    <div class="auto-container">
+                        <div class="content-box">
+                            <h2>Open Joint Account Online</h2>
+                            <p>A joint account is a shared bank account owned by two or more individuals, typically used by
+                                 couples, family members, or business partners.  </p>
+                            <div class="btn-box">
+                                <a href="{{url('/get-register')}}" class="theme-btn btn-three">Create Account</a>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+
                 <div class="slide-item p_relative">
                     <div class="bg-layer" style="background-image: url(assets/images/banner/banner-9.jpg);"></div>
                     <div class="pattern-layer">
@@ -44,10 +65,10 @@
                     </div>
                     <div class="auto-container">
                         <div class="content-box">
-                            <h2>Open our Current Account Online</h2>
-                            <p>This statistic is based on our average personal current account online opening time from the last 12 months.</p>
+                            <h2>Open Retirement Account Online</h2>
+                            <p> A retirement account is a long-term savings plan designed to help you build financial security for your future.</p>
                             <div class="btn-box">
-                                <a href="{{url('/get-login')}}" class="theme-btn btn-three">Create Retirement Account</a>
+                                <a href="{{url('/get-login')}}" class="theme-btn btn-three">Create Account</a>
                             </div>
                         </div>  
                     </div>
