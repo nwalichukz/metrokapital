@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 
-<title>MetroBank - HTML 5 Template Preview</title>
+<title>MetroBank - Your Finance Pal</title>
 
 <!-- Fav Icon -->
 <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
@@ -135,20 +135,17 @@
                 <div class="large-container">
                     <div class="top-inner">
                         <ul class="links-list clearfix">
-                            <li><a href="index.html">Career</a></li>
+                            {{--<li><a href="index.html">Career</a></li>
                             <li><a href="index.html">Faq</a></li>
                             <li><a href="index.html">Rewards</a></li>
-                            <li><a href="index.html">Media</a></li>
+                            <li><a href="index.html">Media</a></li>--}}
                         </ul>
                         <ul class="info-list clearfix"> 
                             <li>
                                 <i class="icon-1"></i>
-                                <a href="mailto:info@example.com">info@example.com</a>
+                                <a href="mailto:contactmetrokapital@gmail.com">contactmetrokapital@gmail.com</a>
                             </li>
-                            <li>
-                                <i class="icon-2"></i>
-                                Find Nearest Branch
-                            </li>
+                           
                         </ul>
                     </div>
                 </div>
@@ -196,7 +193,7 @@
                                         </li> 
                                         <li class="dropdown"><a href="index.html">Pages</a>
                                             <ul>
-                                                <li class="dropdown"><a href="index.html">Directors</a>
+                                            {{-- <li class="dropdown"><a href="index.html">Directors</a>
                                                     <ul>
                                                         <li><a href="team.html">Board of Directors</a></li>
                                                         <li><a href="team-details.html">Director Details</a></li>
@@ -207,9 +204,9 @@
                                                         <li><a href="career.html">Career Page</a></li>
                                                         <li><a href="career-details.html">Career Details</a></li>
                                                     </ul>
-                                                </li>
+                                                </li>--}}
                                                 <li class="dropdown"><a href="index.html">Blog</a>
-                                                    <ul>
+                                                    {{--<ul>
                                                         <li><a href="blog.html">Blog Grid</a></li>
                                                         <li><a href="blog-2.html">Blog Image</a></li>
                                                         <li><a href="blog-3.html">Blog Standard</a></li>
@@ -220,15 +217,15 @@
                                                 <li><a href="credit-cards.html">Credit Cards</a></li>
                                                 <li><a href="faq.html">General FAQ’s</a></li>
                                                 <li><a href="error.html">404 Error</a></li>
-                                            </ul>
+                                            </ul>--}}
                                         </li> 
-                                        <li><a href="contact.html">Contact</a></li> 
+                                        <li><a href="{{url('/contact-us')}}">Contact</a></li> 
                                     </ul>
                                 </div>
                             </nav>
                             <div class="menu-right-content ml_70">
                                 <a href="index.html" class="theme-btn btn-two mr_20">Login</a>
-                                <a href="index.html" class="theme-btn btn-one">Open Account</a>
+                                <a href="index.html" class="theme-btn btn-one">Create Account</a>
                             </div>
                         </div>
                     </div>
@@ -270,9 +267,9 @@
                 <div class="contact-info">
                     <h4>Contact Info</h4>
                     <ul>
-                        <li>Chicago 12, Melborne City, USA</li>
-                        <li><a href="tel:+8801682648101">+88 01682648101</a></li>
-                        <li><a href="mailto:info@example.com">info@example.com</a></li>
+                    <li>Chicago 12, Melborne City, USA</li>
+                        <li><a href="tel:+8801682648101">+1 219 3809 686 </a></li>
+                        <li><a href="mailto:contactmetrokapital@gmail.com">contactmetrokapital@gmail.com</a></li>
                     </ul>
                 </div>
                 <div class="social-links">

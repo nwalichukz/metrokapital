@@ -377,7 +377,7 @@
                     <div class="col-lg-4 col-md-6 col-sm-12 card-block">
                         <div class="card-block-one wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1500ms">
                             <div class="inner-box">
-                                <figure class="image-box"><a href="index-2.html"><img src="{{ asset('assets/images/resource/card-1.jpg')}}" alt=""></a></figure>
+                                <figure class="image-box"><img src="{{ asset('assets/images/resource/card-1.jpg')}}" alt=""></figure>
                                 <div class="lower-content">
                                     <h3><a href="#">Visa Silver Card</a></h3>
                                     <p> Allows you to borrow money (up to a limit) to make purchases, which you will pay back later</p>
@@ -391,7 +391,7 @@
                     <div class="col-lg-4 col-md-6 col-sm-12 card-block">
                         <div class="card-block-one wow fadeInUp animated" data-wow-delay="300ms" data-wow-duration="1500ms">
                             <div class="inner-box">
-                                <figure class="image-box"><a href="#"><img src="{{ asset('assets/images/resource/card-2.jpg')}}" alt=""></a></figure>
+                                <figure class="image-box"><img src="{{ asset('assets/images/resource/card-2.jpg')}}" alt=""></figure>
                                 <div class="lower-content">
                                     <h3><a href="#">Mastercard Gold Card</a></h3>
                                     <p>Another type of payment card - similar to a visa that can be a credit, debit or prepaid card.</p>
@@ -405,7 +405,7 @@
                     <div class="col-lg-4 col-md-6 col-sm-12 card-block">
                         <div class="card-block-one wow fadeInUp animated" data-wow-delay="600ms" data-wow-duration="1500ms">
                             <div class="inner-box">
-                                <figure class="image-box"><a href="#"><img src="{{ asset('assets/images/resource/card-3.jpg')}}" alt=""></a></figure>
+                                <figure class="image-box"><img src="{{ asset('assets/images/resource/card-3.jpg')}}" alt=""></figure>
                                 <div class="lower-content">
                                     <h3><a href="#">Visa Platinum Card</a></h3>
                                     <p>Allows you to borrow money up to $1, 000, 000 make purchases, which you will pay back later </p>
