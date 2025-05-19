@@ -18,11 +18,9 @@
                 </div>
                 <div class="social-links">
                     <ul class="clearfix">
-                        <li><a href="#"><span class="fab fa-twitter"></span></a></li>
-                        <li><a href="#"><span class="fab fa-facebook-square"></span></a></li>
-                        <li><a href="#"><span class="fab fa-pinterest-p"></span></a></li>
+                        <li><a href="#"><span class="fab fa-twitter"></span></a></li>                       
                         <li><a href="#"><span class="fab fa-instagram"></span></a></li>
-                        <li><a href="#"><span class="fab fa-youtube"></span></a></li>
+                        <li><a href="https://www.youtube.com/@metrokapitalor"><span class="fab fa-youtube"></span></a></li>
                     </ul>
                 </div>
             </nav>
@@ -66,7 +64,7 @@
                             <div class="inner-box">
                                 <div class="icon-box"><i class="icon-2"></i></div>
                                 <h3>Our Location</h3>
-                                <p>1901 Thornridge Cir. Shiloh, <br />Hawaii 81063</p>
+                                <p> Chicago 12, Melborne City, USA</p>
                             </div>
                         </div>
                     </div>
@@ -75,7 +73,7 @@
                             <div class="inner-box">
                                 <div class="icon-box"><i class="icon-43"></i></div>
                                 <h3>Email Address</h3>
-                                <p><a href="mailto:contact@metrokapital.org">contact@metrokapital.org</a><br /> <a href="mailto:support@metrokapital.org">support@metrokapital.org</a></p>
+                                <p><a href="mailto:contactmetrokapital@gmail.com">contactmetrokapital@gmail.com</a><br /> <a href="mailto:support@metrokapital.org">support@metrokapital.org</a></p>
                             </div>
                         </div>
                     </div>
@@ -84,7 +82,7 @@
                             <div class="inner-box">
                                 <div class="icon-box"><i class="icon-44"></i></div>
                                 <h3>Phone Number</h3>
-                                <p>Emergency Cases <br /><a href="tel:2085550112">+(208) 555-0112</a> (24/7)</p>
+                                <p>Emergency Cases <br /><a href="tel:2085550112">+1 219 3809 686</a> (24/7)</p>
                             </div>
                         </div>
                     </div>
