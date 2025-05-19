@@ -10,6 +10,7 @@ use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\Binary\BinaryController;
 use App\Http\Controllers\Referral\ReferralController;
 use App\Http\Controllers\Investment\InvestmentController;
+use App\Http\Controllers\Investment\JointAccountController;
 use App\Http\Controllers\Investment\CitizenByInvestment;
 use App\Http\Controllers\Investment\ResidencyByInvestment;
 use App\Http\Controllers\Investment\ResidencyByRealEstate;
@@ -135,10 +136,18 @@ Route::get('/admin/end-investment/{id}', [InvestmentController::class, 'endInv']
 Route::get('/user/delete-investment/{id}', [InvestmentController::class, 'delete']);
 
 Route::post('/user/investment/create', [InvestmentController::class, 'create']);
+Route::post('/user/investment/create-two', [InvestmentController::class, 'createTwo']);
 
 Route::get('/dashboard/get-investment-page', [InvestmentController::class, 'getInvestmentPage']);
 Route::get('/admin/get-all-investments', [InvestmentController::class, 'getAll']);
 Route::get('/user/get-my-investments/{user_id}', [InvestmentController::class, 'myInvestments']);
+
+
+Route::get('/admin/all-investments', [InvestmentController::class, 'getAll']);
+Route::get('/admin/end-inv/{id}', [InvestmentController::class, 'endInv']);
+
+Route::get('/dashboard/get-investment-page/{id}', [InvestmentController::class, 'returnInvestmentPage']);
+
 
 
 Route::get('/admin/get-citizenship-by-investment', [CitizenByInvestment::class, 'addACitizenByInvestmentPage']);
@@ -171,26 +180,30 @@ Route::get('/view-residency-by-real-estate/{id}', [ResidencyByRealEstate::class,
 
 
 
-
-Route::get('/dashboard/get-investment-page/{id}', [InvestmentController::class, 'returnInvestmentPage']);
-
 Route::post('/admin/create-wallet-address', [WalletAddressController::class, 'create']);
 Route::get('/admin/delete-wallet-address/{id}', [WalletAddressController::class, 'delete']);
 Route::post('/user/external-transfer', [UserWalletController::class, 'externalTransfer']);
 Route::any('/user/confirm-wallet-details', [UserWalletController::class, 'confirmUserWalletNo']);
 
 Route::any('/user/internal-transfer/create', [UserWalletController::class, 'transferToAnotherUserWalletId']);
+Route::post('/user/fund-joint-account/create', [UserWalletController::class, 'fundSecondWallet']);
 
 
 Route::post('/admin/create-investment-type', [InvestmentTypeController::class, 'create']);
 
 Route::any('/user/confirm-investment-type/{id}', [InvestmentTypeController::class, 'confirmInvestment']);
+Route::get('/user/confirm-investment-type_two/{id}', [InvestmentTypeController::class, 'confirmInvestmentTwo']);
 
 Route::get('/admin/get-all-investment-type/{id?}', [InvestmentTypeController::class, 'getAll']);
 
 Route::get('/user/get-account-plans/{name}', [InvestmentTypeController::class, 'getAccountPlans']);
 
 Route::get('/admin/inv-type/delete/{id}', [InvestmentTypeController::class, 'delete']);
+
+// joint account
+Route::get('/user/get-joint-account', [JointAccountController::class, 'getPage']);
+Route::post('/user/joint-account-create', [JointAccountController::class, 'create']);
+
 
 Route::get('/admin/get-all-wallet-address', [WalletAddressController::class, 'getAll']);
 
@@ -265,9 +278,6 @@ Route::get('/admin/get-send-email-to-all', [DashboardController::class, 'getSend
 
 Route::post('/admin/send-email-to-all-users', [Mailer::class, 'sendMassMail']);
 Route::post('/admin/send-email', [Mailer::class, 'sendSingleMail']);
-
-Route::get('/admin/all-investments', [InvestmentController::class, 'getAll']);
-Route::get('/admin/end-inv/{id}', [InvestmentController::class, 'endInv']);
 
 
 Route::get('/admin/all-transactions', [UserTransactionHistoryController::class, 'getAll']);

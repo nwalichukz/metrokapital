@@ -200,6 +200,21 @@ class InvestmentTypeController extends Controller
 
     }
 
+     /**
+     * returns confirm investment page
+     * Two
+     * @return true
+     * 
+     * @param $settings page
+     * 
+     */
+    public static function confirmInvestmentTwo($id){
+      
+      $inv_type = InvestmentType::find($id);
+      return view('dashboard/src/html/components/forms/investment-preview-two')->with(['inv_type'=>$inv_type]);
+   
+       }
+
 
       /**
      * returns acc plans
