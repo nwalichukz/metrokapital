@@ -380,9 +380,9 @@
                                 <figure class="image-box"><a href="index-2.html"><img src="{{ asset('assets/images/resource/card-1.jpg')}}" alt=""></a></figure>
                                 <div class="lower-content">
                                     <h3><a href="#">Visa Silver Card</a></h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec felis tincidunt</p>
+                                    <p> Allows you to borrow money (up to a limit) to make purchases, which you will pay back later</p>
                                     <div class="btn-box">
-                                        <a href="#" class="theme-btn btn-two">Apple for Card</a>
+                                        <a href="{{url('/get-login')}}" class="theme-btn btn-two">Apple for Card</a>
                                     </div>
                                 </div>
                             </div>
@@ -394,9 +394,9 @@
                                 <figure class="image-box"><a href="#"><img src="{{ asset('assets/images/resource/card-2.jpg')}}" alt=""></a></figure>
                                 <div class="lower-content">
                                     <h3><a href="#">Mastercard Gold Card</a></h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec felis tincidunt</p>
+                                    <p>Another type of payment card - similar to a visa that can be a credit, debit or prepaid card.</p>
                                     <div class="btn-box">
-                                        <a href="#" class="theme-btn btn-two">Apple for Card</a>
+                                        <a href="{{url('/get-login')}}" class="theme-btn btn-two">Apple for Card</a>
                                     </div>
                                 </div>
                             </div>
@@ -408,9 +408,9 @@
                                 <figure class="image-box"><a href="#"><img src="{{ asset('assets/images/resource/card-3.jpg')}}" alt=""></a></figure>
                                 <div class="lower-content">
                                     <h3><a href="#">Visa Platinum Card</a></h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec felis tincidunt</p>
+                                    <p>Allows you to borrow money up to $1, 000, 000 make purchases, which you will pay back later </p>
                                     <div class="btn-box">
-                                        <a href="#" class="theme-btn btn-two">Apple for Card</a>
+                                        <a href="{{url('/get-login')}}" class="theme-btn btn-two">Apple for Card</a>
                                     </div>
                                 </div>
                             </div>

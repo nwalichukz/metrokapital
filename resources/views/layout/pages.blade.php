@@ -284,9 +284,10 @@
                                 <img src="{{ asset('assets/images/logo-2.png')}}" alt=""></a></figure>
                                 <p>Please get to us let us know how we can help you.</p>
                                 <ul class="social-links">
-                                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                       
                                         <li><a href="#"><i class="fab fa-twitter"></i></a></li>
                                         <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                        <li><a href="https://www.youtube.com/@metrokapitalor"><i class="fab fa-youtube"></i></a></li>
                                 </ul>
                             </div>
                         </div>
