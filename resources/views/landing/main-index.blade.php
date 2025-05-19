@@ -97,7 +97,7 @@
                             <div class="count-outer count-box">
                                 <span class="count-text" data-speed="1500" data-stop="90">0</span><span>Bn</span>
                             </div>
-                            <p>Total Transection</p>
+                            <p>Total Transactions</p>
                         </div>
                     </div>
                     <div class="funfact-block-one">
@@ -106,7 +106,7 @@
                             <div class="count-outer count-box">
                                 <span class="count-text" data-speed="1500" data-stop="40">0</span><span>+</span>
                             </div>
-                            <p>Branchs in USA</p>
+                            <p>Branches in USA</p>
                         </div>
                     </div>
                 </div>
@@ -158,7 +158,7 @@
                             <div class="content-box ml_40">
                                 <div class="sec-title mb_20">
                                     <h6>About US</h6>
-                                    <h2>Financial Guidance for Every Stage of Life.</h2>
+                                    <h2>Financial Solutions for Every Stage of Life.</h2>
                                 </div>
                                 <div class="text-box mb_40">
                                     <p>The Security Center for and Mobile and Online Banking.</p>
