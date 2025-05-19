@@ -246,7 +246,7 @@
                                                             </div>
                                                         </div>
                                                         <div class="nk-tb-col">
-                                                            <a href="html/user-details-regular.html">
+                                                            <a href="#">
                                                                 <div class="user-card">
                                                                     <div class="user-avatar bg-primary">
                                                                         <span>{{strtoupper(substr($user->name,0, 2))}}</span>
