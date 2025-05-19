@@ -15,7 +15,7 @@
                             <h2>Open our Current Account Online</h2>
                             <p>This statistic is based on our average personal current account online opening time from the last 12 months.</p>
                             <div class="btn-box">
-                                <a href="{{url('/get-register')}}" class="theme-btn btn-three">Create Account</a>
+                                <a href="{{url('/get-register')}}" class="theme-btn btn-three">Create Savings Account</a>
                             </div>
                         </div> 
                     </div>
@@ -31,7 +31,7 @@
                             <h2>Open our Current Account Online</h2>
                             <p>This statistic is based on our average personal current account online opening time from the last 12 months.</p>
                             <div class="btn-box">
-                                <a href="{{url('/get-register')}}" class="theme-btn btn-three">Create Account</a>
+                                <a href="{{url('/get-register')}}" class="theme-btn btn-three">Create Current Account</a>
                             </div>
                         </div> 
                     </div>
@@ -47,7 +47,7 @@
                             <h2>Open our Current Account Online</h2>
                             <p>This statistic is based on our average personal current account online opening time from the last 12 months.</p>
                             <div class="btn-box">
-                                <a href="{{url('/get-login')}}" class="theme-btn btn-three">Create Account</a>
+                                <a href="{{url('/get-login')}}" class="theme-btn btn-three">Create Retirement Account</a>
                             </div>
                         </div>  
                     </div>
