@@ -302,7 +302,7 @@
                                 <div class="icon-box"><i class="icon-16"></i></div>
                                 <h4><a href="service-details-5.html">All Bank Account</a></h4>
                                 <ul class="list-item clearfix">
-                                    <li>nstant Access Savings</li>
+                                    <li>Instant Access Savings</li>
                                     <li>Instant Access Cash</li>
                                     <li>Young Savers Account</li>
                                 </ul>
@@ -632,16 +632,8 @@
                                 <p>Center for and Mobile and Online Banking.</p>
                             </div>
                             <div class="btn-box">
-                                <a href="#" class="play-store mr_20">
-                             <img src="{{ asset('assets/images/icons/icon-2.png')}}" alt="">
-                                    <span>get it on</span>
-                                    Google Play
-                                </a>
-                                <a href="#" class="play-store">
-                             <img src="{{ asset('assets/images/icons/icon-3.png')}}" alt="">
-                                    <span>Download on the</span>
-                                    App Store
-                                </a>
+                             
+                              
                             </div>
                         </div>
                     </div>
