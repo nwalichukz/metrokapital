@@ -66,16 +66,14 @@
                                                    <option value="3">New York</option>
                                                 </select>
                                             </div>
-                                        </div>--}}
+                                        </div>
 
                                         <div class="form-group">
                                             <input type="text" name="location" placeholder="Location">
                                         </div>
-                                        <div class="form-group">
-                                            <button type="submit" class="theme-btn btn-one">Find on Map</button>
-                                        </div>
+                                       
                                     </form>
-                                </div>
+                                </div>--}}
                             </div>
                         </div>
                     </div>
