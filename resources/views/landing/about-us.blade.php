@@ -274,11 +274,9 @@
                 </div>
                 <div class="social-links">
                     <ul class="clearfix">
-                        <li><a href="index.html"><span class="fab fa-twitter"></span></a></li>
-                        <li><a href="index.html"><span class="fab fa-facebook-square"></span></a></li>
-                        <li><a href="index.html"><span class="fab fa-pinterest-p"></span></a></li>
-                        <li><a href="index.html"><span class="fab fa-instagram"></span></a></li>
-                        <li><a href="index.html"><span class="fab fa-youtube"></span></a></li>
+                        <li><a href="#"><span class="fab fa-twitter"></span></a></li>
+                        <li><a href="#"><span class="fab fa-instagram"></span></a></li>
+                        <li><a href="https://www.youtube.com/@metrokapitalor"><span class="fab fa-youtube"></span></a></li>
                     </ul>
                 </div>
             </nav>
@@ -300,7 +298,7 @@
                 <div class="content-box">
                     <h1>About Us</h1>
                     <ul class="bread-crumb clearfix">
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="{{url('/')}}">Home</a></li>
                         <li>About Us</li>
                     </ul>
                 </div>
@@ -343,7 +341,7 @@
                             <div class="content-box ml_40">
                                 <div class="sec-title mb_20">
                                     <h6>About US</h6>
-                                    <h2>Financial Guidance for Every Stage of Life.</h2>
+                                    <h2>Financial Solutions for Every Stage of Life.</h2>
                                 </div>
                                 <div class="text-box mb_40">
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec felis, suscipit you take action against fraud. See it the Security Center for and Mobile and Online Banking.</p>
@@ -373,7 +371,7 @@
 
 
         <!-- funfact-section -->
-        <section class="funfact-section about-page pt_95 pb_120">
+        {{--<section class="funfact-section about-page pt_95 pb_120">
             <div class="auto-container">
                 <div class="inner-container clearfix">
                     <div class="funfact-block-one">
@@ -391,10 +389,10 @@
                             <div class="count-outer count-box">
                                 <span class="count-text" data-speed="1500" data-stop="90">0</span><span>Bn</span>
                             </div>
-                            <p>Total Transection</p>
+                            <p>Total Transaction</p>
                         </div>
                     </div>
-                    <div class="funfact-block-one">
+                   {{-- <div class="funfact-block-one">
                         <div class="inner-box">
                             <div class="icon-box"><i class="icon-23"></i></div>
                             <div class="count-outer count-box">
@@ -402,10 +400,10 @@
                             </div>
                             <p>Branchs in USA</p>
                         </div>
-                    </div>
+                    </div>--}}
                 </div>
             </div>
-        </section>
+        </section>--}}
         <!-- funfact-section end -->
 
 
@@ -480,7 +478,7 @@
 
 
         <!-- apps-section -->
-        <section class="apps-section about-page pb_120">
+        {{--<section class="apps-section about-page pb_120">
             <div class="light-icon" style="background-image: url(assets/images/icons/icon-4.png);"></div>
             <div class="auto-container">
                 <div class="inner-container">
@@ -521,12 +519,12 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section>--}}
         <!-- apps-section end -->
 
 
         <!-- testimonial-style-two -->
-        <section class="testimonial-style-two pt_120 pb_120">
+        {{--<section class="testimonial-style-two pt_120 pb_120">
             <div class="bg-layer" style="background-image: url(assets/images/background/testimonial-bg-2.jpg);"></div>
             <div class="auto-container">
                 <div class="row clearfix">
@@ -577,12 +575,12 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section>--}}
         <!-- testimonial-style-two end -->
 
 
         <!-- subscribe-section -->
-        <section class="subscribe-section">
+        {{--<section class="subscribe-section">
             <div class="pattern-layer" style="background-image: url(assets/images/shape/shape-5.png);"></div>
             <div class="auto-container">
                 <div class="row align-items-center">
@@ -603,7 +601,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section>--}}
         <!-- subscribe-section end -->
 
 
@@ -623,11 +621,11 @@
                         <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
                             <div class="footer-widget logo-widget">
                                 <figure class="footer-logo"><a href="index.html"><img src="assets/images/logo-2.png" alt=""></a></figure>
-                                <p>Tincidunt neque pretium lectus donec risus. Mauris mi tempor nunc orc leo consequat vitae erat gravida lobortis nec et sagittis.</p>
+                                <p>Metrokapital is a forward-thinking digital investment bank committed to redefining the future of finance.</p>
                                 <ul class="social-links">
-                                    <li><a href="index.html"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="index.html"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="index.html"><i class="fab fa-instagram"></i></a></li>
+                                    <li><a href="https://www.youtube.com/@metrokapitalor"><i class="fab fa-youtube"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -638,22 +636,19 @@
                                 </div>
                                 <div class="widget-content">
                                     <ul class="links-list clearfix">
-                                        <li><a href="about.html">About Us</a></li>
-                                        <li><a href="index.html">Testimonials</a></li>
-                                        <li><a href="career.html">Careers</a></li>
-                                        <li><a href="career-details.html">Career Detail</a></li>
-                                        <li><a href="faq.html">Faq’s</a></li>
+                                   
+                                        <li><a href="#">Faq’s</a></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
+                        {{--<div class="col-lg-3 col-md-6 col-sm-12 footer-column">
                             <div class="footer-widget links-widget">
                                 <div class="widget-title">
                                     <h4>Usefull Links</h4>
                                 </div>
                                 <div class="widget-content">
-                                    <ul class="links-list clearfix">
+                                   <ul class="links-list clearfix">
                                         <li><a href="index.html">Credit Card</a></li>
                                         <li><a href="index.html">Saving Account</a></li>
                                         <li><a href="index.html">Digital Gift Cards</a></li>
@@ -666,7 +661,7 @@
                         <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
                             <div class="footer-widget contact-widget">
                                 <div class="widget-title">
-                                    <h4>Find Our Branch & ATM</h4>
+                                 
                                 </div>
                                 <div class="form-inner">
                                     <form method="post" action="index.html">
@@ -687,7 +682,7 @@
                                             <button type="submit" class="theme-btn btn-one">Find on Map</button>
                                         </div>
                                     </form>
-                                </div>
+                                </div>--}}
                             </div>
                         </div>
                     </div>
