@@ -259,42 +259,44 @@
                                                                       
                                                                     </div>
                                                                     <div class="user-info">
-                                                                        <span class="tb-lead">@if(!empty($inv->user->name)){{$inv->user->name}} @endif<span class="dot dot-success d-md-none ms-1"></span></span>
+                                                                        <span class="tb-lead">
+                                                                            @if(!empty($inv->user->name)){{$inv->user->name}} @endif
+                                                                            <span class="dot dot-success d-md-none ms-1"></span></span>
                                                                    
                                                                     </div>
                                                                 </div>
                                                             </a>
                                                         </div>
 
-                                                        <div class="nk-tb-col tb-col-mb">
+                                                        <div class="nk-tb-col tb-col-mb tb-col-ms">
                                                             <span class="tb-amount">@if(!empty($inv->invType->parent_name)){{strtoupper($inv->invType->parent_name)}} @endif <br/></span>
                                                             <span class="tb-amount">@if(!empty($inv->invType->name)){{$inv->invType->name}} @endif </span>
                                                         </div>
 
-                                                        <div class="nk-tb-col tb-col-mb">
+                                                        <div class="nk-tb-col tb-col-mb tb-col-ms">
                                                             <span class="tb-amount">{{$inv->amount}} <span class="currency">USD</span></span>
                                                         </div>
 
-                                                        <div class="nk-tb-col tb-col-mb">
+                                                        <div class="nk-tb-col tb-col-mb tb-col-ms">
                                                             <span class="tb-amount">{{$inv->status}} </span>
                                                         </div>
 
-                                                        <div class="nk-tb-col tb-col-md">
+                                                        <div class="nk-tb-col tb-col-md tb-col-ms">
                                                             <span>{{$inv->possible_total_earning}} <span class="currency">USD</span></span>
                                                         </div>
 
-                                                        <div class="nk-tb-col tb-col-mb">
+                                                        <div class="nk-tb-col tb-col-mb tb-col-ms">
                                                             <span class="tb-amount">@if(!empty($inv->invType->duration)) {{$inv->invType->duration}} @endif </span>
                                                         </div>
 
-                                                        <div class="nk-tb-col tb-col-lg">
+                                                        <div class="nk-tb-col tb-col-lg tb-col-ms">
                                                             <ul class="list-status">
                                                                 <li><em class="icon text-success ni ni-check-circle"></em> <span>{{ $inv->created_at}}</span></li>
                                                                
                                                             </ul>
                                                         </div>
 
-                                                        <div class="nk-tb-col tb-col-lg">
+                                                        <div class="nk-tb-col tb-col-lg tb-col-ms">
                                                             <ul class="list-status">
                                                                 <li><em class="icon text-success ni ni-check-circle"></em> <span>{{ $inv->end_date}}</span></li>
                                                                
