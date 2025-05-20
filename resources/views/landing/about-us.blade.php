@@ -168,7 +168,7 @@
                             <nav class="main-menu navbar-expand-md navbar-light clearfix">
                                 <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
                                     <ul class="navigation clearfix">
-                                        <li class="dropdown"><a href="index.html">Home</a>
+                                        {{--<li class="dropdown"><a href="index.html">Home</a>
                                             <ul>
                                                 <li><a href="index.html">Home Page One</a></li>
                                                 <li><a href="index-2.html">Home Page Two</a></li>
@@ -193,7 +193,7 @@
                                         </li> 
                                         <li class="dropdown"><a href="index.html">Pages</a>
                                             <ul>
-                                            {{-- <li class="dropdown"><a href="index.html">Directors</a>
+                                            <li class="dropdown"><a href="index.html">Directors</a>
                                                     <ul>
                                                         <li><a href="team.html">Board of Directors</a></li>
                                                         <li><a href="team-details.html">Director Details</a></li>
@@ -205,7 +205,7 @@
                                                         <li><a href="career-details.html">Career Details</a></li>
                                                     </ul>
                                                 </li>--}}
-                                                <li class="dropdown"><a href="index.html">Blog</a>
+                                            
                                                     {{--<ul>
                                                         <li><a href="blog.html">Blog Grid</a></li>
                                                         <li><a href="blog-2.html">Blog Image</a></li>
@@ -224,8 +224,8 @@
                                 </div>
                             </nav>
                             <div class="menu-right-content ml_70">
-                                <a href="index.html" class="theme-btn btn-two mr_20">Login</a>
-                                <a href="index.html" class="theme-btn btn-one">Create Account</a>
+                                <a href="{{url('/get-login')}}" class="theme-btn btn-two mr_20">Login</a>
+                                <a href="{{url('/get-register')}}" class="theme-btn btn-one">Create Account</a>
                             </div>
                         </div>
                     </div>
@@ -245,8 +245,8 @@
                                 <!--Keep This Empty / Menu will come through Javascript-->
                             </nav>
                             <div class="menu-right-content ml_70">
-                                <a href="index.html" class="theme-btn btn-two mr_20">Login</a>
-                                <a href="index.html" class="theme-btn btn-one">Open Account</a>
+                            <a href="{{url('/get-login')}}" class="theme-btn btn-two mr_20">Login</a>
+                            <a href="{{url('/get-register')}}" class="theme-btn btn-one">Create Account</a>
                             </div>
                         </div>
                     </div>
@@ -344,22 +344,22 @@
                                     <h2>Financial Solutions for Every Stage of Life.</h2>
                                 </div>
                                 <div class="text-box mb_40">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec felis, suscipit you take action against fraud. See it the Security Center for and Mobile and Online Banking.</p>
+                                    <p>Whatever banking needs you have we have got you covered. See us the Security Center for and Mobile and Online Banking.</p>
                                 </div>
                                 <div class="inner-box mb_45">
                                     <div class="single-item">
                                         <div class="icon-box"><i class="icon-10"></i></div>
                                         <h3>Solution Focused</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec felis tincidunt feugiat</p>
+                                        <p>Our Solutions are focused o your banking needs</p>
                                     </div>
                                     <div class="single-item">
                                         <div class="icon-box"><i class="icon-11"></i></div>
                                         <h3>99.99% Success</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec felis tincidunt feugiat</p>
+                                        <p>Our success rate is a testament to the attention we give to the needs of our clients</p>
                                     </div>
                                 </div>
                                 <div class="btn-box">
-                                    <a href="index.html" class="theme-btn btn-one">Discover More</a>
+                                    <a href="{{url('/get-login')}}" class="theme-btn btn-one">Discover More</a>
                                 </div>
                             </div>
                         </div>
@@ -440,7 +440,7 @@
                             <div class="inner-box">
                                 <div class="icon-box"><i class="icon-5"></i></div>
                                 <h4><a href="index.html">Secure International Transaction</a></h4>
-                                <p>Tortor neque sed tellus estian eget dui id ante tristique more tristique dolor.</p>
+                                <p>For you internationa transactions we got you covered.</p>
                             </div>
                         </div>
                     </div>
@@ -449,7 +449,7 @@
                             <div class="inner-box">
                                 <div class="icon-box"><i class="icon-6"></i></div>
                                 <h4><a href="index.html">24/7 Support from the Expert Team</a></h4>
-                                <p>Tortor neque sed tellus estian eget dui id ante tristique more tristique dolor.</p>
+                                <p>We have got you covered 24/7 in customer support. our team will respond to you within 30 minutes.</p>
                             </div>
                         </div>
                     </div>
@@ -458,7 +458,7 @@
                             <div class="inner-box">
                                 <div class="icon-box"><i class="icon-7"></i></div>
                                 <h4><a href="index.html">Lowest Processing Fee than Other Banks</a></h4>
-                                <p>Tortor neque sed tellus estian eget dui id ante tristique more tristique dolor.</p>
+                                <p>Our charges are very insignificant that you will never find any better place in this industry.</p>
                             </div>
                         </div>
                     </div>
@@ -467,7 +467,7 @@
                             <div class="inner-box">
                                 <div class="icon-box"><i class="icon-8"></i></div>
                                 <h4><a href="index.html">Less Time in any Loans Approval</a></h4>
-                                <p>Tortor neque sed tellus estian eget dui id ante tristique more tristique dolor.</p>
+                                <p>Once your documents are righfully provided we have over 80% approval ratings</p>
                             </div>
                         </div>
                     </div>
