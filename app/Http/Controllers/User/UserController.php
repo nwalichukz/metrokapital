@@ -49,6 +49,7 @@ class UserController extends Controller
             $user->country = $request['country'];
             $user->access_level = 'user';
             $user->kyc_status = 'not-verified';
+            $user->status = 'active';
             $user->save();      
         return $user->id;
      }
