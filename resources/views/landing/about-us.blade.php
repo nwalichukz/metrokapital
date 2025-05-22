@@ -402,7 +402,7 @@
                             <p>Total Transaction</p>
                         </div>
                     </div>
-                   {{-- <div class="funfact-block-one">
+                   <div class="funfact-block-one">
                         <div class="inner-box">
                             <div class="icon-box"><i class="icon-23"></i></div>
                             <div class="count-outer count-box">
@@ -410,7 +410,7 @@
                             </div>
                             <p>Branchs in USA</p>
                         </div>
-                    </div>--}}
+                    </div>
                 </div>
             </div>
         </section>--}}
