@@ -140,7 +140,7 @@
 
 
         <!-- subscribe-section -->
-        <section class="subscribe-section">
+        {{--<section class="subscribe-section">
             <div class="pattern-layer" style="background-image: url(assets/images/shape/shape-5.png);"></div>
             <div class="auto-container">
                 <div class="row align-items-center">
@@ -161,7 +161,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section>--}}
         <!-- subscribe-section end -->
          @endsection
 

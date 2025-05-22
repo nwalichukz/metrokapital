@@ -143,7 +143,7 @@
                         <ul class="info-list clearfix"> 
                             <li>
                                 <i class="icon-1"></i>
-                                <a href="mailto:contactmetrokapital@gmail.com">contactmetrokapital@gmail.com</a>
+                                <a href="mailto:contactmetrokapital@gmail.com"> contactmetrokapital@gmail.com </a>
                             </li>
                            
                         </ul>
@@ -341,16 +341,26 @@
                             <div class="content-box ml_40">
                                 <div class="sec-title mb_20">
                                     <h6>About US</h6>
-                                    <h2>Financial Solutions for Every Stage of Life.</h2>
+                                    <p>We are a forward-thinking digital investment bank committed to redefining the future of finance.
+                                         By combining cutting-edge technology with expert financial insight,
+                                         we offer secure, smart, and seamless investment solutions tailored to the modern investor.</p>
+
+                                         <p>Our platform empowers individuals and businesses to access global markets, manage portfolios, 
+                                            and grow their wealth with confidence — all from the convenience of a digital-first experience.
+                                             Whether you’re a seasoned investor or just starting your financial journey,
+                                             we provide the tools, support, and transparency needed to make informed decisions. </p>
+                                             <p>At the core of our mission is trust, innovation, and financial inclusion.
+                                                 We believe that investing should be accessible, efficient, 
+                                                and rewarding for everyone. Join us as we transform the way the world invests. </p>
                                 </div>
                                 <div class="text-box mb_40">
-                                    <p>Whatever banking needs you have we have got you covered. See us the Security Center for and Mobile and Online Banking.</p>
+                                    <p>Whatever banking needs you have, we have got you covered. See us the Security Center for and Mobile and Online Banking.</p>
                                 </div>
                                 <div class="inner-box mb_45">
                                     <div class="single-item">
                                         <div class="icon-box"><i class="icon-10"></i></div>
                                         <h3>Solution Focused</h3>
-                                        <p>Our Solutions are focused o your banking needs</p>
+                                        <p>Our Solutions are focused on your banking needs</p>
                                     </div>
                                     <div class="single-item">
                                         <div class="icon-box"><i class="icon-11"></i></div>
@@ -440,7 +450,7 @@
                             <div class="inner-box">
                                 <div class="icon-box"><i class="icon-5"></i></div>
                                 <h4><a href="index.html">Secure International Transaction</a></h4>
-                                <p>For you internationa transactions we got you covered.</p>
+                                <p>For your international transactions we got you covered.</p>
                             </div>
                         </div>
                     </div>
@@ -449,7 +459,7 @@
                             <div class="inner-box">
                                 <div class="icon-box"><i class="icon-6"></i></div>
                                 <h4><a href="index.html">24/7 Support from the Expert Team</a></h4>
-                                <p>We have got you covered 24/7 in customer support. our team will respond to you within 30 minutes.</p>
+                                <p>We have got you covered 24/7 in customer support. Our team will respond to you within 30 minutes.</p>
                             </div>
                         </div>
                     </div>
@@ -458,7 +468,7 @@
                             <div class="inner-box">
                                 <div class="icon-box"><i class="icon-7"></i></div>
                                 <h4><a href="index.html">Lowest Processing Fee than Other Banks</a></h4>
-                                <p>Our charges are very insignificant that you will never find any better place in this industry.</p>
+                                <p>Our charges are very low, you will never find any company with lower processing fees than us in this industry.</p>
                             </div>
                         </div>
                     </div>
@@ -467,7 +477,7 @@
                             <div class="inner-box">
                                 <div class="icon-box"><i class="icon-8"></i></div>
                                 <h4><a href="index.html">Less Time in any Loans Approval</a></h4>
-                                <p>Once your documents are righfully provided we have over 80% approval ratings</p>
+                                <p>Once your documents are righfully provided we have over 80% approval rates</p>
                             </div>
                         </div>
                     </div>
@@ -620,7 +630,7 @@
                     <div class="row clearfix">
                         <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
                             <div class="footer-widget logo-widget">
-                                <figure class="footer-logo"><a href="index.html"><img src="assets/images/logo-2.png" alt=""></a></figure>
+                                <figure class="footer-logo"><a href="{{url('/')}}"><img src="assets/images/logo-2.png" alt=""></a></figure>
                                 <p>Metrokapital is a forward-thinking digital investment bank committed to redefining the future of finance.</p>
                                 <ul class="social-links">
                                     <li><a href="https://www.youtube.com/@metrokapitalor"><i class="fab fa-youtube"></i></a></li>
@@ -637,11 +647,12 @@
                                 <div class="widget-content">
                                     <ul class="links-list clearfix">
                                    
-                                        <li><a href="#">Faq’s</a></li>
+                                        <li><a href="#"> Faq’s </a></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
+
                         {{--<div class="col-lg-3 col-md-6 col-sm-12 footer-column">
                             <div class="footer-widget links-widget">
                                 <div class="widget-title">
@@ -690,7 +701,7 @@
             </div>
             <div class="footer-bottom centred">
                 <div class="auto-container">
-                    <div class="copyright"><p>Copyright 2023 by <a href="index.html">MertoBank</a>. All Right Reserved.</p></div>
+                    <div class="copyright"><p>Copyright {{date('Y')}} by <a href="{{url('/')}}"> MertoBank </a>. All Right Reserved.</p></div>
                 </div>
             </div>
         </footer>
