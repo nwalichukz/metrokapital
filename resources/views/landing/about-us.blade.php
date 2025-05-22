@@ -441,8 +441,8 @@
         <section class="feature-style-three pt_120 pb_90">
             <div class="auto-container">
                 <div class="sec-title mb_70 centred">
-                    <h6>Why US</h6>
-                    <h2>Why Choose Us</h2>
+                 
+                    <h2>Why You Should Choose Us</h2>
                 </div>
                 <div class="row clearfix">
                     <div class="col-lg-3 col-md-6 col-sm-12 feature-block">
