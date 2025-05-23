@@ -27,6 +27,8 @@
                                 <div class="widget-content">
                                     <ul class="links-list clearfix">
                                         <li><a href="{{url('/about-us')}}">About Us</a></li>
+                                        <li><a href="{{url('/contact-us')}}">Contact Us</a></li>
+                                        <li><a href="{{url('/faq')}}">FAQ</a></li>
                                         
                                     </ul>
                                 </div>
