@@ -287,8 +287,8 @@
 
 
 
-        <!-- page-title -->
-        <section class="page-title centred">
+         <!-- page-title -->
+         <section class="page-title centred">
             <div class="bg-layer" style="background-image: url(assets/images/background/page-title.jpg);"></div>
             <div class="pattern-layer">
                 <div class="pattern-1" style="background-image: url(assets/images/shape/shape-18.png);"></div>
@@ -296,10 +296,10 @@
             </div>
             <div class="auto-container">
                 <div class="content-box">
-                    <h1>About Us</h1>
+                    <h1>General FAQ’s</h1>
                     <ul class="bread-crumb clearfix">
                         <li><a href="{{url('/')}}">Home</a></li>
-                        <li>About Us</li>
+                        <li>FAQ’s</li>
                     </ul>
                 </div>
             </div>
@@ -307,77 +307,157 @@
         <!-- page-title end -->
 
 
-        <!-- about-section -->
-        <section class="about-section pt_120 pb_120">
-            <div class="pattern-layer rotate-me"></div>
+          <!-- faq-section -->
+          <section class="faq-section pt_120 pb_100">
             <div class="auto-container">
+                <div class="sec-title centred mb_70">
+                    <h6>Regular FAQ’S</h6>
+                    <h2>Frequently Asked Questions</h2>
+                </div>
                 <div class="row clearfix">
-                    <div class="col-lg-6 col-md-12 col-sm-12 image-column">
-                        <div class="image_block_one">
-                            <div class="image-box pr_90 mr_40">
-                                <div class="image-shape" style="background-image: url(assets/images/shape/shape-3.png);"></div>
-                                <figure class="image"><img src="assets/images/resource/about-1.jpg" alt=""></figure>
-                                <div class="rating-box">
-                                    <ul class="rating mb_5 clearfix">
-                                        <li><i class="icon-9"></i></li>
-                                        <li><i class="icon-9"></i></li>
-                                        <li><i class="icon-9"></i></li>
-                                        <li><i class="icon-9"></i></li>
-                                        <li><i class="icon-9"></i></li>
-                                    </ul>
-                                    <h6>5 Star Rating Bank</h6>
+                    <div class="col-lg-6 col-md-12 col-sm-12 accordion-column">
+                        <ul class="accordion-box">
+                            <li class="accordion block active-block">
+                                <div class="acc-btn active">
+                                    <div class="icon-box"></div>
+                                    <h4>What is online banking?</h4>
                                 </div>
-                                <div class="experience-box">
-                                    <div class="inner">
-                                        <h2>40</h2>
-                                        <h6>Years of Experiense</h6>
+                                <div class="acc-content current">
+                                    <div class="text">
+                                        <p>Online banking allows customers 
+                                            to conduct financial transactions
+                                             via the internet using a computer or mobile device..</p>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-12 col-sm-12 content-column">
-                        <div class="content_block_one">
-                            <div class="content-box ml_40">
-                                <div class="sec-title mb_20">
-                                    <h6>About US</h6>
-                                    <p>We are a forward-thinking digital investment bank committed to redefining the future of finance.
-                                         By combining cutting-edge technology with expert financial insight,
-                                         we offer secure, smart, and seamless investment solutions tailored to the modern investor.</p>
+                            </li>
+                            <li class="accordion block">
+                                <div class="acc-btn">
+                                    <div class="icon-box"></div>
+                                    <h4>Is online banking safe?</h4>
+                                </div>
+                                <div class="acc-content">
+                                    <div class="text">
+                                        <p>Yes, most banks use encryption, multi-factor authentication, and other security measures. However,
+                                             users should also protect their login information and avoid using public Wi-Fi for transactions..</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="accordion block">
+                                <div class="acc-btn">
+                                    <div class="icon-box"></div>
+                                    <h4>What services can I access through online banking?</h4>
+                                </div>
+                                <div class="acc-content">
+                                    <div class="text">
+                                     <ul>
+                                        <li>Checking account balances </li>
+                                        <li> Viewing transaction history</li>
 
-                                         <p>Our platform empowers individuals and businesses to access global markets, manage portfolios, 
-                                            and grow their wealth with confidence — all from the convenience of a digital-first experience.
-                                             Whether you’re a seasoned investor or just starting your financial journey,
-                                             we provide the tools, support, and transparency needed to make informed decisions. </p>
-                                             <p>At the core of our mission is trust, innovation, and financial inclusion.
-                                                 We believe that investing should be accessible, efficient, 
-                                                and rewarding for everyone. Join us as we transform the way the world invests. </p>
-                                </div>
-                                <div class="text-box mb_40">
-                                    <p>Whatever banking needs you have, we have got you covered. See us the Security Center for and Mobile and Online Banking.</p>
-                                </div>
-                                <div class="inner-box mb_45">
-                                    <div class="single-item">
-                                        <div class="icon-box"><i class="icon-10"></i></div>
-                                        <h3>Solution Focused</h3>
-                                        <p>Our Solutions are focused on your banking needs</p>
-                                    </div>
-                                    <div class="single-item">
-                                        <div class="icon-box"><i class="icon-11"></i></div>
-                                        <h3>99.99% Success</h3>
-                                        <p>Our success rate is a testament to the attention we give to the needs of our clients</p>
+                                        <li>Transferring money between accounts </li>
+                                        <li> Paying bills</li>
+                                        <li> Depositing checks (via mobile app)</li>
+                                        <li> Applying for loans or credit</li>
+
+                                                    </ul>
                                     </div>
                                 </div>
-                                <div class="btn-box">
-                                    <a href="{{url('/get-login')}}" class="theme-btn btn-one">Discover More</a>
+                            </li>
+                            <li class="accordion block">
+                                <div class="acc-btn">
+                                    <div class="icon-box"></div>
+                                    <h4>How do I sign up for online banking?</h4>
                                 </div>
-                            </div>
-                        </div>
+                                <div class="acc-content">
+                                    <div class="text">
+                                        <p>Visit your bank’s website or download their mobile app. You’ll typically need your account 
+                                            number, Social Security number, and other personal information to register..</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-sm-12 accordion-column">
+                        <ul class="accordion-box">
+                            <li class="accordion block">
+                                <div class="acc-btn">
+                                    <div class="icon-box"></div>
+                                    <h4>Can I access online banking from my smartphone?</h4>
+                                </div>
+                                <div class="acc-content">
+                                    <div class="text">
+                                        <p>Yes, most banks offer mobile apps that allow you to manage your accounts on 
+                                            your smartphone or tablet..</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="accordion block">
+                                <div class="acc-btn">
+                                    <div class="icon-box"></div>
+                                    <h4>What should I do if I forget my password?</h4>
+                                </div>
+                                <div class="acc-content">
+                                    <div class="text">
+                                        <p>Use the “Forgot Password” feature on the login page. You’ll likely be asked to 
+                                            verify your identity before resetting your password..</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="accordion block">
+                                <div class="acc-btn">
+                                    <div class="icon-box"></div>
+                                    <h4>Are there fees for using online banking?</h4>
+                                </div>
+                                <div class="acc-content">
+                                    <div class="text">
+                                        <p>Most banks offer basic online banking services for free, 
+                                            but some features like wire transfers or expedited payments may have fees.
+                                        .</p>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="accordion block">
+                                <div class="acc-btn">
+                                    <div class="icon-box"></div>
+                                    <h4> What if I notice suspicious activity on my account?</h4>
+                                </div>
+                                <div class="acc-content">
+                                    <div class="text">
+                                        <p>Contact your bank immediately. Most banks have fraud
+                                             protection policies and can help secure your account and investigate the issue..</p>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="accordion block">
+                                <div class="acc-btn">
+                                    <div class="icon-box"></div>
+                                    <h4>Can I use online banking when traveling internationally?  </h4>
+                                </div>
+                                <div class="acc-content">
+                                    <div class="text">
+                                        <p>Yes, as long as you have internet access. Be cautious about security when using unfamiliar networks. </p>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="accordion block">
+                                <div class="acc-btn">
+                                    <div class="icon-box"></div>
+                                    <h4> What’s the difference between online banking and mobile banking?</h4>
+                                </div>
+                                <div class="acc-content">
+                                    <div class="text">
+                                        <p> Online banking typically refers to access through a web browser, while mobile banking is done through a bank’s smartphone app.</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- about-section end -->
+        <!-- faq-section end -->
 
 
         <!-- funfact-section -->
@@ -417,202 +497,9 @@
         <!-- funfact-section end -->
 
 
-        <!-- video-section -->
-        <section class="video-section alternat-2 centred">
-            <div class="bg-layer parallax-bg" data-parallax='{"y": 100}' style="background-image: url(assets/images/background/video-bg.jpg);"></div>
-            <div class="auto-container">
-                <div class="inner-box">
-                    <h2>The 3rd Generation Private Commercial Bank</h2>
-                    <div class="video-btn">
-                        <a href="https://www.youtube.com/watch?v=nfP5N9Yc72A&amp;t=28s" class="lightbox-image" data-caption="">
-                            <i class="icon-20"></i>
-                            <span class="border-animation border-1"></span>
-                            <span class="border-animation border-2"></span>
-                            <span class="border-animation border-3"></span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- video-section end -->
+     
 
-
-        <!-- feature-style-three -->
-        <section class="feature-style-three pt_120 pb_90">
-            <div class="auto-container">
-                <div class="sec-title mb_70 centred">
-                 
-                    <h2>Why You Should Choose Us</h2>
-                </div>
-                <div class="row clearfix">
-                    <div class="col-lg-3 col-md-6 col-sm-12 feature-block">
-                        <div class="feature-block-one wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1500ms">
-                            <div class="inner-box">
-                                <div class="icon-box"><i class="icon-5"></i></div>
-                                <h4><a href="index.html">Secure International Transaction</a></h4>
-                                <p>For your international transactions we got you covered.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-12 feature-block">
-                        <div class="feature-block-one wow fadeInUp animated" data-wow-delay="200ms" data-wow-duration="1500ms">
-                            <div class="inner-box">
-                                <div class="icon-box"><i class="icon-6"></i></div>
-                                <h4><a href="index.html">24/7 Support from the Expert Team</a></h4>
-                                <p>We have got you covered 24/7 in customer support. Our team will respond to you within 30 minutes.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-12 feature-block">
-                        <div class="feature-block-one wow fadeInUp animated" data-wow-delay="400ms" data-wow-duration="1500ms">
-                            <div class="inner-box">
-                                <div class="icon-box"><i class="icon-7"></i></div>
-                                <h4><a href="index.html">Lowest Processing Fee than Other Banks</a></h4>
-                                <p>Our charges are very low, you will never find any company with lower processing fees than us in this industry.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-12 feature-block">
-                        <div class="feature-block-one wow fadeInUp animated" data-wow-delay="600ms" data-wow-duration="1500ms">
-                            <div class="inner-box">
-                                <div class="icon-box"><i class="icon-8"></i></div>
-                                <h4><a href="index.html">Less Time in any Loans Approval</a></h4>
-                                <p>Once your documents are righfully provided we have over 80% approval rates</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- feature-style-three end -->
-
-
-        <!-- apps-section -->
-        {{--<section class="apps-section about-page pb_120">
-            <div class="light-icon" style="background-image: url(assets/images/icons/icon-4.png);"></div>
-            <div class="auto-container">
-                <div class="inner-container">
-                    <div class="shape">
-                        <div class="shape-1" style="background-image: url(assets/images/shape/shape-4.png);"></div>
-                        <div class="shape-2" style="background-image: url(assets/images/shape/shape-3.png);"></div>
-                    </div>
-                    <div class="row align-items-center">
-                        <div class="col-lg-6 col-md-12 col-sm-12 image-column">
-                            <div class="image-box">
-                                <figure class="image image-1"><img src="assets/images/resource/mockup-1.png" alt=""></figure>
-                                <figure class="image image-2"><img src="assets/images/resource/mockup-2.png" alt=""></figure>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-12 col-sm-12 content-column">
-                            <div class="content-box">
-                                <div class="sec-title mb_20">
-                                    <h6>Mobile App</h6>
-                                    <h2>Get the Fastest and Most Secure Banking</h2>
-                                </div>
-                                <div class="text-box mb_50">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec felis, suscipit you take action against fraud. See it the Security Center for and Mobile and Online Banking.</p>
-                                </div>
-                                <div class="btn-box">
-                                    <a href="index.html" class="play-store mr_20">
-                                        <img src="assets/images/icons/icon-2.png" alt="">
-                                        <span>get it on</span>
-                                        Google Play
-                                    </a>
-                                    <a href="index.html" class="play-store">
-                                        <img src="assets/images/icons/icon-3.png" alt="">
-                                        <span>Download on the</span>
-                                        App Store
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>--}}
-        <!-- apps-section end -->
-
-
-        <!-- testimonial-style-two -->
-        {{--<section class="testimonial-style-two pt_120 pb_120">
-            <div class="bg-layer" style="background-image: url(assets/images/background/testimonial-bg-2.jpg);"></div>
-            <div class="auto-container">
-                <div class="row clearfix">
-                    <div class="col-lg-4 col-md-12 col-sm-12 title-column">
-                        <div class="sec-title mr_70">
-                            <h6>Testimonials</h6>
-                            <h2>Love from Happy Clients</h2>
-                            <p>Amet dui scelerisque habitant eget tincidunt facilisis pretium lorem ipsum dilore. </p>
-                        </div>
-                    </div>
-                    <div class="col-lg-8 col-md-12 col-sm-12 content-column">
-                        <div class="two-item-carousel owl-carousel owl-theme owl-dots-none nav-style-one">
-                            <div class="testimonial-block-two">
-                                <div class="inner-box">
-                                    <div class="author-box">
-                                        <figure class="thumb-box"><img src="assets/images/resource/testimonial-4.png" alt=""></figure>
-                                        <h4>Julien Anthor</h4>
-                                        <span class="designation">Manager</span>
-                                    </div>
-                                    <ul class="rating mb_15 clearfix">
-                                        <li><i class="icon-9"></i></li>
-                                        <li><i class="icon-9"></i></li>
-                                        <li><i class="icon-9"></i></li>
-                                        <li><i class="icon-9"></i></li>
-                                        <li><i class="icon-9"></i></li>
-                                    </ul>
-                                    <p>“Lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque etiam nis quis at arcu nunc neque ac integer sit lobortis diam semper nulla duis in blandit.”</p>
-                                </div>
-                            </div>
-                            <div class="testimonial-block-two">
-                                <div class="inner-box">
-                                    <div class="author-box">
-                                        <figure class="thumb-box"><img src="assets/images/resource/testimonial-5.png" alt=""></figure>
-                                        <h4>Rolier Demonil</h4>
-                                        <span class="designation">Manager</span>
-                                    </div>
-                                    <ul class="rating mb_15 clearfix">
-                                        <li><i class="icon-9"></i></li>
-                                        <li><i class="icon-9"></i></li>
-                                        <li><i class="icon-9"></i></li>
-                                        <li><i class="icon-9"></i></li>
-                                        <li><i class="icon-9"></i></li>
-                                    </ul>
-                                    <p>“Lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque etiam nis quis at arcu nunc neque ac integer sit lobortis diam semper nulla duis in blandit.”</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>--}}
-        <!-- testimonial-style-two end -->
-
-
-        <!-- subscribe-section -->
-        {{--<section class="subscribe-section">
-            <div class="pattern-layer" style="background-image: url(assets/images/shape/shape-5.png);"></div>
-            <div class="auto-container">
-                <div class="row align-items-center">
-                    <div class="col-lg-6 col-md-12 col-sm-12 text-column">
-                        <div class="text-box">
-                            <h2>Subscribe us to Recieve Latest Updates</h2>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-12 col-sm-12 form-column">
-                        <div class="form-inner ml_40">
-                            <form method="post" action="contact.html">
-                                <div class="form-group">
-                                    <input type="email" name="email" placeholder="Your email" required>
-                                    <button type="submit" class="theme-btn btn-two">Subscribe Now</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>--}}
-        <!-- subscribe-section end -->
+  
 
 
 
@@ -647,8 +534,8 @@
                                 <div class="widget-content">
                                     <ul class="links-list clearfix">
                                    
-                                        <li><a href="{{url('/faq')}}"> Faq’s </a></li>
-                                        <li><a href="{{url('/contact-us')}}"> Contact us </a></li>
+                                        <li><a href="{{url('about-us')}}"> About us </a></li>
+                                        <li><a href="{{url('contact-us')}}"> Contact us </a></li>
                                     </ul>
                                 </div>
                             </div>

@@ -45,6 +45,10 @@ Route::get('/contact-us', function () {
     return view('landing/contact')->with(['title'=>'Contact Us']);
 });
 
+Route::get('/faq', function () {
+    return view('landing/faq')->with(['title'=>'FAQ']);
+});
+
 Route::get('/about-us', function () {
     return view('landing/about-us')->with(['title'=>'Contact Us']);
 });
