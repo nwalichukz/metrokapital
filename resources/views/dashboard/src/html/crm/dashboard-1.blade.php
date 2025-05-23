@@ -556,13 +556,15 @@
                                                 <ul class="nk-support">
                                                     <li class="nk-support-item">
                                                         <div class="user-avatar">
-                                                            <img src="./images/avatar/a-sm.jpg" alt="">
+                                                            {{--img src="{{ asset('images/avatar/a-sm.jpg')}}" alt="">--}}
+                                                            <span>PA</span>
                                                         </div>
                                                         <div class="nk-support-content">
                                                             <div class="title">
                                                                 <span>Primary Account</span>
                                                                 <div class="status delivered">
                                                                     <em class="icon ni ni-check-circle-fill"></em>
+                                                                   
                                                                 </div>
                                                             </div>
                                                             <p>Balance: $ {{Auth::user()->userwallet->balance}}</p>
@@ -611,7 +613,8 @@
 
                                                     <li class="nk-support-item">
                                                         <div class="user-avatar">
-                                                            <img src="./images/avatar/b-sm.jpg" alt="">
+                                                            {{--<img src="{{ asset('images/avatar/b-sm.jpg')}}" alt="">--}}
+                                                            <span>RA</span>
                                                         </div>
                                                         <div class="nk-support-content">
                                                             <div class="title">

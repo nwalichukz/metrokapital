@@ -80,6 +80,11 @@ Route::get('/get-retirement-account-plans', function () {
 });
 
 
+Route::get('/successful-transfer', function () {
+    return view('dashboard/src/html/crm/successful-transaction');
+});
+
+
 Route::get('/get-current-account-plans', function () {
     return view('dashboard/src/html/current-account-plans');
 });
@@ -114,9 +119,17 @@ Route::get('/get-reset', function () {
 Route::post('/create-user', [UserController::class, 'create']);
 Route::post('/update-user', [UserController::class, 'update']);
 Route::any('/admin/search-user', [UserController::class, 'searchUser']);
+Route::post('/user/pin/create', [UserController::class, 'setPin']);
 Route::post('/post-reset-password', [Mailer::class, 'postResetPassword']);
 
+Route::get('/receipt/{banK_name}/{account_name}/{account_number}/{amount}/{date}', [UserWalletController::class, 'generateReceipt']);
+
+
+
 Route::get('/user-profile-setting/{id?}', [UserController::class, 'userProfileSetting']);
+Route::get('admin/make-inactive-external-transfer/{id}/{status}', [UserController::class, 'externalTransferStatus']);
+Route::get('admin/make-active-external-transfer/{id}/{status}', [UserController::class, 'externalTransferStatus']);
+
 
 Route::get('/user/support', [UserController::class, 'support']);
 
@@ -187,6 +200,7 @@ Route::get('/view-residency-by-real-estate/{id}', [ResidencyByRealEstate::class,
 Route::post('/admin/create-wallet-address', [WalletAddressController::class, 'create']);
 Route::get('/admin/delete-wallet-address/{id}', [WalletAddressController::class, 'delete']);
 Route::post('/user/external-transfer', [UserWalletController::class, 'externalTransfer']);
+Route::any('/user/confirm-external-transfer', [UserWalletController::class, 'confirmExternalTransfer']);
 Route::any('/user/confirm-wallet-details', [UserWalletController::class, 'confirmUserWalletNo']);
 
 Route::any('/user/internal-transfer/create', [UserWalletController::class, 'transferToAnotherUserWalletId']);

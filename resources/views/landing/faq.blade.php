@@ -345,16 +345,14 @@
                             <li class="accordion block">
                                 <div class="acc-btn">
                                     <div class="icon-box"></div>
-                                    <h4>What services can I access through online banking?</h4>
+                                    <h4>What services can I access through Metrokapital banking?</h4>
                                 </div>
                                 <div class="acc-content current">
                                     <div class="text">
                                      <ul>
-                                        <li>Checking account balances </li>
-                                        <li> Viewing transaction history</li>
-
+                                       
                                         <li>Transferring money between accounts </li>
-                                        <li> Paying bills</li>
+                                        <li> Investments </li>
                                         <li> Depositing checks (via mobile app)</li>
                                         <li> Applying for loans or credit</li>
 
@@ -366,11 +364,11 @@
                             <li class="accordion block">
                                 <div class="acc-btn">
                                     <div class="icon-box"></div>
-                                    <h4>How do I sign up for online banking?</h4>
+                                    <h4>How do I sign up for to Metrokapital?</h4>
                                 </div>
                                 <div class="acc-content current">
                                     <div class="text">
-                                        <p>Visit your bank’s website or download their mobile app. You’ll typically need your account 
+                                        <p>Visit your bank’s website (metrokapital.org). You’ll typically need your account 
                                             number, Social Security number, and other personal information to register..</p>
                                     </div>
                                 </div>
@@ -382,11 +380,11 @@
                             <li class="accordion block">
                                 <div class="acc-btn">
                                     <div class="icon-box"></div>
-                                    <h4>Can I access online banking from my smartphone?</h4>
+                                    <h4>Can I access Metrokapital from my smartphone?</h4>
                                 </div>
                                 <div class="acc-content current">
                                     <div class="text">
-                                        <p>Yes, most banks offer mobile apps that allow you to manage your accounts on 
+                                        <p>Yes, Metrokapital offers mobile views that allow you to manage your accounts on 
                                             your smartphone or tablet..</p>
                                     </div>
                                 </div>
@@ -412,7 +410,7 @@
                                 </div>
                                 <div class="acc-content current">
                                     <div class="text">
-                                        <p>Most banks offer basic online banking services for free, 
+                                        <p>Metrokapital offers basic online banking services for free, 
                                             but some features like wire transfers or expedited payments may have fees.
                                         .</p>
                                     </div>
@@ -422,12 +420,12 @@
                             <li class="accordion block">
                                 <div class="acc-btn">
                                     <div class="icon-box"></div>
-                                    <h4> What if I notice suspicious activity on my account?</h4>
+                                    <h4> What if I notice suspicious activity on my Metrokapital account?</h4>
                                 </div>
                                 <div class="acc-content current">
                                     <div class="text">
-                                        <p>Contact your bank immediately. Most banks have fraud
-                                             protection policies and can help secure your account and investigate the issue..</p>
+                                        <p>Contact your account officer immediately. Metrokapital Finanace provides every
+                                            every user with a professional officer incharge of their account..</p>
                                     </div>
                                 </div>
                             </li>
@@ -435,7 +433,7 @@
                             <li class="accordion block">
                                 <div class="acc-btn">
                                     <div class="icon-box"></div>
-                                    <h4>Can I use online banking when traveling internationally?  </h4>
+                                    <h4>Can I use Metrokapital Finance when traveling internationally?  </h4>
                                 </div>
                                 <div class="acc-content current">
                                     <div class="text">
@@ -444,17 +442,7 @@
                                 </div>
                             </li>
 <br/>
-                            <li class="accordion block">
-                                <div class="acc-btn">
-                                    <div class="icon-box"></div>
-                                    <h4> What’s the difference between online banking and mobile banking?</h4>
-                                </div>
-                                <div class="acc-content current">
-                                    <div class="text">
-                                        <p> Online banking typically refers to access through a web browser, while mobile banking is done through a bank’s smartphone app.</p>
-                                    </div>
-                                </div>
-                            </li>
+                          
                         </ul>
                     </div>
                 </div>
