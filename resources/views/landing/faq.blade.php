@@ -311,7 +311,6 @@
           <section class="faq-section pt_120 pb_100">
             <div class="auto-container">
                 <div class="sec-title centred mb_70">
-                    <h6>Regular FAQ’S</h6>
                     <h2>Frequently Asked Questions</h2>
                 </div>
                 <div class="row clearfix">
@@ -330,24 +329,26 @@
                                     </div>
                                 </div>
                             </li>
+                            <br/>
                             <li class="accordion block">
                                 <div class="acc-btn">
                                     <div class="icon-box"></div>
                                     <h4>Is online banking safe?</h4>
                                 </div>
-                                <div class="acc-content">
+                                <div class="acc-content current">
                                     <div class="text">
                                         <p>Yes, most banks use encryption, multi-factor authentication, and other security measures. However,
                                              users should also protect their login information and avoid using public Wi-Fi for transactions..</p>
                                     </div>
                                 </div>
                             </li>
+                            <br/>
                             <li class="accordion block">
                                 <div class="acc-btn">
                                     <div class="icon-box"></div>
                                     <h4>What services can I access through online banking?</h4>
                                 </div>
-                                <div class="acc-content">
+                                <div class="acc-content current">
                                     <div class="text">
                                      <ul>
                                         <li>Checking account balances </li>
@@ -362,12 +363,13 @@
                                     </div>
                                 </div>
                             </li>
+                            <br/>
                             <li class="accordion block">
                                 <div class="acc-btn">
                                     <div class="icon-box"></div>
                                     <h4>How do I sign up for online banking?</h4>
                                 </div>
-                                <div class="acc-content">
+                                <div class="acc-content current">
                                     <div class="text">
                                         <p>Visit your bank’s website or download their mobile app. You’ll typically need your account 
                                             number, Social Security number, and other personal information to register..</p>
@@ -383,31 +385,33 @@
                                     <div class="icon-box"></div>
                                     <h4>Can I access online banking from my smartphone?</h4>
                                 </div>
-                                <div class="acc-content">
+                                <div class="acc-content current">
                                     <div class="text">
                                         <p>Yes, most banks offer mobile apps that allow you to manage your accounts on 
                                             your smartphone or tablet..</p>
                                     </div>
                                 </div>
                             </li>
+                            <br/>
                             <li class="accordion block">
                                 <div class="acc-btn">
                                     <div class="icon-box"></div>
                                     <h4>What should I do if I forget my password?</h4>
                                 </div>
-                                <div class="acc-content">
+                                <div class="acc-content current">
                                     <div class="text">
                                         <p>Use the “Forgot Password” feature on the login page. You’ll likely be asked to 
                                             verify your identity before resetting your password..</p>
                                     </div>
                                 </div>
                             </li>
+                            <br/>
                             <li class="accordion block">
                                 <div class="acc-btn">
                                     <div class="icon-box"></div>
                                     <h4>Are there fees for using online banking?</h4>
                                 </div>
-                                <div class="acc-content">
+                                <div class="acc-content current">
                                     <div class="text">
                                         <p>Most banks offer basic online banking services for free, 
                                             but some features like wire transfers or expedited payments may have fees.
@@ -415,38 +419,38 @@
                                     </div>
                                 </div>
                             </li>
-
+<br/>
                             <li class="accordion block">
                                 <div class="acc-btn">
                                     <div class="icon-box"></div>
                                     <h4> What if I notice suspicious activity on my account?</h4>
                                 </div>
-                                <div class="acc-content">
+                                <div class="acc-content current">
                                     <div class="text">
                                         <p>Contact your bank immediately. Most banks have fraud
                                              protection policies and can help secure your account and investigate the issue..</p>
                                     </div>
                                 </div>
                             </li>
-
+<br/>
                             <li class="accordion block">
                                 <div class="acc-btn">
                                     <div class="icon-box"></div>
                                     <h4>Can I use online banking when traveling internationally?  </h4>
                                 </div>
-                                <div class="acc-content">
+                                <div class="acc-content current">
                                     <div class="text">
                                         <p>Yes, as long as you have internet access. Be cautious about security when using unfamiliar networks. </p>
                                     </div>
                                 </div>
                             </li>
-
+<br/>
                             <li class="accordion block">
                                 <div class="acc-btn">
                                     <div class="icon-box"></div>
                                     <h4> What’s the difference between online banking and mobile banking?</h4>
                                 </div>
-                                <div class="acc-content">
+                                <div class="acc-content current">
                                     <div class="text">
                                         <p> Online banking typically refers to access through a web browser, while mobile banking is done through a bank’s smartphone app.</p>
                                     </div>
