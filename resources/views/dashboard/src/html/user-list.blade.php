@@ -323,7 +323,7 @@
                                                                                 @if($user->external_transfer_status == 'active')
                                                                                 <li><a href="{{url('/admin/make-inactive-external-transfer/'.$user->id.'/inactive')}}"><em class="icon ni ni-shield-off"></em><span>Make External Transfer Inactive</span></a></li>
                                                                                 @else
-                                                                                <li><a href="{{url('/admin/make-active-external-transfer/'.$user->id.'/inactive')}}"><em class="icon ni ni-shield-off"></em><span>Make External Transfer active</span></a></li>
+                                                                                <li><a href="{{url('/admin/make-active-external-transfer/'.$user->id.'/active')}}"><em class="icon ni ni-shield-off"></em><span>Make External Transfer active</span></a></li>
                                                                                 @endif
 
                                                                                 @if(Auth::user()->access_level == 'admin')
