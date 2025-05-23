@@ -50,6 +50,7 @@ class UserController extends Controller
             $user->access_level = 'user';
             $user->kyc_status = 'not-verified';
             $user->status = 'active';
+           $user-> external_transfer_status = 'active';
             $user->save();      
         return $user->id;
      }
@@ -382,6 +383,29 @@ class UserController extends Controller
 
 
          /**
+       * get a user
+       * 
+       * @param $id
+       * 
+       * @return view
+       */
+      public static function externalTransferStatus($id, $status){
+        $user = User::find($id);
+        if(!empty($user->id)){
+          if($user->access_level =='admin'){
+            $user->external_transfer_status = $status;
+            $user->save();
+            return redirect()->back()->with('success', 'User external transfer status changed to '.$status);
+          }else{
+            return redirect()->back()->with('error', 'You do not have permission to carry out this transaction. Please try again');
+          }
+        }else{
+            return redirect()->back()->with('error', 'Something went wrong user external transfer status not changed successfully. Please try again');
+        }
+      }
+
+
+         /**
 * This method updates the password
 *
 * for the users
@@ -458,6 +482,37 @@ public static function changePassword(Request $request){
             return redirect()->back()->with('error', 'User not found. Make sure the name or email is spelt correctly and try again');
         }
     }
+
+    /**
+     * 
+     * 
+     * @return true
+     * 
+     * @param $search term
+     * 
+     */
+    public static function setPin(Request $request){
+      $validator = Validator::make($request->all(),
+        [
+        'pin' => 'required',
+     
+        ]);
+
+        if($validator->fails()){
+            return redirect()->back()->withErrors($validator);
+        }
+
+        $user = User::where('id', Auth::user()->id)->first();
+        if(!empty($user->id)){
+          $user->pin = $request['pin'];
+          $user->save();
+          return redirect()->back()->with('success', 'User PIN set successfully');
+       // return view('dashboard/src/html/single-user')->with(['user'=>$user, 'userwallet']);
+        }else{
+            return redirect()->back()->with('error', 'User not found. Make sure the name or email is spelt correctly and try again');
+        }
+    }
+
 
 
      /**

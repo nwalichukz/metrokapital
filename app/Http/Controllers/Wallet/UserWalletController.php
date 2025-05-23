@@ -12,6 +12,7 @@ use App\Http\Controllers\Notification\NewNotificationController;
 use App\Models\UserWallet;
 use App\Models\UserTransactionHistory;
 use App\Models\OrganizationTransactionHistory;
+use Carbon\Carbon;
 use DB, Validator, Auth;
 
 class UserWalletController extends Controller
@@ -606,6 +607,8 @@ class UserWalletController extends Controller
   // return $request->all();
    
     if(self::checkAmt($request['sender_user_id'], $request['amount'])){
+        if(Auth::user()->pin == $request['pin']){
+            if(Auth::user()->external_transfer_status == 'active'){
         try{
           //  $credit = UserWallet::where('wallet_no', $request['receiver_wallet_no'])->with(['user'])->lockForUpdate()->first();
             $debit = UserWallet::where('user_id', $request['sender_user_id'])->with(['user'])->lockForUpdate()->first();
@@ -614,6 +617,7 @@ class UserWalletController extends Controller
                 if($debit->balance >= $request['amount']){
                     $debit->balance = $debit->balance - $request['amount'];
                     $debit->save();
+                    $date_created = $debit->created_at;
                  $debit_transaction_record = [
                         'user_id' => $request['sender_user_id'],
                         'amount' => $request['amount'],
@@ -626,12 +630,24 @@ class UserWalletController extends Controller
                }
             });
      
-            return redirect()->back()->with('success', '$'.$request['amount'].' transfered successfully to '.$request['bank_name']);
+            return view('dashboard/src/html/crm/successful-transaction')->with(['msg'=> 'Your Payment of '.' $'.$request['amount'].'  to '.$request['account_name'].' has been successfully Made',
+                                                                            'bank_name'=>$request['bank_name'],
+                                                                            'amount'=>$request['amount'],
+                                                                            'account_name'=>$request['account_name'],
+                                                                             'account_number'=>$request['account_number'],
+                                                                            'id'=>$request['sender_user_id'],
+                                                                             'date_created'=>Carbon::now()]);
            
         }catch(Exception $e){
             return redirect()->back()->with('error', 'Something went wrong transfer could not be completed successfully. Please try again');
 
         }
+      }else{
+        return redirect()->back()->with('error', 'Please contact your account officer');
+      }
+    }else{
+        return redirect()->back()->with('error', 'Your PIN is incorrect');
+    }
     }else{
         return redirect()->back()->with('error', 'You do not have sufficient balance in your wallet to carry out this transaction'); 
 
@@ -698,6 +714,29 @@ class UserWalletController extends Controller
  
      }
 
+         /**
+     *
+     * returns internal transfer
+     *
+     *
+     */
+    public static function confirmExternalTransfer(Request $request){
+        if(Auth::check()){
+         
+         return view('dashboard/src/html/components/forms/confirm-external-transfer')
+                                ->with(['bank_name'=>$request['bank_name'],
+                                        'account_number'=>$request['account_number'],
+                                        'amount'=>$request['amount'],
+                                        'account_name'=>$request['account_name'],
+                                              ]);
+       
+        }else{
+         Auth::logout();
+         return redirect('/logout');
+        }
+ 
+     }
+
     /**
      *
      * returns fund page
@@ -726,7 +765,11 @@ class UserWalletController extends Controller
      */
     public static function getInternalTransfer(){
         if(Auth::check()){
+            if(!empty(Auth::user()->pin)){
          return view('dashboard/src/html/components/forms/internal-transfer');
+            }else{
+                return view('dashboard/src/html/components/forms/add-pin');       
+            }
  
         }else{
          Auth::logout();
@@ -744,7 +787,11 @@ class UserWalletController extends Controller
      */
     public static function getExternalTransfer(){
         if(Auth::check()){
+            if(!empty(Auth::user()->pin)){
          return view('dashboard/src/html/components/forms/external-transfer');
+        }else{
+            return view('dashboard/src/html/components/forms/add-pin');       
+        }
  
         }else{
          Auth::logout();
@@ -771,6 +818,53 @@ class UserWalletController extends Controller
         }
  
      }
+    
+
+      /**
+     *
+     * confrirm PIN
+     *
+     * cash out
+     *
+     */
+    public static function confirmPin(Request $request){
+        if(Auth::check()){
+            $user = User::where('id', Auth::user()->id)->first();
+            if($user->pin == $request['pin']){
+         return view('dashboard/src/html/components/forms/withdrawal-fund');
+            }else{
+               return redirect()->back()->with('error', 'PIN is incorrect. Please try again');  
+            }
+        }else{
+         Auth::logout();
+         return redirect('/logout');
+        }
+ 
+     }
+
+
+     
+         /**
+     *
+     * returns transaction receits
+     *
+     *
+     */
+    public static function generateReceipt($banK_name, $account_name, $account_number, $amount, $date_created ){
+        if(Auth::check()){
+         return view(' dashboard/src/html/crm/receipt')->with(['bank_name'=>$banK_name,
+                                                                'account_name'=>$account_name,
+                                                                'account_number'=>$account_number,
+                                                                'amount'=>$amount,
+                                                                'date_created'=>$date_created]);
+ 
+        }else{
+         Auth::logout();
+         return redirect('/logout');
+        }
+ 
+     }
+    
     
 
 }

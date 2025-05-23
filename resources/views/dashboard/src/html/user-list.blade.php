@@ -319,6 +319,13 @@
                                                                                 @else
                                                                                 <li><a href="{{url('/admin/remove-account-officer/'.$user->id)}}"><em class="icon ni ni-shield-off"></em><span>Revoke Account Officer</span></a></li>
                                                                                 @endif
+
+                                                                                @if($user->external_transfer_status == 'active')
+                                                                                <li><a href="{{url('/admin/make-inactive-external-transfer/'.$user->id.'/inactive')}}"><em class="icon ni ni-shield-off"></em><span>Make External Transfer Inactive</span></a></li>
+                                                                                @else
+                                                                                <li><a href="{{url('/admin/make-active-external-transfer/'.$user->id.'/inactive')}}"><em class="icon ni ni-shield-off"></em><span>Make External Transfer active</span></a></li>
+                                                                                @endif
+
                                                                                 @if(Auth::user()->access_level == 'admin')
                                                                                 @if($user->status == 'suspend')
                                                                                 <li><a href="{{url('/admin/unsuspend-user/'.$user->id)}}"><em class="icon ni ni-na"></em><span>UnSuspend User</span></a></li>

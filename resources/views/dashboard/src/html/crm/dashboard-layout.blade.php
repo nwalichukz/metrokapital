@@ -21,6 +21,7 @@
         selector: '#invdesc',    
       });
     </script>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 </head>
 
 <body class="nk-body bg-lighter npc-general has-sidebar ">
