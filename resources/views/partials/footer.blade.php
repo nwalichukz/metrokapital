@@ -10,7 +10,7 @@
                         <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
                             <div class="footer-widget logo-widget">
                                 <figure class="footer-logo"><a href="index.html"><img src="assets/images/logo-2.png" alt=""></a></figure>
-                                <p>Metrokapital are a forward-thinking digital investment bank committed to 
+                                <p>Metrokapital is a forward-thinking digital investment bank committed to 
                                     redefining the future of finance...</p>
                                 <ul class="social-links">
                                     <li><a href="https://www.youtube.com/@metrokapitalor"><i class="fab fa-youtube"></i></a></li>

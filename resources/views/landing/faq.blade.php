@@ -319,13 +319,12 @@
                             <li class="accordion block active-block">
                                 <div class="acc-btn active">
                                     <div class="icon-box"></div>
-                                    <h4>What is online banking?</h4>
+                                    <h4>What is Metrokapital?</h4>
                                 </div>
                                 <div class="acc-content current">
                                     <div class="text">
-                                        <p>Online banking allows customers 
-                                            to conduct financial transactions
-                                             via the internet using a computer or mobile device..</p>
+                                        <p>Metrokapital is a forward-thinking digital investment bank committed to 
+                                        redefining the future of finance...</p>
                                     </div>
                                 </div>
                             </li>
