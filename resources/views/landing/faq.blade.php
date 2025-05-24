@@ -332,11 +332,11 @@
                             <li class="accordion block">
                                 <div class="acc-btn">
                                     <div class="icon-box"></div>
-                                    <h4>Is online banking safe?</h4>
+                                    <h4>Is Metrokapital Finance secured?</h4>
                                 </div>
                                 <div class="acc-content current">
                                     <div class="text">
-                                        <p>Yes, most banks use encryption, multi-factor authentication, and other security measures. However,
+                                        <p>Yes, we use encryption, multi-factor authentication, and other security measures. However,
                                              users should also protect their login information and avoid using public Wi-Fi for transactions..</p>
                                     </div>
                                 </div>
@@ -368,7 +368,7 @@
                                 </div>
                                 <div class="acc-content current">
                                     <div class="text">
-                                        <p>Visit your bank’s website (metrokapital.org). You’ll typically need your account 
+                                        <p>Visit your bank’s website (metrokapital.org/get-login). You’ll typically need your account 
                                             number, Social Security number, and other personal information to register..</p>
                                     </div>
                                 </div>
@@ -384,7 +384,7 @@
                                 </div>
                                 <div class="acc-content current">
                                     <div class="text">
-                                        <p>Yes, Metrokapital offers mobile views that allow you to manage your accounts on 
+                                        <p>Yes, Metrokapital offers mobile platform that allow you to manage your accounts on 
                                             your smartphone or tablet..</p>
                                     </div>
                                 </div>

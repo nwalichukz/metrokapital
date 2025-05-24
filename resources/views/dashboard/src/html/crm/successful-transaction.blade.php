@@ -46,7 +46,7 @@
                                         </div><!-- .invoice-wrap -->
                                         <br/>
                                     
-                                        <center><a href="{{url('/receipt/'.$bank_name.'/'.$account_name.'/'.$account_number.'/'.$amount.'/'.$date_created)}}"><button style="background-color:#008CBA;">View Receipt</button></a> <a href="{{url('user/my-transactions/'.$id)}}"><button style="background-color:#008CBA;">View Transactions</button></a></center>
+                                        <center><a href="{{url('/receipt/'.$bank_name.'/'.$account_name.'/'.$account_number.'/'.$amount.'/'.$date_created)}}"><button style="background-color:#008CBA; color:#fff; font-size:2em;">View Receipt</button></a> <a href="{{url('user/my-transactions/'.$id)}}"><button style="background-color:#008CBA; color:#fff; font-size:2em;">View Transactions</button></a></center>
                                     </div><!-- .invoice -->
                                 </div><!-- .nk-block -->
                             </div>
