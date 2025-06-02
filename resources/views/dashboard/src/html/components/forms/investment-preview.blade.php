@@ -43,6 +43,14 @@
                                                     <input name="max_amount" type="text" class="form-control" id="cf-email-address" value="{{$inv_type->max_amt}}" disabled required>
                                                 </div>
 
+                                                @if(!empty($inv_type->int_interval))
+                                                <div class="form-group">
+                                                    <label class="form-label" for="cf-email-address">Int Interval(Days)</label>
+                                                    <input name="int_interval" type="text" class="form-control" id="cf-email-address" value="{{$inv_type->int_interval}}" disabled required>
+                                                </div>
+                                                @endif
+
+
                                                 <div class="form-group">
                                                     <label class="form-label" for="cf-email-address">Percentage Profit</label>
                                                     <input name="earning_percentage" type="text" class="form-control" id="cf-email-address" value="{{$inv_type->earning_percentage}}" disabled required>

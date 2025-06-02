@@ -649,6 +649,7 @@
                                    
                                         <li><a href="{{url('/faq')}}"> Faq’s </a></li>
                                         <li><a href="{{url('/contact-us')}}"> Contact us </a></li>
+                                        <li><a href="{{url('islamic-banking')}}"> Islamic Banking </a></li>
                                     </ul>
                                 </div>
                             </div>

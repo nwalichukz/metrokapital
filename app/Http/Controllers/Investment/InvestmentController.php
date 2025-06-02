@@ -72,12 +72,13 @@ class InvestmentController extends Controller
     $now = Carbon::now();
     $inv_type = InvestmentType::find($request['investment_type_id']);
     $percentage = $inv_type->earning_percentage/100;
+    $int_interval = $inv_type->duration/$inv_type->int_interval;
     $create = new Investment;
     $create->amount = $request['amount'];
     $create->user_id = Auth::user()->id;
     $create->investment_type_id = $request['investment_type_id'];
     $create->end_date = $now->addDays($inv_type->duration);
-    $create->possible_total_earning =  ($request['amount'] + ($inv_type->duration * $request['amount'] * $percentage));
+    $create->possible_total_earning =  round($request['amount'] + ($request['amount'] * $percentage * $int_interval));
     $create->status = 'active';
     $create->save();
     // ReferralController::fulfill($user->referral_code, $request['amount']);
