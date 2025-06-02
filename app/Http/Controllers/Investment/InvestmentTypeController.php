@@ -30,6 +30,7 @@ class InvestmentTypeController extends Controller
         $save->earning_percentage = $request['earning_percentage'];
         $save->duration = $request['duratn_in_mnth'];
         $save->description = $request['description'];
+        $save->int_interval = $request['int_interval'];
         $save->save();
         return $save->id;
      }
@@ -59,7 +60,7 @@ class InvestmentTypeController extends Controller
       } 
       $create = self::save($request);
       if($create){
-         return redirect()->back()->with('success', 'Investment type created successfully');
+         return redirect('admin/get-all-investment-type/'.$request['user_id'])->with('success', 'Investment type created successfully');
 
       }else{
          return redirect()->back()->with('error', 'Something went wrong, Investment not created. Please try again');

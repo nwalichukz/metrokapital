@@ -299,6 +299,9 @@
                                 <div class="widget-content">
                                     <ul class="links-list clearfix">
                                         <li><a href="{{url('/about-us')}}">About Us</a></li>
+                                        <li><a href="{{url('faq')}}"> FAQ </a></li>
+                                        <li><a href="{{url('contact-us')}}"> Contact us </a></li>
+                                        <li><a href="{{url('islamic-banking')}}"> Islamic Banking </a></li>
                                         
                                     </ul>
                                 </div>

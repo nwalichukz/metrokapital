@@ -51,7 +51,7 @@
 
                                                 <div class="form-group">
                                                     <label class="form-label" for="cf-email-address">PIN</label>
-                                                    <input type="text" name="pin" class="form-control" id="cf-email-address" required>
+                                                    <input type="text" onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="4" name="pin" class="form-control" id="cf-email-address" required>
                                                 </div>
                                               
                                               

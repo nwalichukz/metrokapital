@@ -53,6 +53,10 @@ Route::get('/about-us', function () {
     return view('landing/about-us')->with(['title'=>'Contact Us']);
 });
 
+Route::get('/islamic-banking', function () {
+    return view('landing/islamic-banking')->with(['title'=>'Contact Us']);
+});
+
 Route::get('/real-estate-inv-antigua-and-barbuda', function () {
     return view('landing/real-estate-investment-antigua-and-barbuda');
 });
