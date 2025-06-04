@@ -619,6 +619,22 @@ public static function changePassword(Request $request){
 
     }
 
+
+        /**
+     * returns account officer
+     * 
+     * @return true
+     * 
+     * @param $settings page
+     * 
+     */
+    public static function getSendEmail($id){
+     
+      return view('dashboard/src/html/components/forms/send-mail')->with(['user_id'=>$id]);
+
+    }
+
+
     
        /**
      * returns account officer image

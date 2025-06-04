@@ -265,6 +265,8 @@ Route::get('/admin/make-account-officer/{id}', [UserController::class, 'makeAcco
 Route::get('/admin/remove-account-officer/{id}', [UserController::class, 'removeAccountOfficer']); 
 Route::get('/admin/upload-account-officer-image/{id}', [UserController::class, 'uploadAccountOfficerProfileImagePage']);
 Route::post('/admin/account-officer-image/create', [UserController::class, 'uploadAccountOfficerProfile']);
+Route::post('/admin/send-mail', [Mailer::class, 'sendUserEmail']);
+Route::get('/admin/send-email/{id}', [UserController::class, 'getSendEmail']);
 
 
 Route::get('/dashboard/get-fund-account/{id}', [UserWalletController::class, 'getFundPage']);
