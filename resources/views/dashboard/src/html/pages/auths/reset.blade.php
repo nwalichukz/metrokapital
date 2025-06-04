@@ -43,13 +43,13 @@
                                         </div>
                                     </div>
                                 </div>
-                                <form action="{{url('dashboard-index')}}">
+                                <form action="{{url('user/reset-password')}}">
                                     <div class="form-group">
                                         <div class="form-label-group">
                                             <label class="form-label" for="default-01">Email</label>
                                         </div>
                                         <div class="form-control-wrap">
-                                            <input type="text" class="form-control form-control-lg" id="default-01" placeholder="Enter your email address or username">
+                                            <input name="email" type="text" class="form-control form-control-lg" id="default-01" placeholder="Enter your email address">
                                         </div>
                                     </div>
                                     

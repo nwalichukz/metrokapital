@@ -34,8 +34,8 @@ class ContactMail extends Mailable
     public function build()
     {   $subject = $this->subject;
         $email = $this->email;
-        $address = 'support@feesremit.com';
-        $name1 =    'FeesRemit';
+        $address = 'support@metrokapital.com';
+        $name1 =    'MetroKapital';
         return $this->view('email.contactmail')
                     ->subject($subject)
                     ->replyTo($email, $this->name)
