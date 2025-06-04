@@ -4,6 +4,24 @@ namespace App\Http\Controllers\Email;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Mail\ContactMail;
+use App\Mail\WelcomeMail;
+use App\Mail\WelcomeMailAdmin;
+use App\Mail\PasswordResetMail;
+use App\Mail\VerifyEmail;
+use App\Mail\CreditMail;
+use App\Mail\DebitMail;
+use App\Mail\GenericMail;
+use App\Mail\MailNotify;
+use App\Mail\SendAdminToken;
+use App\Mail\TrendingTopicMail;
+use App\Mail\LastLoginMail;
+// use App\Mail\ChangeMail;
+use App\Models\User;
+use Illuminate\Support\Facades\Hash;
+use Mail, Validator;
+use Illuminate\Support\Str;
+use Carbon\Carbon;
 
 class Mailer extends Controller
 {
@@ -78,7 +96,7 @@ class Mailer extends Controller
             ]);
         }
         $delay = (new \Carbon\Carbon)->now()->addMinutes(2);
-        Mail::to('billballer@gmail.com')->later($delay, new ContactMail($request['name'], $request['email'], $request['subject'], $request['content']));
+        Mail::to('contactmetrokapital@gmail.com')->later($delay, new ContactMail($request['name'], $request['email'], $request['subject'], $request['content']));
         return redirect()->back()->with('success', 'Contact mail sent successfully. Thanks for contacting us');
        /* return response()->json([
             'status' => 'success',

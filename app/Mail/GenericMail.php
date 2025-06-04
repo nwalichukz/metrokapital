@@ -33,8 +33,8 @@ class GenericMail extends Mailable
     public function build()
     {
       //  $subject = 'DigitMoni - Debit Transaction Notification';
-        $address = 'contactbillballer@gmail.com';
-        $name = 'Oma from BillBaller';
+        $address = 'contactmetrokapital@gmail.com';
+        $name = 'MetroKapital';
         $title = $this->title;
         return $this->view('email.generic')
                     ->subject($title)
