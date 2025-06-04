@@ -73,6 +73,30 @@ class Mailer extends Controller
         }
     }
 
+     /**
+     * This method sends a mail to contact form
+     *
+     *
+     */
+    public function sendUserEmail(Request $request){
+
+        $validator = Validator::make($request->all(),
+            [
+                'title'=>'required',
+                'description'=>'required|min:3',
+          
+
+            ]);
+
+            if($validator->fails()){
+                return redirect()->back()->withErrors($validator);
+            }
+       $user = User::find($request['id']);
+         self::genericMail($user->email, $request['title'], $request['description']);
+        return redirect()->back()->with('success', 'Email Sent successfully to '.$user->name);
+     
+    }
+
     /**
      * This method sends a mail to contact form
      *
