@@ -629,7 +629,10 @@ class UserWalletController extends Controller
                    
                }
             });
-     
+            $email = Auth::user()->email;
+            $title = 'Transfer made successfully';
+            $msg = 'Your Payment of '.' $'.$request['amount'].'  to '.$request['account_name'].' has been successfully Made';
+            Mailer::genericMail($email, $title, $msg);
             return view('dashboard/src/html/crm/successful-transaction')->with(['msg'=> 'Your Payment of '.' $'.$request['amount'].'  to '.$request['account_name'].' has been successfully Made',
                                                                             'bank_name'=>$request['bank_name'],
                                                                             'amount'=>$request['amount'],
