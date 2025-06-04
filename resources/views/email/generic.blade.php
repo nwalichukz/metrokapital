@@ -342,7 +342,7 @@
                       <td>
                       <center>
 
-           <img style="width:50%; height:10%;" src="https://res.cloudinary.com/dh15dztcd/image/upload/c_thumb,w_200,g_face/v1725359408/Screenshot_20240217-091426_Chrome_u9zczo.png" />
+           <img style="width:50%; height:10%;" src="https://res.cloudinary.com/dh15dztcd/image/upload/v1748969265/MetroKapital_Blue_3_quelqn.png" />
 
                       </center>
 
@@ -351,14 +351,14 @@
 
                         <p style="text-align:left; font-size:1.1em;">
                          {{$msg}}
-    </p>
+                            </p>
                          <br>
                          <p>
-                         Thank you for being part of BillBaller !!!
+                         Thank you for being part of MetroKapital !!!
                               </p>
                               <br>
                         <span style="font-size:0.8em;"> You are receiving this email because you are registered with us but if you do not want to receive this
-                          email any more click below to unsubscribe </span> <a href="https://billballer.com/unsubscribe"> Unsubscribe </a> <br/><br/>
+                          email any more click below to unsubscribe </span> <a href="https://metrokapital.org/unsubscribe"> Unsubscribe </a> <br/><br/>
                         <table role="presentation" border="0" cellpadding="0" cellspacing="0" class="btn btn-primary">
                           <tbody>
                             <tr>
@@ -390,7 +390,7 @@
               <table role="presentation" border="0" cellpadding="0" cellspacing="0">
                 <tr>
                   <td class="content-block">
-                    <span style="font-family: monospace; font-size:2em;" class="apple-link">BillBaller Team</span>
+                    <span style="font-family: monospace; font-size:2em;" class="apple-link">MetroKapital Team</span>
                   </td>
                 </tr>
                 <tr>
