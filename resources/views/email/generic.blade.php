@@ -357,7 +357,7 @@
                          Thank you for being part of MetroKapital !!!
                               </p>
                               <br>
-                        <span style="font-size:0.8em;"> You are receiving this email because you are registered with us but if you do not want to receive this
+                        <span style="font-size:0.6em;"> You are receiving this email because you are registered with us but if you do not want to receive this
                           email any more click below to unsubscribe </span> <a href="https://metrokapital.org/unsubscribe"> Unsubscribe </a> <br/><br/>
                         <table role="presentation" border="0" cellpadding="0" cellspacing="0" class="btn btn-primary">
                           <tbody>
@@ -367,7 +367,7 @@
                                   <tbody>
                                     <tr>
                                       <br/>
-                                     <td> <a href="https://play.google.com/store/apps/details?id=com.bill_baller.app" target="_blank">Download App</a> </td>
+                                     {{--<td> <a href="https://play.google.com/store/apps/details?id=com.bill_baller.app" target="_blank">Download App</a> </td>--}}
                                     </tr>
                                   </tbody>
                                 </table>
