@@ -89,7 +89,7 @@ class InvestmentController extends Controller
     }
     //return redirect()->back()->with('success', 'Ok good');
     $email = Auth::user()->email;
-    $title = 'Investment Successful';
+    $title = 'Successful';
     $msg = 'Your '.$inv_type->name.' '.$inv_type->parent_name.' investment of $'.$request['amount'].' was successful';
     Mailer::genericMail($email, $title, $msg);
     return redirect('/user/get-my-investments/'.$create->user_id)->with('success', 'Investment successful. Thanks');
