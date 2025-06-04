@@ -305,6 +305,8 @@ Route::get('/admin/get-send-email-to-all', [DashboardController::class, 'getSend
 
 Route::post('/admin/send-email-to-all-users', [Mailer::class, 'sendMassMail']);
 Route::post('/admin/send-email', [Mailer::class, 'sendSingleMail']);
+Route::post('/user/send-contact', [Mailer::class, 'sendContact']);
+Route::post('/user/reset-password', [Mailer::class, 'postResetPassword']);
 
 
 Route::get('/admin/all-transactions', [UserTransactionHistoryController::class, 'getAll']);
