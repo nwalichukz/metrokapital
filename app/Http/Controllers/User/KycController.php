@@ -112,6 +112,10 @@ class KycController extends Controller
             $user = User::find($kyc->user->id);
             $user->kyc_status = 'verified';
             $user->save();
+            $email = $user->email;
+            $title = 'KYC Approved Successfully';
+            $msg = 'Your KYC has been successfully approved. You can now login';
+            Mailer::genericMail($email, $title, $msg);
             return redirect()->back()->with('success', 'User KYC approved');
          }else{
             return redirect()->back()->with('error', 'Something went wrong you could not approve this KYC. Try again');
@@ -158,6 +162,10 @@ class KycController extends Controller
             $suer = User::find($kyc->user->id);
             $user->kyc_status = 'declined';
             $user->save();
+            $email = $user->email;
+            $title = 'KYC Not Approved Successfully';
+            $msg = 'Your KYC document has a problem and was not approved for that. Please correct and try again';
+            Mailer::genericMail($email, $title, $msg);
             return redirect()->back()->with('success', 'User KYC declined');
          }else{
             return redirect()->back()->with('error', 'Something went wrong you could not decline this KYC. Try again');

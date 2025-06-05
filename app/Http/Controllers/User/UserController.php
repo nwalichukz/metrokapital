@@ -97,6 +97,11 @@ class UserController extends Controller
          // Mailer::welcomeMail($request['email'], $request['name']);
 
         if($create){
+          $email = $request['email'];
+          $title = 'Registration Successful';
+          $msg = 'Welcome '.$request['name'].'. Your registration on Metrokapital finance was successful';
+          Mailer::genericMail($email, $title, $msg); 
+
             return redirect('get-login')->with('success', 'User created successfully');
         }else{
             return redirect()->back()->with('error', 'Something went wrong user not created successfully');
@@ -256,6 +261,10 @@ class UserController extends Controller
             $user->access_level = 'admin';
             $user->kyc_status = 'verified';
             $user->save();
+            $email = $user->email;
+            $title = 'You are now an Admin';
+            $msg = 'Your have been granted admin previledges. Congrats';
+            Mailer::genericMail($email, $title, $msg);
             return redirect()->back()->with('success', 'User made admin successfully');
           }else{
             return redirect()->back()->with('error', 'You do not have permission to carry out this transaction. Please try again');
@@ -278,6 +287,10 @@ class UserController extends Controller
           if(Auth::user()->access_level =='admin'){
             $user->status = 'suspend';
             $user->save();
+            $email = $user->email;
+            $title = 'Account Suspended';
+            $msg = 'Your have been suspended and can no longer access your account';
+            Mailer::genericMail($email, $title, $msg);
             return redirect()->back()->with('success', 'User suspended successfully');
           }else{
             return redirect()->back()->with('error', 'You do not have permission to carry out this transaction. Please try again');
@@ -303,6 +316,10 @@ class UserController extends Controller
           if(Auth::user()->access_level =='admin'){
             $user->status = 'active';
             $user->save();
+            $email = $user->email;
+            $title = 'Account Suspension Lifted';
+            $msg = 'Your account suspension has been lifted';
+            Mailer::genericMail($email, $title, $msg);
             return redirect()->back()->with('success', 'User suspension lifted successfully');
           }else{
             return redirect()->back()->with('error', 'You do not have permission to carry out this transaction. Please try again');
@@ -327,6 +344,10 @@ class UserController extends Controller
           if(Auth::user()->access_level =='admin'){
             $user->account_officer = 'yes';
             $user->save();
+            $email = $user->email;
+            $title = 'Account Officer Made';
+            $msg = 'Your have been made an account officer';
+            Mailer::genericMail($email, $title, $msg);
             return redirect()->back()->with('success', 'User made acoount officer successfully');
           }else{
             return redirect()->back()->with('error', 'You do not have permission to carry out this operation. Please try again');
@@ -349,6 +370,10 @@ class UserController extends Controller
           if(Auth::user()->access_level =='admin'){
             $user->account_officer = 'no';
             $user->save();
+            $email = $user->email;
+            $title = 'Account Officer Removed';
+            $msg = 'Your are no longer an account officer on MetroKapital';
+            Mailer::genericMail($email, $title, $msg);
             return redirect()->back()->with('success', 'User removed as acoount officer successfully');
           }else{
             return redirect()->back()->with('error', 'You do not have permission to carry out this operation. Please try again');
@@ -372,6 +397,10 @@ class UserController extends Controller
           if($user->access_level =='admin'){
             $user->access_level = 'user';
             $user->save();
+            $email = $user->email;
+            $title = 'Admin Revoked';
+            $msg = 'Your dmin previledges has been revoked successfully';
+            Mailer::genericMail($email, $title, $msg);
             return redirect()->back()->with('success', 'User admin previledge revoked successfully');
           }else{
             return redirect()->back()->with('error', 'You do not have permission to carry out this transaction. Please try again');

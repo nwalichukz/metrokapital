@@ -385,6 +385,11 @@ class UserWalletController extends Controller
                        
                    }
                 });
+
+                $email = Auth::user()->email;
+                $title = 'Transfer made successfully';
+                $msg = '$'.$request['amount'].' transfered successfully to '.$credit->user->name;
+                Mailer::genericMail($email, $title, $msg);
          
                 return redirect()->back()->with('success', '$'.$request['amount'].' transfered successfully to '.$credit->user->name);
                
