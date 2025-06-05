@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Controllers\Wallet\UserWalletController;
 use Illuminate\Http\Request;
 use App\Models\DepositRequest;
+use App\Http\Controllers\Email\Mailer;
 use App\Models\User;
 use Validator, Auth;
 use Carbon\Carbon;
@@ -147,6 +148,10 @@ class DepositRequestController extends Controller
          return redirect()->back()->with('error', $e->message);
    
          }
+         $email = $settle->user->email;
+         $title = 'Deposit Request Settled Successfully';
+         $msg = '$'.$request['amount'].' has been successfully deposited to your wallet';
+         Mailer::genericMail($email, $title, $msg);
        return redirect('/admin/deposit-request/get-all')->with('success', 'Deposit request settled successfully.');
             }else{
          Auth::logout();

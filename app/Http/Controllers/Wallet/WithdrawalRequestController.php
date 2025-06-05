@@ -147,6 +147,10 @@ class WithdrawalRequestController extends Controller
          return redirect()->back()->with('error', $e->message);
    
          }
+         $email = $settle->user->email;
+         $title = 'Withdrawal Request Settled Successfully';
+         $msg = '$'.$request['amount'].' has been successfully debited from your wallet balance';
+         Mailer::genericMail($email, $title, $msg);
        return redirect('/admin/withdrawal-request/get-all')->with('success', 'Withdrawal request settled successfully.');
             }else{
          Auth::logout();
