@@ -358,7 +358,16 @@
                               </p>
                               <br>
                         <span style="font-size:0.6em;"> You are receiving this email because you are registered with us but if you do not want to receive this
-                          email any more click below to unsubscribe </span> <a href="https://metrokapital.org/unsubscribe"> Unsubscribe </a> <br/><br/>
+                          email any more click below to </span> <a href="https://metrokapital.org/unsubscribe"> Unsubscribe </a> <br/><br/>
+    </td>
+    <tr>
+      <td>
+      <span style="font-size:0.6em;"> Address: Chicago 12, Melborne City, USA
+        <br>
+        Phone: +1 219 3809 686 
+      </span> 
+    </td>
+  </tr>
                         <table role="presentation" border="0" cellpadding="0" cellspacing="0" class="btn btn-primary">
                           <tbody>
                             <tr>
