@@ -53,11 +53,13 @@ class ResidencyByInvestment extends Controller
       } 
       $create = self::save($request);
       if(!empty($request->file('image'))){
+        foreach($request->file('image') as $property_img){
         $img = new InvestmentImage;
         $img->rcr_id = $create;
-        $img->name = ImageController::uploadPropertyImage($request);
+        $img->name = ImageController::uploadPropertyImage($property_img);
         $img->inv_type = 'rbi'; 
         $img->save();
+        {
       }
       if($create){
          return redirect()->back()->with('success', 'Residency by investment created successfully');

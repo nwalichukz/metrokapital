@@ -47,8 +47,7 @@ class ImageController extends Controller
      * 
      */
     public static function uploadPropertyImage($request){     
-          
-           $image = $request->file('image');
+        $image = $request->file('image');
            $input['imagename'] = hexdec(uniqid()).$image->getClientOriginalName();
        
            $location = public_path("images/Property");

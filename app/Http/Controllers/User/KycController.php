@@ -5,6 +5,7 @@ namespace App\Http\Controllers\User;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\Image\ImageController;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Email\Mailer;
 use App\Models\Kyc;
 use App\Models\User;
 use Validator, Auth;
