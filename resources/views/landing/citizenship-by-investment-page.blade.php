@@ -13,10 +13,31 @@
                   
                 <div class="image">
                     @if(!empty($image->name))
-                <figure class="">
-                    <img src="{{asset('images/Property/'.$image->name)}}" alt="Property Image">
+               
+                    <!-- Slideshow container -->
+<div class="slideshow-container">
+
+<!-- Full-width images with number and caption text -->
+<div class="mySlides fade">
+  <div class="numbertext"> </div>
+
+  <img src="{{asset('images/Property/'.$image->name)}}" alt="Property Image" style="width:100%">
+  <div class="text">Property Image</div>
+</div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+
+</div>
+                  
             
-            </figure>
+           
               @endif
             </div>
 

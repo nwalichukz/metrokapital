@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Controllers\Wallet\UserWalletController;
 use Illuminate\Http\Request;
 use App\Models\WithdrawalRequest;
+use App\Http\Controllers\Email\Mailer;
 use App\Models\User;
 use Carbon\Carbon;
 use Validator, Auth;

@@ -52,12 +52,14 @@ class CitizenByInvestment extends Controller
       } 
       $create = self::save($request);
       if($request->file('image')){
+       // foreach($request->file('image') as $property_img){
       //  return $request->all();
         $img = new InvestmentImage;
         $img->rcr_id = $create;
         $img->name = ImageController::uploadPropertyImage($request);
         $img->inv_type = 'cbi'; 
         $img->save();
+      //  }
       }
       if($create){
          return redirect()->back()->with('success', 'Citizenship by investment created successfully');
