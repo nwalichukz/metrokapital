@@ -12,24 +12,22 @@
                  
                   
                 <div class="image">
-                    @if(!empty($image->name))
+   @if(!$image->isEmpty())
                
                     <!-- Slideshow container -->
-<div class="slideshow-container">
+  <div class="w3-content w3-display-container">
+  
+    @foreach ($image as $user)
 
-<!-- Full-width images with number and caption text -->
-<div class="mySlides fade">
-  <div class="numbertext"> </div>
+  <img class="mySlides" src="{{asset('images/Property/'.$user->name)}}" alt="Property Image" style="width:100%">
+ 
+ @endforeach
+  <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
 
-  <img src="{{asset('images/Property/'.$image->name)}}" alt="Property Image" style="width:100%">
-  <div class="text">Property Image</div>
 </div>
 
-  <!-- Next and previous buttons -->
-  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-  <a class="next" onclick="plusSlides(1)">&#10095;</a>
-</div>
-<br>
+ 
 
 <!-- The dots/circles -->
 <div style="text-align:center">

@@ -29,7 +29,7 @@
 
                                                             <div class="form-group">
                                                     <label class="form-label" for="cf-full-name">Upload Image</label>
-                                                    <input name="image" type="file" class="form-control" id="cf-nam" placeholder="Select Image" multiple required>
+                                                    <input name="image[]" type="file" class="form-control" id="cf-nam" placeholder="Select Image" multiple required>
                                                 </div>
                                                   
                                               

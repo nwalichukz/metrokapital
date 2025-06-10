@@ -12,11 +12,20 @@
                  
                   
                 <div class="image">
-                    @if(!empty($image->name))
-                <figure class="">
-                    <img src="{{asset('images/Property/'.$image->name)}}" alt="Property Image">
-            
-            </figure>
+                @if(!$image->isEmpty())
+               
+                    <!-- Slideshow container -->
+  <div class="w3-content w3-display-container">
+  
+    @foreach ($image as $user)
+
+  <img class="mySlides" src="{{asset('images/Property/'.$user->name)}}" alt="Property Image" style="width:100%">
+ 
+ @endforeach
+  <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+
+</div>
               @endif
             </div>
 
