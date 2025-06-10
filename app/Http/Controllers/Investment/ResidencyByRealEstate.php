@@ -55,7 +55,7 @@ class ResidencyByRealEstate extends Controller
         foreach($request->file('image') as $property_img){
         $img = new InvestmentImage;
         $img->rcr_id = $create;
-        $img->name = ImageController::uploadPropertyImage($request);
+        $img->name = ImageController::uploadPropertyImage($property_img);
         $img->inv_type = 'rbr'; 
         $img->save();
         }
@@ -96,7 +96,7 @@ class ResidencyByRealEstate extends Controller
      */
     public static function getRealEstateInvPage($id){
       $citi_inv = ResidencyByRealEstateModel::where('id', $id)->first();
-      $image = InvestmentImage::where(['rcr_id'=>$citi_inv->id, 'inv_type'=>'rbr'])->first();
+      $image = InvestmentImage::where(['rcr_id'=>$citi_inv->id, 'inv_type'=>'rbr'])->get();
        return view('landing/real-estate-investment-page')->with(['data'=>$citi_inv, 'image'=>$image]);
      
  

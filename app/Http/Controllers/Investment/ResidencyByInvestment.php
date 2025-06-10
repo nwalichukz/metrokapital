@@ -34,6 +34,45 @@ class ResidencyByInvestment extends Controller
      /**
      * creates citizenship by investment
      * 
+     * @param request
+     * 
+     * @return response
+     * 
+     */
+    public function create2(Request $request){
+      $validator = Validator::make($request->all(),
+      [
+      'country_name' => 'required|min:2',
+      'description' => 'required|min:20',
+     
+      ]);
+     // return $request->all();
+      if($validator->fails()){
+          return redirect()->back()->withErrors($validator);
+      } 
+      $create = self::save($request);
+      if($request->file('image')){
+        foreach($request->file('image') as $property_img){
+        $img = new InvestmentImage;
+        $img->rcr_id = $create;
+        $img->name = ImageController::uploadPropertyImage($property_img);
+        $img->inv_type = 'rbi'; 
+        $img->save();
+        }
+      }
+      if($create){
+         return redirect()->back()->with('success', 'Residency by investment created successfully');
+
+      }else{
+         return redirect()->back()->with('error', 'Something went wrong, residency by investment not created. Please try again');
+
+      }
+
+    }
+
+    /**
+     * creates citizenship by investment
+     * 
      * 
      * @param request
      * 
@@ -52,24 +91,26 @@ class ResidencyByInvestment extends Controller
           return redirect()->back()->withErrors($validator);
       } 
       $create = self::save($request);
-      if(!empty($request->file('image'))){
-        foreach($request->file('image') as $property_img){
+      if($request->file('image')){
+       foreach($request->file('image') as $property_img){
+      //  return $request->all();
         $img = new InvestmentImage;
         $img->rcr_id = $create;
         $img->name = ImageController::uploadPropertyImage($property_img);
-        $img->inv_type = 'rbi'; 
+        $img->inv_type = 'rbi';
         $img->save();
-        {
+       }
       }
       if($create){
          return redirect()->back()->with('success', 'Residency by investment created successfully');
 
       }else{
-         return redirect()->back()->with('error', 'Something went wrong, residency by investment not created. Please try again');
+         return redirect()->back()->with('error', 'Something went wrong, Residency by investment not created. Please try again');
 
       }
 
     }
+  
 
       
      /**
@@ -97,7 +138,7 @@ class ResidencyByInvestment extends Controller
      */
     public static function getResidencyInvPage($id){
       $citi_inv = ResidencyByInvestmentModel::where('id', $id)->first();
-      $image = InvestmentImage::where(['rcr_id'=>$citi_inv->id, 'inv_type'=>'rbi'])->first();
+      $image = InvestmentImage::where(['rcr_id'=>$citi_inv->id, 'inv_type'=>'rbi'])->get();
    
        return view('landing/citizenship-by-investment-page')->with(['data'=>$citi_inv, 'image'=>$image]);
      

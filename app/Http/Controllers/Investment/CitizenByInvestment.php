@@ -52,14 +52,14 @@ class CitizenByInvestment extends Controller
       } 
       $create = self::save($request);
       if($request->file('image')){
-       // foreach($request->file('image') as $property_img){
+       foreach($request->file('image') as $property_img){
       //  return $request->all();
         $img = new InvestmentImage;
         $img->rcr_id = $create;
-        $img->name = ImageController::uploadPropertyImage($request);
+        $img->name = ImageController::uploadPropertyImage($property_img);
         $img->inv_type = 'cbi'; 
         $img->save();
-      //  }
+       }
       }
       if($create){
          return redirect()->back()->with('success', 'Citizenship by investment created successfully');
@@ -111,7 +111,7 @@ class CitizenByInvestment extends Controller
      */
     public static function getCitizenInvPage($id){
       $citi_inv = CitizenshipByInvestment::where('id', $id)->first();
-      $image = InvestmentImage::where(['rcr_id'=>$citi_inv->id, 'inv_type'=>'cbi'])->first();
+      $image = InvestmentImage::where(['rcr_id'=>$citi_inv->id, 'inv_type'=>'cbi'])->get();
        return view('landing/citizenship-by-investment-page')->with(['data'=>$citi_inv, 'image'=>$image]);
      
  
