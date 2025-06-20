@@ -6,7 +6,7 @@
             <div class="close-btn"><i class="fas fa-times"></i></div>
             
             <nav class="menu-box">
-                <div class="nav-logo"><a href="index.html"><img src="assets/images/logo.png" alt="" title=""></a></div>
+                <div class="nav-logo"><a href="{{url('/')}}"><img src="assets/images/logo.png" alt="" title=""></a></div>
                 <div class="menu-outer"><!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--></div>
                 <div class="contact-info">
                     <h4>Contact Info</h4>
@@ -19,7 +19,7 @@
                 <div class="social-links">
                     <ul class="clearfix">
                         <li><a href="#"><span class="fab fa-twitter"></span></a></li>                       
-                        <li><a href="#"><span class="fab fa-instagram"></span></a></li>
+                        <li><a href="https://www.instagram.com/invites/contact/?utm_source=ig_contact_invite&utm_medium=copy_link&utm_content=82dl51j"><span class="fab fa-instagram"></span></a></li>
                         <li><a href="https://www.youtube.com/@metrokapitalor"><span class="fab fa-youtube"></span></a></li>
                     </ul>
                 </div>

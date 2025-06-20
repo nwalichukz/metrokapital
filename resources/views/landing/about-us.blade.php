@@ -635,7 +635,7 @@
                                 <ul class="social-links">
                                     <li><a href="https://www.youtube.com/@metrokapitalor"><i class="fab fa-youtube"></i></a></li>
                                     <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                    <li><a href="https://www.instagram.com/invites/contact/?utm_source=ig_contact_invite&utm_medium=copy_link&utm_content=82dl51j"><i class="fab fa-instagram"></i></a></li>
                                 </ul>
                             </div>
                         </div>

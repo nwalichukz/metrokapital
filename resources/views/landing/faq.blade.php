@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 
-<title>MetroBank - FAQ</title>
+<title>MetroKapital - FAQ</title>
 
 <!-- Fav Icon -->
 <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
@@ -275,7 +275,7 @@
                 <div class="social-links">
                     <ul class="clearfix">
                         <li><a href="#"><span class="fab fa-twitter"></span></a></li>
-                        <li><a href="#"><span class="fab fa-instagram"></span></a></li>
+                        <li><a href="https://www.instagram.com/invites/contact/?utm_source=ig_contact_invite&utm_medium=copy_link&utm_content=82dl51j"><span class="fab fa-instagram"></span></a></li>
                         <li><a href="https://www.youtube.com/@metrokapitalor"><span class="fab fa-youtube"></span></a></li>
                     </ul>
                 </div>
