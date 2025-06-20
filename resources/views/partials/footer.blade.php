@@ -15,7 +15,7 @@
                                 <ul class="social-links">
                                     <li><a href="https://www.youtube.com/@metrokapitalor"><i class="fab fa-youtube"></i></a></li>
                                     <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                    <li><a href="https://www.instagram.com/invites/contact/?utm_source=ig_contact_invite&utm_medium=copy_link&utm_content=82dl51j"><i class="fab fa-instagram"></i></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -29,6 +29,7 @@
                                         <li><a href="{{url('/about-us')}}">About Us</a></li>
                                         <li><a href="{{url('/contact-us')}}">Contact Us</a></li>
                                         <li><a href="{{url('/faq')}}">FAQ</a></li>
+                                        <li><a href="{{url('islamic-banking')}}"> Islamic Banking </a></li>
                                         
                                     </ul>
                                 </div>
