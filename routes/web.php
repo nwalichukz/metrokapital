@@ -21,6 +21,7 @@ use App\Http\Controllers\Wallet\WalletAddressController;
 use App\Http\Controllers\Wallet\WithdrawalRequestController;
 use App\Http\Controllers\Wallet\UserTransactionHistoryController;
 use App\Http\Controllers\Email\Mailer;
+use App\Http\Controllers\Email\SendOtpController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -265,6 +266,8 @@ Route::get('/admin/make-account-officer/{id}', [UserController::class, 'makeAcco
 Route::get('/admin/remove-account-officer/{id}', [UserController::class, 'removeAccountOfficer']); 
 Route::get('/admin/upload-account-officer-image/{id}', [UserController::class, 'uploadAccountOfficerProfileImagePage']);
 Route::post('/admin/account-officer-image/create', [UserController::class, 'uploadAccountOfficerProfile']);
+
+
 Route::post('/admin/send-mail', [Mailer::class, 'sendUserEmail']);
 Route::get('/admin/send-email/{id}', [UserController::class, 'getSendEmail']);
 
@@ -309,6 +312,8 @@ Route::post('/admin/send-email-to-all-users', [Mailer::class, 'sendMassMail']);
 Route::post('/admin/send-email', [Mailer::class, 'sendSingleMail']);
 Route::post('/user/send-contact', [Mailer::class, 'sendContact']);
 Route::post('/user/reset-password', [Mailer::class, 'postResetPassword']);
+
+Route::get('user/send-otp/{user_id}', [SendOtpController::class, 'storeCodeSendMail']);
 
 
 Route::get('/admin/all-transactions', [UserTransactionHistoryController::class, 'getAll']);

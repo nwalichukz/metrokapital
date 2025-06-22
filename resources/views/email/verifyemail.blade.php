@@ -340,10 +340,10 @@
                   <table role="presentation" border="0" cellpadding="0" cellspacing="0">
                     <tr>
                       <td>
-                        <center><img style="width:60%; height:60%;" src="https://res.cloudinary.com/dh15dztcd/image/upload/v1628764376/abolle12_slu5ke.png"/> </center>
+                        <center><img style="width:60%; height:60%;" src="https://res.cloudinary.com/dh15dztcd/image/upload/v1748969265/MetroKapital_Blue_3_quelqn.png"/> </center>
                        <br>
                        <p style=" font-size:1.2em;">
-                              This is your email verification code.</p>
+                              This is your one time password.</p>
 
                        <hr><p><center style="text-align:; font-size:2em; color:blue;">Code: <b>{{$code}}</b> </center></p><hr>
 
@@ -382,7 +382,7 @@
               <table role="presentation" border="0" cellpadding="0" cellspacing="0">
                 <tr>
                   <td class="content-block">
-                    <span style="font-family:monospace; font-weight:bold; font-size: 2em;" class="apple-link">FeesRemit Team</span>
+                    <span style="font-family:monospace; font-weight:bold; font-size: 2em;" class="apple-link">Metrokapital Team</span>
                   </td>
                 </tr>
                 <tr>
