@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="{{ asset('dashboard/assets/css/dashlite.css?ver=3.2.4')}}">
     <link id="skin-default" rel="stylesheet" href="{{ asset('dashboard/assets/css/theme.css?ver=3.2.4')}}">
     <script src="{{ asset('tinymce/js/tinymce/tinymce.min.js')}}" referrerpolicy="origin"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
       tinymce.init({
         selector: '#invdesc',    
@@ -1159,9 +1160,10 @@
         </div>
     </div><!-- .Edit Modal-Content -->
     <!-- JavaScript -->
-    <script src="{{ asset('dashboard/assets/js/bundle.js?ver=3.2.4')}}"></script>
+    <script src="{{ asset('dashboard/assets/js/bundle.js')}}"></script> 
             <script src="{{ asset('dashboard/assets/js/scripts.js?ver=3.2.4')}}"></script>
     <script src="{{ asset('dashboard/assets/js/charts/chart-crm.js?ver=3.2.4')}}"></script>
+   
 
 <script type="text/javascript">
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
@@ -1173,6 +1175,26 @@ s1.charset='UTF-8';
 s1.setAttribute('crossorigin','*');
 s0.parentNode.insertBefore(s1,s0);
 })();
+
+function showForm(){
+    event.preventDefault();
+    var xz = <?php echo Auth::user()->id ?>;
+    var y = document.getElementById("otp");
+    var xy = document.getElementById("showbtn");
+    var z = document.getElementById("trfbtn");
+   // x.style.display = 'none';
+    y.style.display = 'block';
+    z.style.display = 'block';
+    xy.style.display = 'none';
+ 
+   $.ajax("send-otp/"+ xz);
+}
+
+function resendOtp(){
+    event.preventDefault();
+    var xz = <?php echo Auth::user()->id ?>; 
+   $.ajax("send-otp/"+ xz);
+}
 </script>
 </body>
 

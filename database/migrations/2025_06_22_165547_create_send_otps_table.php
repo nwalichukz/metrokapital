@@ -13,11 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('email_verifications', function (Blueprint $table) {
+        Schema::create('send_otps', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('user_id')->unsigned();
             $table->text('verify_code');
-            $table->string('status')->default('active'); 
+            $table->string('status')->default('active'); //active, expired, verified
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('email_verifications');
+        Schema::dropIfExists('send_otps');
     }
 };

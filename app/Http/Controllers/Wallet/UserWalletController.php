@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Wallet;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Email\Mailer;
+use App\Http\Controllers\Email\SendOtpController;
 use App\Models\User;
 use App\Http\Controllers\Wallet\UserTransactionHistoryController;
 use App\Http\Controllers\Wallet\OrganizationTransactionHistoryController;
@@ -612,6 +613,9 @@ class UserWalletController extends Controller
   // return $request->all();
    
     if(self::checkAmt($request['sender_user_id'], $request['amount'])){
+
+        if(SendOtpController::verifyCodeOnly($request['sender_user_id'], $request['otp']) == true){
+
         if(Auth::user()->pin == $request['pin']){
             if(Auth::user()->external_transfer_status == 'active'){
         try{
@@ -639,23 +643,27 @@ class UserWalletController extends Controller
             $msg = 'Your Payment of '.' $'.$request['amount'].'  to '.$request['account_name'].' has been successfully Made';
             Mailer::genericMail($email, $title, $msg);
             return view('dashboard/src/html/crm/successful-transaction')->with(['msg'=> 'Your Payment of '.' $'.$request['amount'].'  to '.$request['account_name'].' has been successfully Made',
-                                                                            'bank_name'=>$request['bank_name'],
-                                                                            'amount'=>$request['amount'],
-                                                                            'account_name'=>$request['account_name'],
-                                                                             'account_number'=>$request['account_number'],
-                                                                            'id'=>$request['sender_user_id'],
-                                                                             'date_created'=>Carbon::now()]);
+                                                                                'bank_name'=>$request['bank_name'],
+                                                                                'amount'=>$request['amount'],
+                                                                                'account_name'=>$request['account_name'],
+                                                                                'account_number'=>$request['account_number'],
+                                                                                'id'=>$request['sender_user_id'],
+                                                                                'date_created'=>Carbon::now()]);
            
         }catch(Exception $e){
             return redirect()->back()->with('error', 'Something went wrong transfer could not be completed successfully. Please try again');
 
         }
       }else{
-        return redirect()->back()->with('error', 'Please contact your account officer');
+        return redirect('dashboard/get-external-transfer')->with('error', 'Please contact your account officer');
       }
     }else{
-        return redirect()->back()->with('error', 'Your PIN is incorrect');
+        return redirect('dashboard/get-external-transfer')->with('error', 'Your PIN is incorrect');
     }
+}else{
+     return redirect('dashboard/get-external-transfer')->with('error', 'You OTP is incorrect');
+}
+
     }else{
         return redirect()->back()->with('error', 'You do not have sufficient balance in your wallet to carry out this transaction'); 
 
