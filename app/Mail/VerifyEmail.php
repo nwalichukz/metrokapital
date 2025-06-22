@@ -28,9 +28,9 @@ class VerifyEmail extends Mailable
      */
     public function build()
     {
-        $subject = 'FeesRemit email verification code';
+        $subject = 'One time password code';
         $address = 'support@feesremit.com';
-        $name = 'FeesRemit';
+        $name = 'Metro-Kapital';
         return $this->view('email.verifyemail')
                     ->subject($subject)
                     ->from($address, $name);
