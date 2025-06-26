@@ -31,7 +31,7 @@ class PasswordResetMail extends Mailable
     {
         $subject = 'A New Password Has Been Generated For You';
         $address = 'feesremit@gmail.com';
-        $name = 'FeesRemit';
+        $name = 'Metro-Kapital';
         return $this->view('email.passwordreset')
                     ->subject($subject)
                     ->from($address, $name);

@@ -340,7 +340,7 @@
                   <table role="presentation" border="0" cellpadding="0" cellspacing="0">
                     <tr>
                       <td>
-                        <center><img style="width:10%; height:10%;" src="https://res.cloudinary.com/dh15dztcd/image/upload/v1628764376/abolle12_slu5ke.png"/> </center>
+                        <center><img style="width:10%; height:10%;" src="https://res.cloudinary.com/dh15dztcd/image/upload/v1748969265/MetroKapital_Blue_3_quelqn.png"/> </center>
                        <br>
                        <center><h3 style="font-style:bold;"> Your password has been reset.</h3></center>
                         <p style="text-align:justify; font-size:1.1em;">
@@ -350,7 +350,7 @@
 
                               <br><br>
                        {{-- <span style="font-size:1em;"> You are receiving this email because you are registred with us but if you do not want to receive this
-                          email any more click below to unsubscribe </span> <a href="https://feesremit.com/api/unsubscribe"> Unsubscribe </a> <br/><br/>--}}
+                          email any more click below to unsubscribe </span> <a href="https://metrokapital.org/unsubscribe"> Unsubscribe </a> <br/><br/>--}}
                         <table role="presentation" border="0" cellpadding="0" cellspacing="0" class="btn btn-primary">
                           <tbody>
                             <tr>
@@ -358,7 +358,7 @@
                                 <table role="presentation" border="0" cellpadding="0" cellspacing="0">
                                   <tbody>
                                     <tr>
-                                      <td> <a href="https://play.google.com/store/apps/details?id=com.bill_baller.app" target="_blank">Download App</a> </td>
+                                      <td>  </td>
                                     </tr>
                                   </tbody>
                                 </table>
@@ -381,7 +381,7 @@
               <table role="presentation" border="0" cellpadding="0" cellspacing="0">
                 <tr>
                   <td class="content-block">
-                    <span style="font-family:monospace; font-weight:bold;" class="apple-link">The FeesRemit Team</span>
+                    <span style="font-family:monospace; font-weight:bold;" class="apple-link">The Metrokapital Team</span>
                   </td>
                 </tr>
                 <tr>

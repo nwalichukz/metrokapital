@@ -43,7 +43,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <form action="{{url('user/reset-password')}}">
+                                <form action="{{url('post-reset-password')}}">
                                     <div class="form-group">
                                         <div class="form-label-group">
                                             <label class="form-label" for="default-01">Email</label>
