@@ -592,7 +592,7 @@ public static function changePassword(Request $request){
      * 
      */
     public static function userList(){
-      $user = User::all();
+      $user = User::where('id', '!=', NULL)->orderBy('created_at', 'DESC')->paginate(3000);
       return view('dashboard/src/html/user-list')->with(['users'=>$user]);
 
     }
