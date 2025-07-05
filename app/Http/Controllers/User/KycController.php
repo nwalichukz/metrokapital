@@ -46,7 +46,7 @@ class KycController extends Controller
         $validator = Validator::make($request->all(),
         [
         'name' => 'required',
-        'image' => 'required',
+        'image' => 'required|image',
       
         ]);
 
