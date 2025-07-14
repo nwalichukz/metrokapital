@@ -421,7 +421,7 @@ class UserController extends Controller
       public static function externalTransferStatus($id, $status){
         $user = User::find($id);
         if(!empty($user->id)){
-          if($user->access_level =='admin'){
+          if(Auth::user()->access_level =='admin'){
             $user->external_transfer_status = $status;
             $user->save();
             return redirect()->back()->with('success', 'User external transfer status changed to '.$status);
