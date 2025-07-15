@@ -29,10 +29,7 @@
 
  
 
-<!-- The dots/circles -->
-<div style="text-align:center">
 
-</div>
                   
             
            
