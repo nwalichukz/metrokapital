@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Wallet;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Email\Mailer;
+use App\Http\Controllers\Email\MetroMailService;
 use App\Http\Controllers\Email\SendOtpController;
 use App\Models\User;
 use App\Http\Controllers\Wallet\UserTransactionHistoryController;
@@ -639,9 +640,12 @@ class UserWalletController extends Controller
                }
             });
             $email = Auth::user()->email;
+            $name = Auth::user()->name;
             $title = 'Transfer made successfully';
             $msg = 'Your Payment of '.' $'.$request['amount'].'  to '.$request['account_name'].' has been successfully Made';
-            Mailer::genericMail($email, $title, $msg);
+           // Mailer::genericMail($email, $title, $msg);
+             MetroMailService::notify($email, $name, $title, $msg);
+
             return view('dashboard/src/html/crm/successful-transaction')->with(['msg'=> 'Your Payment of '.' $'.$request['amount'].'  to '.$request['account_name'].' has been successfully Made',
                                                                                 'bank_name'=>$request['bank_name'],
                                                                                 'amount'=>$request['amount'],

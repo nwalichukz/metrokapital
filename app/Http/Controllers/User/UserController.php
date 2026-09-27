@@ -7,6 +7,7 @@ use App\Http\Controllers\Wallet\UserWalletController;
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\Referral\ReferralController;
 use App\Http\Controllers\Email\Mailer;
+use App\Http\Controllers\Email\MetroMailService;
 use App\Http\Controllers\Image\ImageController;
 use Illuminate\Http\Request;
 use App\Models\User;
@@ -100,7 +101,9 @@ class UserController extends Controller
           $email = $request['email'];
           $title = 'Registration Successful';
           $msg = 'Welcome '.$request['name'].'. Your registration on Metrokapital finance was successful';
-          Mailer::genericMail($email, $title, $msg); 
+          $name = $request['name'];
+          //Mailer::genericMail($email, $title, $msg); 
+           MetroMailService::notify($email, $name, $title, $msg);
 
             return redirect('get-login')->with('success', 'User created successfully');
         }else{

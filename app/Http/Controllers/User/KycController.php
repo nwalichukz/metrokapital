@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Controllers\Image\ImageController;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Email\Mailer;
+use App\Http\Controllers\Email\MetroMailService;
 use App\Models\Kyc;
 use App\Models\User;
 use Validator, Auth;
@@ -114,9 +115,11 @@ class KycController extends Controller
             $user->kyc_status = 'verified';
             $user->save();
             $email = $user->email;
+            $name = $user->name;
             $title = 'KYC Approved Successfully';
             $msg = 'Your KYC has been successfully approved. You can now login';
-            Mailer::genericMail($email, $title, $msg);
+            // Mailer::genericMail($email, $title, $msg);
+            MetroMailService::notify($email, $name, $title, $msg);
             return redirect()->back()->with('success', 'User KYC approved');
          }else{
             return redirect()->back()->with('error', 'Something went wrong you could not approve this KYC. Try again');
@@ -164,9 +167,12 @@ class KycController extends Controller
             $user->kyc_status = 'declined';
             $user->save();
             $email = $user->email;
+            $name = $user->name;
             $title = 'KYC Not Approved Successfully';
             $msg = 'Your KYC document has a problem and was not approved for that. Please correct and try again';
-            Mailer::genericMail($email, $title, $msg);
+           // Mailer::genericMail($email, $title, $msg);
+            MetroMailService::notify($email, $name, $title, $msg);
+            
             return redirect()->back()->with('success', 'User KYC declined');
          }else{
             return redirect()->back()->with('error', 'Something went wrong you could not decline this KYC. Try again');

@@ -7,6 +7,7 @@ use App\Http\Controllers\Wallet\UserWalletController;
 use Illuminate\Http\Request;
 use App\Models\WithdrawalRequest;
 use App\Http\Controllers\Email\Mailer;
+use App\Http\Controllers\Email\MetroMailService;
 use App\Models\User;
 use Carbon\Carbon;
 use Validator, Auth;
@@ -148,10 +149,12 @@ class WithdrawalRequestController extends Controller
          return redirect()->back()->with('error', $e->message);
    
          }
-         $email = $settle->user->email;
+           $email = $settle->user->email;
+           $name = $settle->user->name;
          $title = 'Withdrawal Request Settled Successfully';
          $msg = '$'.$request['amount'].' has been successfully debited from your wallet balance';
-         Mailer::genericMail($email, $title, $msg);
+        // Mailer::genericMail($email, $title, $msg);
+           MetroMailService::notify($email, $name, $title, $msg);
        return redirect('/admin/withdrawal-request/get-all')->with('success', 'Withdrawal request settled successfully.');
             }else{
          Auth::logout();
