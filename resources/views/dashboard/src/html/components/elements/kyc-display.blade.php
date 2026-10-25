@@ -28,9 +28,10 @@
         <img src="{{ asset('images/Kyc/'.$data->file_name)}}" class="card-img-top" alt="">
         <div class="card-inner">
         <h5 class="card-title">@if(!empty($data->user->name)){{$data->user->name}} @endif</h5>
-        @if(!empty($data->name))
-        <p class="card-text">{{$data->user->country}}, {{$data->name}} </p>
-        @endif
+        
+        <p class="card-text">@if(!empty($data->name))
+            {{$data->user->country}} @endif, @if(!empty($data->name)){{$data->name}} @endif</p>
+
 
         <a href="{{url('admin/approve/'.$data->id)}}" class="btn btn-primary" title="When approved user can access dashboard">Approve</a>
         <a href="{{url('admin/decline/'.$data->id)}}" class="btn btn-warning" title="If declined user will not be able to login">Decline</a>
