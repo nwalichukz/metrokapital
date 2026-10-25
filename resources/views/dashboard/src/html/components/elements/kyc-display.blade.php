@@ -29,7 +29,7 @@
         <div class="card-inner">
         <h5 class="card-title">@if(!empty($data->user->name)){{$data->user->name}} @endif</h5>
         
-        <p class="card-text">@if(!empty($data->name))
+        <p class="card-text">@if(!empty($data->user->country))
             {{$data->user->country}} @endif, @if(!empty($data->name)){{$data->name}} @endif</p>
 
 
