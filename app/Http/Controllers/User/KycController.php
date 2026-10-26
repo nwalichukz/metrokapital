@@ -163,7 +163,7 @@ class KycController extends Controller
          if(!empty($kyc->id)){
             $kyc->status = 'declined';
             $kyc->save();
-            $suer = User::find($kyc->user->id);
+            $user = User::find($kyc->user->id);
             $user->kyc_status = 'declined';
             $user->save();
             $email = $user->email;
@@ -172,7 +172,7 @@ class KycController extends Controller
             $msg = 'Your KYC document has a problem and was not approved for that. Please correct and try again';
            // Mailer::genericMail($email, $title, $msg);
             MetroMailService::notify($email, $name, $title, $msg);
-            
+
             return redirect()->back()->with('success', 'User KYC declined');
          }else{
             return redirect()->back()->with('error', 'Something went wrong you could not decline this KYC. Try again');
